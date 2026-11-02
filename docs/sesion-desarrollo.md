@@ -1,8 +1,8 @@
-# Registro de Sesión: Desarrollo y Lanzamiento de Combustible Extremadura v1.0.0
+# Registro de Sesión: Desarrollo y Lanzamiento de Combustible Extremadura v1.0.1
 
 - **Fecha:** 2 de noviembre de 2026
 - **Proyecto:** Combustible Extremadura (`combustible-extremadura`)
-- **Versión de lanzamiento:** `v1.0.0`
+- **Versión de lanzamiento:** `v1.0.1`
 - **Dominio de producción:** `https://combustible.antoniohorrillo.com/`
 - **Repositorio oficial:** `https://github.com/antoniohh/CombustibleExtremadura`
 - **Autor y Titular:** Antonio Horrillo ([antoniohorrillo.com](https://antoniohorrillo.com))
@@ -98,6 +98,7 @@ CombustibleExtremadura/
 │       └── global.css
 ├── .gitignore
 ├── .nvmrc
+├── AGENTS.md
 ├── CHANGELOG.md
 ├── LICENSE
 ├── README.md
@@ -129,9 +130,10 @@ CombustibleExtremadura/
 
 ---
 
-## 5. Preparación de la Release `v1.0.0` y Despliegue
+## 5. Preparación de la Release `v1.0.1` y Despliegue
 
-- Se ha establecido la versión `1.0.0` en `package.json`, `CHANGELOG.md` y `README.md`.
+- Se ha establecido la versión `1.0.1` en `package.json`, `package-lock.json`, `CHANGELOG.md` y `README.md`.
+- Se ha incorporado `AGENTS.md` con las directrices operativas del proyecto y la regla estricta de no crear etiquetas Git locales (`git tag`).
 - Se ha añadido `public/CNAME` con el dominio `combustible.antoniohorrillo.com` y `public/.nojekyll`.
 - Se ha compilado el proyecto verificando la generación de `dist/index.html`, `dist/cookies/index.html`, `dist/CNAME`, `dist/.nojekyll` y `dist/datos/*.json`.
-- Se ha generado el paquete distribuible `release/combustible-extremadura-v1.0.0.zip` junto con su suma de verificación `release/combustible-extremadura-v1.0.0.zip.sha256` y las notas de lanzamiento `release/RELEASE_NOTES_v1.0.0.md`.
+- Se ha generado el paquete distribuible `release/combustible-extremadura-v1.0.1.zip` junto con su suma de verificación `release/combustible-extremadura-v1.0.1.zip.sha256` y las notas de lanzamiento `release/RELEASE_NOTES_v1.0.1.md`.

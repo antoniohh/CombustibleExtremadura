@@ -2,6 +2,19 @@
 
 Todas las versiones relevantes de **Combustible Extremadura**. El proyecto sigue [Versionado Semántico](https://semver.org/lang/es/).
 
+## [1.0.1] — 2026-11-02
+
+Release de mantenimiento y consolidación de despliegue para el dominio personalizado `https://combustible.antoniohorrillo.com/`.
+
+### Añadido
+
+- **Directrices operativas del proyecto ([`AGENTS.md`](AGENTS.md)):** definición de las normas de arquitectura, estándares de accesibilidad WCAG AA/AAA, privacidad RGPD y flujo de preparación de releases sin creación automática de etiquetas Git locales.
+- **Paquete de distribución `v1.0.1`:** compilación estática actualizada lista para su publicación en GitHub Releases (`combustible-extremadura-v1.0.1.zip` y checksum SHA256).
+
+### Cambiado
+
+- Sincronización de versión a `1.0.1` en `package.json`, `package-lock.json`, `README.md` y documentación técnica en `docs/`.
+
 ## [1.0.0] — 2026-11-02
 
 Primera release oficial de producción de **Combustible Extremadura** (`https://combustible.antoniohorrillo.com/`), portal estático para la consulta diaria e histórica del precio de la **Gasolina 95 E5** y el **Gasóleo A (Diésel)** en Badajoz, Cáceres y los 179 municipios con estación de servicio de Extremadura.

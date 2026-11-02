@@ -1,6 +1,6 @@
 # Combustible Extremadura
 
-[![Versión](https://img.shields.io/badge/versi%C3%B3n-1.0.0-0284c7?style=for-the-badge)](CHANGELOG.md)
+[![Versión](https://img.shields.io/badge/versi%C3%B3n-1.0.1-0284c7?style=for-the-badge)](CHANGELOG.md)
 [![Astro](https://img.shields.io/badge/Astro-7.4.2-BC52EE?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.3.3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Chart.js](https://img.shields.io/badge/Chart.js-4.5.1-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)](https://www.chartjs.org)
@@ -130,6 +130,7 @@ CombustibleExtremadura/
 │       └── global.css
 ├── .gitignore
 ├── .nvmrc
+├── AGENTS.md
 ├── CHANGELOG.md
 ├── LICENSE
 ├── README.md
@@ -155,20 +156,14 @@ Si necesitas cambiar el dominio en el futuro, actualiza `src/lib/site.ts`, `astr
 
 ## 📦 Control de Versiones
 
-Versión actual: **1.0.0** · [Historial completo en CHANGELOG.md](CHANGELOG.md)
+Versión actual: **1.0.1** · [Historial completo en CHANGELOG.md](CHANGELOG.md)
 
 | Versión | Fecha | Cambios principales |
 |---|---|---|
-| **1.0.0** | 2026-11-02 | Lanzamiento inicial en `combustible.antoniohorrillo.com`: precios diarios en 422 EESS, comparativa Badajoz vs Cáceres, buscador de 179 municipios, serie histórica 2025-2026 con 4 gráficos Chart.js, calculadora de ahorro, Consent Mode v2 y actualización diaria automatizada a las 06:00 AM |
+| **1.0.1** | 2026-11-02 | Incorporación de `AGENTS.md`, consolidación del flujo de publicación en GitHub Releases y paquete de distribución `v1.0.1` |
+| 1.0.0 | 2026-11-02 | Lanzamiento inicial en `combustible.antoniohorrillo.com`: precios diarios en 422 EESS, comparativa Badajoz vs Cáceres, buscador de 179 municipios, serie histórica 2025-2026 con 4 gráficos Chart.js, calculadora de ahorro, Consent Mode v2 y actualización diaria automatizada a las 06:00 AM |
 
-Para publicar una release mediante etiquetas de Git:
-
-```bash
-git tag -a v1.0.0 -m "Combustible Extremadura v1.0.0"
-git push origin v1.0.0
-```
-
-El workflow `.github/workflows/release.yml` compila el sitio y adjunta automáticamente `combustible-extremadura-v1.0.0.zip` a la release en GitHub. Además, el paquete precompilado local se encuentra disponible en `release/combustible-extremadura-v1.0.0.zip`.
+El workflow `.github/workflows/release.yml` compila el sitio y adjunta automáticamente `combustible-extremadura-v1.0.1.zip` al publicar una etiqueta `v*` en GitHub. Además, el paquete precompilado local se encuentra disponible en `release/combustible-extremadura-v1.0.1.zip`.
 
 ---
 
