@@ -24,6 +24,29 @@ const {
 
 const { badajoz, caceres } = provincias;
 
+const badajozCiudad = todasLasPoblaciones.find((p) => p.municipio === "Badajoz")!;
+const caceresCiudad = todasLasPoblaciones.find((p) => p.municipio === "Cáceres")!;
+
+const badajozCiudadPublicas = badajozCiudad.estaciones.filter((e) => e.tipoVenta === "P");
+const badajozCiudadTopGasoleo = [...badajozCiudadPublicas]
+  .filter((e) => e.gasoleoA !== null)
+  .sort((a, b) => (a.gasoleoA ?? 99) - (b.gasoleoA ?? 99))
+  .slice(0, 5);
+const badajozCiudadTopGasolina = [...badajozCiudadPublicas]
+  .filter((e) => e.gasolina95 !== null)
+  .sort((a, b) => (a.gasolina95 ?? 99) - (b.gasolina95 ?? 99))
+  .slice(0, 5);
+
+const caceresCiudadPublicas = caceresCiudad.estaciones.filter((e) => e.tipoVenta === "P");
+const caceresCiudadTopGasoleo = [...caceresCiudadPublicas]
+  .filter((e) => e.gasoleoA !== null)
+  .sort((a, b) => (a.gasoleoA ?? 99) - (b.gasoleoA ?? 99))
+  .slice(0, 5);
+const caceresCiudadTopGasolina = [...caceresCiudadPublicas]
+  .filter((e) => e.gasolina95 !== null)
+  .sort((a, b) => (a.gasolina95 ?? 99) - (b.gasolina95 ?? 99))
+  .slice(0, 5);
+
 const LETRAS_MUNICIPIOS = [
   "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "Z"
 ];
@@ -75,7 +98,7 @@ node scripts/actualizar_historico_mes.mjs 2026-10-01 2026-10-31`;
       </div>
 
       <!-- Paneles Principales de Precio de Hoy en Extremadura -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
 
         <!-- Panel Gasolina 95 E5 Hoy -->
         <div class="lg:col-span-4 rounded-2xl bg-slate-950/90 border border-sky-500/40 p-6 flex flex-col justify-between">
@@ -266,6 +289,247 @@ node scripts/actualizar_historico_mes.mjs 2026-10-01 2026-10-31`;
             <span class="font-bold text-amber-300 num-tabular">
               +{fmtPrecio((extremadura.diferencialDieselGasolina ?? 0) * 100, 1)} cts/L
             </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DOS CAJAS CAPITALES DE PROVINCIA: BADAJOZ CAPITAL Y CÁCERES CAPITAL (PRECIOS GASOLINA Y DIÉSEL + FORMATO TOP 5) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-14">
+
+        <!-- Caja 1: Badajoz Capital · Precios Gasolina y Diésel + Top 5 Más Baratas Hoy -->
+        <div data-top-group="badajoz-capital" class="rounded-2xl bg-slate-950/90 border border-sky-500/35 p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800 mb-4">
+              <div class="flex items-center gap-2.5">
+                <span class="w-3 h-3 rounded-full bg-sky-400"></span>
+                <h2 class="text-base font-bold text-white tracking-normal">
+                  Badajoz Capital · Top 5 Hoy
+                </h2>
+                <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-sky-950 text-sky-200 border border-sky-700/60 num-tabular">
+                  {badajozCiudad.numEstaciones} EESS
+                </span>
+              </div>
+
+              <div class="inline-flex rounded-lg bg-slate-900 p-0.5 border border-slate-700" role="tablist" aria-label="Combustible Top 5 Badajoz Capital">
+                <button
+                  type="button"
+                  role="tab"
+                  data-group-tab="badajoz-cap-gasoleo"
+                  aria-selected="true"
+                  class="px-2.5 py-1 rounded-md text-xs font-bold text-slate-200 aria-selected:bg-amber-600 aria-selected:text-white transition-colors cursor-pointer"
+                >
+                  Diésel
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  data-group-tab="badajoz-cap-gasolina"
+                  aria-selected="false"
+                  class="px-2.5 py-1 rounded-md text-xs font-bold text-slate-200 aria-selected:bg-sky-600 aria-selected:text-white transition-colors cursor-pointer"
+                >
+                  Gasolina 95
+                </button>
+              </div>
+            </div>
+
+            <!-- Resumen de precios medios y mínimos hoy en Badajoz Capital -->
+            <div class="grid grid-cols-2 gap-3 mb-4">
+              <div class="rounded-xl bg-slate-900/90 border border-sky-500/30 px-3.5 py-2.5 flex items-center justify-between gap-2">
+                <div>
+                  <span class="block text-[11px] font-semibold text-sky-300">Gasolina 95 · Badajoz</span>
+                  <span class="text-lg sm:text-xl font-black text-white num-tabular">
+                    {fmtPrecio(badajozCiudad.mediaGasolina95)} <span class="text-xs font-bold text-sky-300">€/L</span>
+                  </span>
+                </div>
+                <div class="text-right">
+                  <span class="block text-[10px] uppercase font-bold text-slate-400">Mín. hoy</span>
+                  <span class="text-xs font-extrabold text-emerald-300 num-tabular">
+                    {fmtPrecio(badajozCiudad.minGasolina95)} €
+                  </span>
+                </div>
+              </div>
+
+              <div class="rounded-xl bg-slate-900/90 border border-amber-500/30 px-3.5 py-2.5 flex items-center justify-between gap-2">
+                <div>
+                  <span class="block text-[11px] font-semibold text-amber-300">Gasóleo A · Badajoz</span>
+                  <span class="text-lg sm:text-xl font-black text-white num-tabular">
+                    {fmtPrecio(badajozCiudad.mediaGasoleoA)} <span class="text-xs font-bold text-amber-300">€/L</span>
+                  </span>
+                </div>
+                <div class="text-right">
+                  <span class="block text-[10px] uppercase font-bold text-slate-400">Mín. hoy</span>
+                  <span class="text-xs font-extrabold text-emerald-300 num-tabular">
+                    {fmtPrecio(badajozCiudad.minGasoleoA)} €
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lista Top 5 Diésel en Badajoz Capital -->
+            <div data-group-panel="badajoz-cap-gasoleo" class="divide-y divide-slate-800/90 text-xs">
+              {badajozCiudadTopGasoleo.map((est) => (
+                <div class="py-2.5 flex items-center justify-between gap-2">
+                  <div class="min-w-0">
+                    <span class="block font-bold text-white truncate">
+                      {est.rotulo} · <span class="text-amber-300">CP {est.cp}</span>
+                    </span>
+                    <span class="block text-slate-300 text-[11px] truncate">{est.direccion}</span>
+                  </div>
+                  <span class="font-black text-sm text-emerald-300 num-tabular shrink-0">
+                    {fmtPrecio(est.gasoleoA)} €
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <!-- Lista Top 5 Gasolina 95 en Badajoz Capital -->
+            <div data-group-panel="badajoz-cap-gasolina" class="hidden divide-y divide-slate-800/90 text-xs">
+              {badajozCiudadTopGasolina.map((est) => (
+                <div class="py-2.5 flex items-center justify-between gap-2">
+                  <div class="min-w-0">
+                    <span class="block font-bold text-white truncate">
+                      {est.rotulo} · <span class="text-sky-300">CP {est.cp}</span>
+                    </span>
+                    <span class="block text-slate-300 text-[11px] truncate">{est.direccion}</span>
+                  </div>
+                  <span class="font-black text-sm text-emerald-300 num-tabular shrink-0">
+                    {fmtPrecio(est.gasolina95)} €
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="pt-3 mt-2 border-t border-slate-800 flex items-center justify-between gap-2 text-xs text-slate-300">
+            <span class="num-tabular">
+              50L media: <strong class="text-sky-300">{fmtPrecio((badajozCiudad.mediaGasolina95 ?? 0) * 50, 2)} €</strong> (G95) · <strong class="text-amber-300">{fmtPrecio((badajozCiudad.mediaGasoleoA ?? 0) * 50, 2)} €</strong> (Diésel)
+            </span>
+            <button
+              type="button"
+              data-jump-municipio="Badajoz"
+              class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-sky-700 text-xs font-semibold text-white border border-slate-700 transition-colors cursor-pointer shrink-0"
+            >
+              Ver las {badajozCiudad.numEstaciones} EESS
+            </button>
+          </div>
+        </div>
+
+        <!-- Caja 2: Cáceres Capital · Precios Gasolina y Diésel + Top 5 Más Baratas Hoy -->
+        <div data-top-group="caceres-capital" class="rounded-2xl bg-slate-950/90 border border-amber-500/35 p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800 mb-4">
+              <div class="flex items-center gap-2.5">
+                <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+                <h2 class="text-base font-bold text-white tracking-normal">
+                  Cáceres Capital · Top 5 Hoy
+                </h2>
+                <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-amber-950 text-amber-200 border border-amber-700/60 num-tabular">
+                  {caceresCiudad.numEstaciones} EESS
+                </span>
+              </div>
+
+              <div class="inline-flex rounded-lg bg-slate-900 p-0.5 border border-slate-700" role="tablist" aria-label="Combustible Top 5 Cáceres Capital">
+                <button
+                  type="button"
+                  role="tab"
+                  data-group-tab="caceres-cap-gasoleo"
+                  aria-selected="true"
+                  class="px-2.5 py-1 rounded-md text-xs font-bold text-slate-200 aria-selected:bg-amber-600 aria-selected:text-white transition-colors cursor-pointer"
+                >
+                  Diésel
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  data-group-tab="caceres-cap-gasolina"
+                  aria-selected="false"
+                  class="px-2.5 py-1 rounded-md text-xs font-bold text-slate-200 aria-selected:bg-sky-600 aria-selected:text-white transition-colors cursor-pointer"
+                >
+                  Gasolina 95
+                </button>
+              </div>
+            </div>
+
+            <!-- Resumen de precios medios y mínimos hoy en Cáceres Capital -->
+            <div class="grid grid-cols-2 gap-3 mb-4">
+              <div class="rounded-xl bg-slate-900/90 border border-sky-500/30 px-3.5 py-2.5 flex items-center justify-between gap-2">
+                <div>
+                  <span class="block text-[11px] font-semibold text-sky-300">Gasolina 95 · Cáceres</span>
+                  <span class="text-lg sm:text-xl font-black text-white num-tabular">
+                    {fmtPrecio(caceresCiudad.mediaGasolina95)} <span class="text-xs font-bold text-sky-300">€/L</span>
+                  </span>
+                </div>
+                <div class="text-right">
+                  <span class="block text-[10px] uppercase font-bold text-slate-400">Mín. hoy</span>
+                  <span class="text-xs font-extrabold text-emerald-300 num-tabular">
+                    {fmtPrecio(caceresCiudad.minGasolina95)} €
+                  </span>
+                </div>
+              </div>
+
+              <div class="rounded-xl bg-slate-900/90 border border-amber-500/30 px-3.5 py-2.5 flex items-center justify-between gap-2">
+                <div>
+                  <span class="block text-[11px] font-semibold text-amber-300">Gasóleo A · Cáceres</span>
+                  <span class="text-lg sm:text-xl font-black text-white num-tabular">
+                    {fmtPrecio(caceresCiudad.mediaGasoleoA)} <span class="text-xs font-bold text-amber-300">€/L</span>
+                  </span>
+                </div>
+                <div class="text-right">
+                  <span class="block text-[10px] uppercase font-bold text-slate-400">Mín. hoy</span>
+                  <span class="text-xs font-extrabold text-emerald-300 num-tabular">
+                    {fmtPrecio(caceresCiudad.minGasoleoA)} €
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lista Top 5 Diésel en Cáceres Capital -->
+            <div data-group-panel="caceres-cap-gasoleo" class="divide-y divide-slate-800/90 text-xs">
+              {caceresCiudadTopGasoleo.map((est) => (
+                <div class="py-2.5 flex items-center justify-between gap-2">
+                  <div class="min-w-0">
+                    <span class="block font-bold text-white truncate">
+                      {est.rotulo} · <span class="text-amber-300">CP {est.cp}</span>
+                    </span>
+                    <span class="block text-slate-300 text-[11px] truncate">{est.direccion}</span>
+                  </div>
+                  <span class="font-black text-sm text-emerald-300 num-tabular shrink-0">
+                    {fmtPrecio(est.gasoleoA)} €
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <!-- Lista Top 5 Gasolina 95 en Cáceres Capital -->
+            <div data-group-panel="caceres-cap-gasolina" class="hidden divide-y divide-slate-800/90 text-xs">
+              {caceresCiudadTopGasolina.map((est) => (
+                <div class="py-2.5 flex items-center justify-between gap-2">
+                  <div class="min-w-0">
+                    <span class="block font-bold text-white truncate">
+                      {est.rotulo} · <span class="text-sky-300">CP {est.cp}</span>
+                    </span>
+                    <span class="block text-slate-300 text-[11px] truncate">{est.direccion}</span>
+                  </div>
+                  <span class="font-black text-sm text-emerald-300 num-tabular shrink-0">
+                    {fmtPrecio(est.gasolina95)} €
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="pt-3 mt-2 border-t border-slate-800 flex items-center justify-between gap-2 text-xs text-slate-300">
+            <span class="num-tabular">
+              50L media: <strong class="text-sky-300">{fmtPrecio((caceresCiudad.mediaGasolina95 ?? 0) * 50, 2)} €</strong> (G95) · <strong class="text-amber-300">{fmtPrecio((caceresCiudad.mediaGasoleoA ?? 0) * 50, 2)} €</strong> (Diésel)
+            </span>
+            <button
+              type="button"
+              data-jump-municipio="Cáceres"
+              class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-sky-700 text-xs font-semibold text-white border border-slate-700 transition-colors cursor-pointer shrink-0"
+            >
+              Ver las {caceresCiudad.numEstaciones} EESS
+            </button>
           </div>
         </div>
 

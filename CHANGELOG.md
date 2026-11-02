@@ -2,6 +2,21 @@
 
 Todas las versiones relevantes de **Combustible Extremadura**. El proyecto sigue [Versionado Semántico](https://semver.org/lang/es/).
 
+## [1.1.0] — 2026-11-02
+
+Nueva versión que incorpora paneles destacados con el Top 5 diario de las dos capitales de provincia (**Badajoz Capital** y **Cáceres Capital**) en la portada principal y renueva por completo la identidad visual, iconos y tarjeta Open Graph generados con Nano Banana.
+
+### Añadido
+
+- **Paneles de Precios y Top 5 Hoy en Badajoz Capital y Cáceres Capital en el bloque principal** ([`index.astro`](src/pages/index.astro), [`spa.ts`](src/scripts/spa.ts)):
+  - Dos nuevas cajas interactivas situadas justo debajo de las tres tarjetas principales de Extremadura y encima de la tabla de las 16 principales localidades.
+  - Resumen directo del precio medio y mínimo del día de **Gasolina 95** y **Gasóleo A (Diésel)** en la ciudad de **Badajoz** (41 EESS) y en la ciudad de **Cáceres** (15 EESS), junto con el coste medio de un depósito de 50 litros y botón directo al detalle completo de todas sus estaciones.
+  - Listado interactivo en formato **Top 5** con pestañas independientes (`Diésel` / `Gasolina 95`) para consultar de un vistazo las 5 gasolineras más baratas hoy en cada capital provincial.
+- **Nuevas creatividades de marca, favicon y Open Graph generadas con Nano Banana (`public/assets/`):**
+  - Nueva tarjeta social Open Graph ([`og-image.png`](public/assets/og-image.png), `1200×630` px) con diseño oscuro tipo observatorio de datos, tarjeta 3D con el mapa provincial de Extremadura (Badajoz y Cáceres), curvas luminosas de tendencia y distintivo oficial MITECO.
+  - Nuevo isotipo y familia completa de iconos de alta resolución ([`icon-512.png`](public/assets/icon-512.png), [`icon-192.png`](public/assets/icon-192.png), [`apple-touch-icon.png`](public/assets/apple-touch-icon.png), [`favicon.ico`](public/favicon.ico), [`favicon.svg`](public/assets/favicon.svg) y [`logo.svg`](public/assets/logo.svg)) combinando gota energética ámbar, boquilla de surtidor y flecha cian de evolución de precios.
+  - Integración del icono de alta definición `icon-192.png` en [`Header.astro`](src/components/Header.astro), [`Footer.astro`](src/components/Footer.astro) y [`site.webmanifest`](public/site.webmanifest).
+
 ## [1.0.1] — 2026-11-02
 
 Release de mantenimiento y consolidación de despliegue para el dominio personalizado `https://combustible.antoniohorrillo.com/`.

@@ -1,6 +1,6 @@
 # Combustible Extremadura
 
-[![Versión](https://img.shields.io/badge/versi%C3%B3n-1.0.1-0284c7?style=for-the-badge)](CHANGELOG.md)
+[![Versión](https://img.shields.io/badge/versi%C3%B3n-1.1.0-0284c7?style=for-the-badge)](CHANGELOG.md)
 [![Astro](https://img.shields.io/badge/Astro-7.4.2-BC52EE?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.3.3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Chart.js](https://img.shields.io/badge/Chart.js-4.5.1-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)](https://www.chartjs.org)
@@ -18,9 +18,10 @@ Aplicación web estática (SPA) para la consulta diaria e histórica del **preci
 
 ## 🎯 Características Principales
 
-1. **Precio Diario (Hoy) y Principales Localidades:**
+1. **Precio Diario (Hoy), Top 5 en Badajoz y Cáceres Capital y Principales Localidades:**
    - Captura diaria de las **422 estaciones de servicio** de Extremadura desde la API oficial del MITECO (`FiltroCCAA/11`).
    - Compilación automática todos los días a las **06:00 AM** mediante GitHub Actions (`.github/workflows/deploy.yml`) para que a las 07:00 AM estén publicados los precios vigentes del día.
+   - Paneles destacados en portada con medias autonómicas, **Top 5 de gasolineras más baratas hoy en Extremadura**, y dos cajas específicas para las dos capitales de provincia (**Badajoz Capital** con 41 EESS y **Cáceres Capital** con 15 EESS) con sus precios medios/mínimos y su **Top 5 hoy** (selector interactivo Diésel / Gasolina 95).
    - Tabla en vivo de las **16 principales localidades de Extremadura** (Badajoz, Cáceres, Mérida, Plasencia, Don Benito, Almendralejo, Villanueva de la Serena, Navalmoral de la Mata, Zafra, Montijo, Trujillo, Villafranca de los Barros, Miajadas, Coria, Olivenza y Jerez de los Caballeros).
 2. **Comparativa Hoy Badajoz vs. Cáceres:**
    - Medias provinciales del día (Badajoz y Cáceres), ahorro en depósito de 50 litros, estaciones por debajo de la media autonómica y top 5 de gasolineras más baratas hoy en cada provincia.
@@ -86,9 +87,10 @@ CombustibleExtremadura/
 │   ├── assets/
 │   │   ├── apple-touch-icon.png
 │   │   ├── favicon.svg
+│   │   ├── icon-192.png
+│   │   ├── icon-512.png
 │   │   ├── logo.svg
-│   │   ├── og-image.png
-│   │   └── og-image.svg
+│   │   └── og-image.png
 │   ├── datos/
 │   │   ├── hoy_extremadura.json                   # Precios del día actual (422 EESS, 179 municipios)
 │   │   ├── historico_extremadura_2026.json        # Histórico diario Extremadura 2025-2026
@@ -156,14 +158,15 @@ Si necesitas cambiar el dominio en el futuro, actualiza `src/lib/site.ts`, `astr
 
 ## 📦 Control de Versiones
 
-Versión actual: **1.0.1** · [Historial completo en CHANGELOG.md](CHANGELOG.md)
+Versión actual: **1.1.0** · [Historial completo en CHANGELOG.md](CHANGELOG.md)
 
 | Versión | Fecha | Cambios principales |
 |---|---|---|
-| **1.0.1** | 2026-11-02 | Incorporación de `AGENTS.md`, consolidación del flujo de publicación en GitHub Releases y paquete de distribución `v1.0.1` |
+| **1.1.0** | 2026-11-02 | Nuevas cajas de precios y Top 5 hoy para Badajoz Capital y Cáceres Capital en portada, e identidad visual completa (icono, favicon y tarjeta Open Graph `1200×630`) generada con Nano Banana |
+| 1.0.1 | 2026-11-02 | Incorporación de `AGENTS.md`, consolidación del flujo de publicación en GitHub Releases y paquete de distribución `v1.0.1` |
 | 1.0.0 | 2026-11-02 | Lanzamiento inicial en `combustible.antoniohorrillo.com`: precios diarios en 422 EESS, comparativa Badajoz vs Cáceres, buscador de 179 municipios, serie histórica 2025-2026 con 4 gráficos Chart.js, calculadora de ahorro, Consent Mode v2 y actualización diaria automatizada a las 06:00 AM |
 
-El workflow `.github/workflows/release.yml` compila el sitio y adjunta automáticamente `combustible-extremadura-v1.0.1.zip` al publicar una etiqueta `v*` en GitHub. Además, el paquete precompilado local se encuentra disponible en `release/combustible-extremadura-v1.0.1.zip`.
+El workflow `.github/workflows/release.yml` compila el sitio y adjunta automáticamente `combustible-extremadura-v1.1.0.zip` al publicar una etiqueta `v*` en GitHub. Además, el paquete precompilado local se encuentra disponible en `release/combustible-extremadura-v1.1.0.zip`.
 
 ---
 

@@ -72,18 +72,38 @@ function normalizarBusqueda(str: string): string {
 function inicializarTabsTopHoy() {
   const btns = document.querySelectorAll<HTMLButtonElement>("[data-top-tab]");
   const panels = document.querySelectorAll<HTMLElement>("[data-top-panel]");
-  if (!btns.length) return;
+  if (btns.length) {
+    btns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-top-tab");
+        btns.forEach((b) => b.setAttribute("aria-selected", String(b === btn)));
+        panels.forEach((p) => {
+          if (p.getAttribute("data-top-panel") === target) {
+            p.classList.remove("hidden");
+          } else {
+            p.classList.add("hidden");
+          }
+        });
+      });
+    });
+  }
 
-  btns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const target = btn.getAttribute("data-top-tab");
-      btns.forEach((b) => b.setAttribute("aria-selected", String(b === btn)));
-      panels.forEach((p) => {
-        if (p.getAttribute("data-top-panel") === target) {
-          p.classList.remove("hidden");
-        } else {
-          p.classList.add("hidden");
-        }
+  // Conmutadores independientes por provincia (Badajoz / Cáceres)
+  const groups = document.querySelectorAll<HTMLElement>("[data-top-group]");
+  groups.forEach((group) => {
+    const groupBtns = group.querySelectorAll<HTMLButtonElement>("[data-group-tab]");
+    const groupPanels = group.querySelectorAll<HTMLElement>("[data-group-panel]");
+    groupBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-group-tab");
+        groupBtns.forEach((b) => b.setAttribute("aria-selected", String(b === btn)));
+        groupPanels.forEach((p) => {
+          if (p.getAttribute("data-group-panel") === target) {
+            p.classList.remove("hidden");
+          } else {
+            p.classList.add("hidden");
+          }
+        });
       });
     });
   });

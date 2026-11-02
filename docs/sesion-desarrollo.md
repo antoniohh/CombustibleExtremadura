@@ -1,8 +1,8 @@
-# Registro de Sesión: Desarrollo y Lanzamiento de Combustible Extremadura v1.0.1
+# Registro de Sesión: Desarrollo y Lanzamiento de Combustible Extremadura v1.1.0
 
 - **Fecha:** 2 de noviembre de 2026
 - **Proyecto:** Combustible Extremadura (`combustible-extremadura`)
-- **Versión de lanzamiento:** `v1.0.1`
+- **Versión actual:** `v1.1.0`
 - **Dominio de producción:** `https://combustible.antoniohorrillo.com/`
 - **Repositorio oficial:** `https://github.com/antoniohh/CombustibleExtremadura`
 - **Autor y Titular:** Antonio Horrillo ([antoniohorrillo.com](https://antoniohorrillo.com))
@@ -50,9 +50,10 @@ CombustibleExtremadura/
 │   ├── assets/
 │   │   ├── apple-touch-icon.png
 │   │   ├── favicon.svg
+│   │   ├── icon-192.png
+│   │   ├── icon-512.png
 │   │   ├── logo.svg
-│   │   ├── og-image.png
-│   │   └── og-image.svg
+│   │   └── og-image.png
 │   ├── datos/
 │   │   ├── hoy_extremadura.json                   # Precios del día actual (422 EESS, 179 municipios)
 │   │   ├── historico_extremadura_2026.json        # Serie histórica diaria Extremadura 2025-2026
@@ -63,10 +64,10 @@ CombustibleExtremadura/
 │   ├── robots.txt
 │   ├── site.webmanifest
 │   └── sitemap.xml
-├── release/                                       # Paquete ZIP y notas de la release v1.0.0 (ignorado en git)
-│   ├── RELEASE_NOTES_v1.0.0.md
-│   ├── combustible-extremadura-v1.0.0.zip
-│   └── combustible-extremadura-v1.0.0.zip.sha256
+├── release/                                       # Paquetes ZIP y notas de release (ignorado en git)
+│   ├── RELEASE_NOTES_v1.1.0.md
+│   ├── combustible-extremadura-v1.1.0.zip
+│   └── combustible-extremadura-v1.1.0.zip.sha256
 ├── scripts/
 │   ├── actualizar_precios_hoy.mjs                 # Captura diaria de las 422 EESS de Extremadura
 │   ├── actualizar_historico_mes.mjs               # Actualización incremental mensual del histórico
@@ -111,8 +112,10 @@ CombustibleExtremadura/
 
 ## 4. Secciones de la Aplicación (`src/pages/index.astro` y `src/pages/cookies.astro`)
 
-1. **Precio del Combustible Hoy y 16 Principales Localidades (`#precios-hoy`):**
-   - Tarjetas en vivo de Gasolina 95 E5 y Gasóleo A con media autonómica, coste de depósito de 50L, surtidor más barato y más caro de Extremadura hoy, diferencial diésel-gasolina y tabla de las 16 localidades más pobladas.
+1. **Precio del Combustible Hoy, Top 5 en Capitales y 16 Principales Localidades (`#precios-hoy`):**
+   - Tarjetas en vivo de Gasolina 95 E5 y Gasóleo A con media autonómica, coste de depósito de 50L, surtidor más barato y más caro de Extremadura hoy y Top 5 autonómico.
+   - Dos cajas específicas para las dos capitales de provincia (**Badajoz Capital · Top 5 Hoy** con 41 EESS y **Cáceres Capital · Top 5 Hoy** con 15 EESS) con precios medios y mínimos de Gasolina 95 y Diésel y selector interactivo con las 5 gasolineras más baratas de cada ciudad.
+   - Tabla en vivo de las 16 localidades más pobladas de Extremadura.
 2. **Comparativa Hoy: Badajoz vs. Cáceres (`#comparativa-provincias`):**
    - Medias provinciales del día, brecha por litro y por depósito de 50L, porcentaje de estaciones económicas y top 5 de gasolineras más baratas hoy en cada provincia.
 3. **Explorador Interactivo de los 179 Municipios (`#todas-las-poblaciones`):**
@@ -130,10 +133,10 @@ CombustibleExtremadura/
 
 ---
 
-## 5. Preparación de la Release `v1.0.1` y Despliegue
+## 5. Preparación de la Release `v1.1.0` y Despliegue
 
-- Se ha establecido la versión `1.0.1` en `package.json`, `package-lock.json`, `CHANGELOG.md` y `README.md`.
-- Se ha incorporado `AGENTS.md` con las directrices operativas del proyecto y la regla estricta de no crear etiquetas Git locales (`git tag`).
-- Se ha añadido `public/CNAME` con el dominio `combustible.antoniohorrillo.com` y `public/.nojekyll`.
-- Se ha compilado el proyecto verificando la generación de `dist/index.html`, `dist/cookies/index.html`, `dist/CNAME`, `dist/.nojekyll` y `dist/datos/*.json`.
-- Se ha generado el paquete distribuible `release/combustible-extremadura-v1.0.1.zip` junto con su suma de verificación `release/combustible-extremadura-v1.0.1.zip.sha256` y las notas de lanzamiento `release/RELEASE_NOTES_v1.0.1.md`.
+- Se ha establecido la versión `1.1.0` en `package.json`, `package-lock.json`, `CHANGELOG.md` y `README.md`.
+- Se han añadido las dos cajas en formato Top 5 para las ciudades de **Badajoz Capital** y **Cáceres Capital** en el bloque principal de portada (`src/pages/index.astro` y `src/scripts/spa.ts`).
+- Se han renovado todas las creatividades de marca, icono/favicon (`icon-512.png`, `icon-192.png`, `apple-touch-icon.png`, `favicon.ico`, `favicon.svg`, `logo.svg`) y la imagen Open Graph (`og-image.png`, `1200×630` px) mediante **Nano Banana**.
+- Se mantiene `AGENTS.md` con las directrices operativas del proyecto y la regla estricta de no crear etiquetas Git locales (`git tag`).
+- Se ha generado el paquete distribuible `release/combustible-extremadura-v1.1.0.zip` junto con su suma de verificación `release/combustible-extremadura-v1.1.0.zip.sha256` y las notas de lanzamiento `release/RELEASE_NOTES_v1.1.0.md`.
