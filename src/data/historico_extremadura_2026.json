@@ -1,0 +1,4468 @@
+[
+  {
+    "fecha": "01-01-2025",
+    "gasolina95_E5": 1.533,
+    "gasoleoA": 1.708,
+    "estacionesG95": 348,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "02-01-2025",
+    "gasolina95_E5": 1.536,
+    "gasoleoA": 1.71,
+    "estacionesG95": 353,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "03-01-2025",
+    "gasolina95_E5": 1.54,
+    "gasoleoA": 1.718,
+    "estacionesG95": 365,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "04-01-2025",
+    "gasolina95_E5": 1.545,
+    "gasoleoA": 1.72,
+    "estacionesG95": 364,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "05-01-2025",
+    "gasolina95_E5": 1.548,
+    "gasoleoA": 1.726,
+    "estacionesG95": 363,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "06-01-2025",
+    "gasolina95_E5": 1.549,
+    "gasoleoA": 1.727,
+    "estacionesG95": 362,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "07-01-2025",
+    "gasolina95_E5": 1.553,
+    "gasoleoA": 1.729,
+    "estacionesG95": 364,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "08-01-2025",
+    "gasolina95_E5": 1.554,
+    "gasoleoA": 1.724,
+    "estacionesG95": 367,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "09-01-2025",
+    "gasolina95_E5": 1.556,
+    "gasoleoA": 1.727,
+    "estacionesG95": 370,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "10-01-2025",
+    "gasolina95_E5": 1.556,
+    "gasoleoA": 1.729,
+    "estacionesG95": 371,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "11-01-2025",
+    "gasolina95_E5": 1.559,
+    "gasoleoA": 1.731,
+    "estacionesG95": 371,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "12-01-2025",
+    "gasolina95_E5": 1.562,
+    "gasoleoA": 1.734,
+    "estacionesG95": 372,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "13-01-2025",
+    "gasolina95_E5": 1.566,
+    "gasoleoA": 1.738,
+    "estacionesG95": 373,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "14-01-2025",
+    "gasolina95_E5": 1.568,
+    "gasoleoA": 1.738,
+    "estacionesG95": 373,
+    "estacionesGasA": 118
+  },
+  {
+    "fecha": "15-01-2025",
+    "gasolina95_E5": 1.574,
+    "gasoleoA": 1.745,
+    "estacionesG95": 372,
+    "estacionesGasA": 118
+  },
+  {
+    "fecha": "16-01-2025",
+    "gasolina95_E5": 1.578,
+    "gasoleoA": 1.75,
+    "estacionesG95": 372,
+    "estacionesGasA": 118
+  },
+  {
+    "fecha": "17-01-2025",
+    "gasolina95_E5": 1.58,
+    "gasoleoA": 1.757,
+    "estacionesG95": 371,
+    "estacionesGasA": 118
+  },
+  {
+    "fecha": "18-01-2025",
+    "gasolina95_E5": 1.58,
+    "gasoleoA": 1.752,
+    "estacionesG95": 362,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "19-01-2025",
+    "gasolina95_E5": 1.579,
+    "gasoleoA": 1.75,
+    "estacionesG95": 362,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "20-01-2025",
+    "gasolina95_E5": 1.58,
+    "gasoleoA": 1.75,
+    "estacionesG95": 361,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "21-01-2025",
+    "gasolina95_E5": 1.578,
+    "gasoleoA": 1.744,
+    "estacionesG95": 362,
+    "estacionesGasA": 118
+  },
+  {
+    "fecha": "22-01-2025",
+    "gasolina95_E5": 1.578,
+    "gasoleoA": 1.744,
+    "estacionesG95": 362,
+    "estacionesGasA": 118
+  },
+  {
+    "fecha": "23-01-2025",
+    "gasolina95_E5": 1.578,
+    "gasoleoA": 1.745,
+    "estacionesG95": 363,
+    "estacionesGasA": 118
+  },
+  {
+    "fecha": "24-01-2025",
+    "gasolina95_E5": 1.577,
+    "gasoleoA": 1.747,
+    "estacionesG95": 364,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "25-01-2025",
+    "gasolina95_E5": 1.577,
+    "gasoleoA": 1.742,
+    "estacionesG95": 364,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "26-01-2025",
+    "gasolina95_E5": 1.577,
+    "gasoleoA": 1.742,
+    "estacionesG95": 364,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "27-01-2025",
+    "gasolina95_E5": 1.576,
+    "gasoleoA": 1.74,
+    "estacionesG95": 365,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "28-01-2025",
+    "gasolina95_E5": 1.574,
+    "gasoleoA": 1.738,
+    "estacionesG95": 362,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "29-01-2025",
+    "gasolina95_E5": 1.572,
+    "gasoleoA": 1.734,
+    "estacionesG95": 358,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "30-01-2025",
+    "gasolina95_E5": 1.571,
+    "gasoleoA": 1.733,
+    "estacionesG95": 361,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "31-01-2025",
+    "gasolina95_E5": 1.57,
+    "gasoleoA": 1.737,
+    "estacionesG95": 360,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "01-02-2025",
+    "gasolina95_E5": 1.57,
+    "gasoleoA": 1.733,
+    "estacionesG95": 360,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "02-02-2025",
+    "gasolina95_E5": 1.571,
+    "gasoleoA": 1.734,
+    "estacionesG95": 362,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "03-02-2025",
+    "gasolina95_E5": 1.571,
+    "gasoleoA": 1.734,
+    "estacionesG95": 366,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "04-02-2025",
+    "gasolina95_E5": 1.571,
+    "gasoleoA": 1.733,
+    "estacionesG95": 363,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "05-02-2025",
+    "gasolina95_E5": 1.572,
+    "gasoleoA": 1.736,
+    "estacionesG95": 361,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "06-02-2025",
+    "gasolina95_E5": 1.572,
+    "gasoleoA": 1.737,
+    "estacionesG95": 362,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "07-02-2025",
+    "gasolina95_E5": 1.57,
+    "gasoleoA": 1.739,
+    "estacionesG95": 359,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "08-02-2025",
+    "gasolina95_E5": 1.57,
+    "gasoleoA": 1.737,
+    "estacionesG95": 356,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "09-02-2025",
+    "gasolina95_E5": 1.57,
+    "gasoleoA": 1.737,
+    "estacionesG95": 356,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "10-02-2025",
+    "gasolina95_E5": 1.57,
+    "gasoleoA": 1.734,
+    "estacionesG95": 362,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "11-02-2025",
+    "gasolina95_E5": 1.569,
+    "gasoleoA": 1.733,
+    "estacionesG95": 359,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "12-02-2025",
+    "gasolina95_E5": 1.573,
+    "gasoleoA": 1.738,
+    "estacionesG95": 355,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "13-02-2025",
+    "gasolina95_E5": 1.574,
+    "gasoleoA": 1.739,
+    "estacionesG95": 358,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "14-02-2025",
+    "gasolina95_E5": 1.574,
+    "gasoleoA": 1.744,
+    "estacionesG95": 358,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "15-02-2025",
+    "gasolina95_E5": 1.573,
+    "gasoleoA": 1.737,
+    "estacionesG95": 357,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "16-02-2025",
+    "gasolina95_E5": 1.572,
+    "gasoleoA": 1.737,
+    "estacionesG95": 357,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "17-02-2025",
+    "gasolina95_E5": 1.572,
+    "gasoleoA": 1.736,
+    "estacionesG95": 361,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "18-02-2025",
+    "gasolina95_E5": 1.57,
+    "gasoleoA": 1.732,
+    "estacionesG95": 358,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "19-02-2025",
+    "gasolina95_E5": 1.568,
+    "gasoleoA": 1.731,
+    "estacionesG95": 357,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "20-02-2025",
+    "gasolina95_E5": 1.569,
+    "gasoleoA": 1.733,
+    "estacionesG95": 356,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "21-02-2025",
+    "gasolina95_E5": 1.568,
+    "gasoleoA": 1.736,
+    "estacionesG95": 356,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "22-02-2025",
+    "gasolina95_E5": 1.568,
+    "gasoleoA": 1.733,
+    "estacionesG95": 357,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "23-02-2025",
+    "gasolina95_E5": 1.567,
+    "gasoleoA": 1.731,
+    "estacionesG95": 357,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "24-02-2025",
+    "gasolina95_E5": 1.566,
+    "gasoleoA": 1.73,
+    "estacionesG95": 362,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "25-02-2025",
+    "gasolina95_E5": 1.563,
+    "gasoleoA": 1.725,
+    "estacionesG95": 359,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "26-02-2025",
+    "gasolina95_E5": 1.56,
+    "gasoleoA": 1.722,
+    "estacionesG95": 361,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "27-02-2025",
+    "gasolina95_E5": 1.557,
+    "gasoleoA": 1.716,
+    "estacionesG95": 361,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "28-02-2025",
+    "gasolina95_E5": 1.555,
+    "gasoleoA": 1.717,
+    "estacionesG95": 358,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "01-03-2025",
+    "gasolina95_E5": 1.555,
+    "gasoleoA": 1.713,
+    "estacionesG95": 358,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "02-03-2025",
+    "gasolina95_E5": 1.555,
+    "gasoleoA": 1.712,
+    "estacionesG95": 360,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "03-03-2025",
+    "gasolina95_E5": 1.553,
+    "gasoleoA": 1.711,
+    "estacionesG95": 368,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "04-03-2025",
+    "gasolina95_E5": 1.554,
+    "gasoleoA": 1.714,
+    "estacionesG95": 367,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "05-03-2025",
+    "gasolina95_E5": 1.549,
+    "gasoleoA": 1.71,
+    "estacionesG95": 368,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "06-03-2025",
+    "gasolina95_E5": 1.543,
+    "gasoleoA": 1.705,
+    "estacionesG95": 367,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "07-03-2025",
+    "gasolina95_E5": 1.536,
+    "gasoleoA": 1.701,
+    "estacionesG95": 368,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "08-03-2025",
+    "gasolina95_E5": 1.533,
+    "gasoleoA": 1.694,
+    "estacionesG95": 367,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "09-03-2025",
+    "gasolina95_E5": 1.531,
+    "gasoleoA": 1.694,
+    "estacionesG95": 367,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "10-03-2025",
+    "gasolina95_E5": 1.525,
+    "gasoleoA": 1.689,
+    "estacionesG95": 373,
+    "estacionesGasA": 117
+  },
+  {
+    "fecha": "11-03-2025",
+    "gasolina95_E5": 1.521,
+    "gasoleoA": 1.688,
+    "estacionesG95": 372,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "12-03-2025",
+    "gasolina95_E5": 1.518,
+    "gasoleoA": 1.686,
+    "estacionesG95": 374,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "13-03-2025",
+    "gasolina95_E5": 1.515,
+    "gasoleoA": 1.684,
+    "estacionesG95": 378,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "14-03-2025",
+    "gasolina95_E5": 1.514,
+    "gasoleoA": 1.689,
+    "estacionesG95": 379,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "15-03-2025",
+    "gasolina95_E5": 1.513,
+    "gasoleoA": 1.685,
+    "estacionesG95": 379,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "16-03-2025",
+    "gasolina95_E5": 1.512,
+    "gasoleoA": 1.683,
+    "estacionesG95": 378,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "17-03-2025",
+    "gasolina95_E5": 1.509,
+    "gasoleoA": 1.681,
+    "estacionesG95": 379,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "18-03-2025",
+    "gasolina95_E5": 1.508,
+    "gasoleoA": 1.681,
+    "estacionesG95": 378,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "19-03-2025",
+    "gasolina95_E5": 1.507,
+    "gasoleoA": 1.68,
+    "estacionesG95": 378,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "20-03-2025",
+    "gasolina95_E5": 1.507,
+    "gasoleoA": 1.68,
+    "estacionesG95": 378,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "21-03-2025",
+    "gasolina95_E5": 1.507,
+    "gasoleoA": 1.685,
+    "estacionesG95": 376,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "22-03-2025",
+    "gasolina95_E5": 1.506,
+    "gasoleoA": 1.682,
+    "estacionesG95": 376,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "23-03-2025",
+    "gasolina95_E5": 1.505,
+    "gasoleoA": 1.682,
+    "estacionesG95": 376,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "24-03-2025",
+    "gasolina95_E5": 1.505,
+    "gasoleoA": 1.682,
+    "estacionesG95": 378,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "25-03-2025",
+    "gasolina95_E5": 1.507,
+    "gasoleoA": 1.684,
+    "estacionesG95": 377,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "26-03-2025",
+    "gasolina95_E5": 1.507,
+    "gasoleoA": 1.685,
+    "estacionesG95": 375,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "27-03-2025",
+    "gasolina95_E5": 1.508,
+    "gasoleoA": 1.685,
+    "estacionesG95": 375,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "28-03-2025",
+    "gasolina95_E5": 1.51,
+    "gasoleoA": 1.694,
+    "estacionesG95": 371,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "29-03-2025",
+    "gasolina95_E5": 1.51,
+    "gasoleoA": 1.69,
+    "estacionesG95": 367,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "30-03-2025",
+    "gasolina95_E5": 1.509,
+    "gasoleoA": 1.69,
+    "estacionesG95": 367,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "31-03-2025",
+    "gasolina95_E5": 1.51,
+    "gasoleoA": 1.69,
+    "estacionesG95": 371,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "01-04-2025",
+    "gasolina95_E5": 1.512,
+    "gasoleoA": 1.691,
+    "estacionesG95": 367,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "02-04-2025",
+    "gasolina95_E5": 1.515,
+    "gasoleoA": 1.695,
+    "estacionesG95": 370,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "03-04-2025",
+    "gasolina95_E5": 1.518,
+    "gasoleoA": 1.696,
+    "estacionesG95": 374,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "04-04-2025",
+    "gasolina95_E5": 1.518,
+    "gasoleoA": 1.701,
+    "estacionesG95": 372,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "05-04-2025",
+    "gasolina95_E5": 1.517,
+    "gasoleoA": 1.695,
+    "estacionesG95": 372,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "06-04-2025",
+    "gasolina95_E5": 1.513,
+    "gasoleoA": 1.689,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "07-04-2025",
+    "gasolina95_E5": 1.511,
+    "gasoleoA": 1.687,
+    "estacionesG95": 377,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "08-04-2025",
+    "gasolina95_E5": 1.506,
+    "gasoleoA": 1.682,
+    "estacionesG95": 378,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "09-04-2025",
+    "gasolina95_E5": 1.502,
+    "gasoleoA": 1.679,
+    "estacionesG95": 379,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "10-04-2025",
+    "gasolina95_E5": 1.498,
+    "gasoleoA": 1.673,
+    "estacionesG95": 381,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "11-04-2025",
+    "gasolina95_E5": 1.493,
+    "gasoleoA": 1.673,
+    "estacionesG95": 381,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "12-04-2025",
+    "gasolina95_E5": 1.492,
+    "gasoleoA": 1.669,
+    "estacionesG95": 381,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "13-04-2025",
+    "gasolina95_E5": 1.488,
+    "gasoleoA": 1.664,
+    "estacionesG95": 381,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "14-04-2025",
+    "gasolina95_E5": 1.485,
+    "gasoleoA": 1.661,
+    "estacionesG95": 380,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "15-04-2025",
+    "gasolina95_E5": 1.48,
+    "gasoleoA": 1.654,
+    "estacionesG95": 380,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "16-04-2025",
+    "gasolina95_E5": 1.478,
+    "gasoleoA": 1.653,
+    "estacionesG95": 381,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "17-04-2025",
+    "gasolina95_E5": 1.477,
+    "gasoleoA": 1.656,
+    "estacionesG95": 382,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "18-04-2025",
+    "gasolina95_E5": 1.477,
+    "gasoleoA": 1.652,
+    "estacionesG95": 379,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "19-04-2025",
+    "gasolina95_E5": 1.477,
+    "gasoleoA": 1.652,
+    "estacionesG95": 378,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "20-04-2025",
+    "gasolina95_E5": 1.478,
+    "gasoleoA": 1.653,
+    "estacionesG95": 378,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "21-04-2025",
+    "gasolina95_E5": 1.476,
+    "gasoleoA": 1.653,
+    "estacionesG95": 379,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "22-04-2025",
+    "gasolina95_E5": 1.472,
+    "gasoleoA": 1.651,
+    "estacionesG95": 377,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "23-04-2025",
+    "gasolina95_E5": 1.47,
+    "gasoleoA": 1.649,
+    "estacionesG95": 377,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "24-04-2025",
+    "gasolina95_E5": 1.469,
+    "gasoleoA": 1.648,
+    "estacionesG95": 378,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "25-04-2025",
+    "gasolina95_E5": 1.467,
+    "gasoleoA": 1.652,
+    "estacionesG95": 378,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "26-04-2025",
+    "gasolina95_E5": 1.467,
+    "gasoleoA": 1.648,
+    "estacionesG95": 374,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "27-04-2025",
+    "gasolina95_E5": 1.468,
+    "gasoleoA": 1.65,
+    "estacionesG95": 372,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "28-04-2025",
+    "gasolina95_E5": 1.469,
+    "gasoleoA": 1.649,
+    "estacionesG95": 372,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "29-04-2025",
+    "gasolina95_E5": 1.47,
+    "gasoleoA": 1.649,
+    "estacionesG95": 368,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "30-04-2025",
+    "gasolina95_E5": 1.469,
+    "gasoleoA": 1.652,
+    "estacionesG95": 376,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "01-05-2025",
+    "gasolina95_E5": 1.468,
+    "gasoleoA": 1.646,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "02-05-2025",
+    "gasolina95_E5": 1.468,
+    "gasoleoA": 1.644,
+    "estacionesG95": 372,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "03-05-2025",
+    "gasolina95_E5": 1.467,
+    "gasoleoA": 1.642,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "04-05-2025",
+    "gasolina95_E5": 1.466,
+    "gasoleoA": 1.642,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "05-05-2025",
+    "gasolina95_E5": 1.464,
+    "gasoleoA": 1.641,
+    "estacionesG95": 376,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "06-05-2025",
+    "gasolina95_E5": 1.462,
+    "gasoleoA": 1.637,
+    "estacionesG95": 378,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "07-05-2025",
+    "gasolina95_E5": 1.461,
+    "gasoleoA": 1.636,
+    "estacionesG95": 377,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "08-05-2025",
+    "gasolina95_E5": 1.46,
+    "gasoleoA": 1.636,
+    "estacionesG95": 378,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "09-05-2025",
+    "gasolina95_E5": 1.457,
+    "gasoleoA": 1.637,
+    "estacionesG95": 378,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "10-05-2025",
+    "gasolina95_E5": 1.457,
+    "gasoleoA": 1.633,
+    "estacionesG95": 378,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "11-05-2025",
+    "gasolina95_E5": 1.457,
+    "gasoleoA": 1.634,
+    "estacionesG95": 378,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "12-05-2025",
+    "gasolina95_E5": 1.456,
+    "gasoleoA": 1.632,
+    "estacionesG95": 375,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "13-05-2025",
+    "gasolina95_E5": 1.455,
+    "gasoleoA": 1.631,
+    "estacionesG95": 373,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "14-05-2025",
+    "gasolina95_E5": 1.456,
+    "gasoleoA": 1.633,
+    "estacionesG95": 373,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "15-05-2025",
+    "gasolina95_E5": 1.459,
+    "gasoleoA": 1.637,
+    "estacionesG95": 372,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "16-05-2025",
+    "gasolina95_E5": 1.46,
+    "gasoleoA": 1.641,
+    "estacionesG95": 372,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "17-05-2025",
+    "gasolina95_E5": 1.461,
+    "gasoleoA": 1.637,
+    "estacionesG95": 372,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "18-05-2025",
+    "gasolina95_E5": 1.462,
+    "gasoleoA": 1.638,
+    "estacionesG95": 371,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "19-05-2025",
+    "gasolina95_E5": 1.464,
+    "gasoleoA": 1.64,
+    "estacionesG95": 372,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "20-05-2025",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.639,
+    "estacionesG95": 371,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "21-05-2025",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.64,
+    "estacionesG95": 368,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "22-05-2025",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.641,
+    "estacionesG95": 365,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "23-05-2025",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.642,
+    "estacionesG95": 362,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "24-05-2025",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.639,
+    "estacionesG95": 364,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "25-05-2025",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.64,
+    "estacionesG95": 365,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "26-05-2025",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.639,
+    "estacionesG95": 367,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "27-05-2025",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.638,
+    "estacionesG95": 366,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "28-05-2025",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.639,
+    "estacionesG95": 370,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "29-05-2025",
+    "gasolina95_E5": 1.464,
+    "gasoleoA": 1.639,
+    "estacionesG95": 370,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "30-05-2025",
+    "gasolina95_E5": 1.464,
+    "gasoleoA": 1.642,
+    "estacionesG95": 370,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "31-05-2025",
+    "gasolina95_E5": 1.464,
+    "gasoleoA": 1.638,
+    "estacionesG95": 370,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "01-06-2025",
+    "gasolina95_E5": 1.464,
+    "gasoleoA": 1.638,
+    "estacionesG95": 370,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "02-06-2025",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.637,
+    "estacionesG95": 372,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "03-06-2025",
+    "gasolina95_E5": 1.459,
+    "gasoleoA": 1.634,
+    "estacionesG95": 372,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "04-06-2025",
+    "gasolina95_E5": 1.459,
+    "gasoleoA": 1.634,
+    "estacionesG95": 376,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "05-06-2025",
+    "gasolina95_E5": 1.459,
+    "gasoleoA": 1.633,
+    "estacionesG95": 377,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "06-06-2025",
+    "gasolina95_E5": 1.458,
+    "gasoleoA": 1.636,
+    "estacionesG95": 379,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "07-06-2025",
+    "gasolina95_E5": 1.458,
+    "gasoleoA": 1.634,
+    "estacionesG95": 379,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "08-06-2025",
+    "gasolina95_E5": 1.459,
+    "gasoleoA": 1.636,
+    "estacionesG95": 376,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "09-06-2025",
+    "gasolina95_E5": 1.459,
+    "gasoleoA": 1.635,
+    "estacionesG95": 376,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "10-06-2025",
+    "gasolina95_E5": 1.458,
+    "gasoleoA": 1.634,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "11-06-2025",
+    "gasolina95_E5": 1.459,
+    "gasoleoA": 1.634,
+    "estacionesG95": 374,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "12-06-2025",
+    "gasolina95_E5": 1.46,
+    "gasoleoA": 1.635,
+    "estacionesG95": 371,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "13-06-2025",
+    "gasolina95_E5": 1.462,
+    "gasoleoA": 1.642,
+    "estacionesG95": 375,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "14-06-2025",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.64,
+    "estacionesG95": 374,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "15-06-2025",
+    "gasolina95_E5": 1.466,
+    "gasoleoA": 1.645,
+    "estacionesG95": 375,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "16-06-2025",
+    "gasolina95_E5": 1.47,
+    "gasoleoA": 1.647,
+    "estacionesG95": 376,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "17-06-2025",
+    "gasolina95_E5": 1.475,
+    "gasoleoA": 1.649,
+    "estacionesG95": 375,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "18-06-2025",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.65,
+    "estacionesG95": 371,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "19-06-2025",
+    "gasolina95_E5": 1.483,
+    "gasoleoA": 1.655,
+    "estacionesG95": 373,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "20-06-2025",
+    "gasolina95_E5": 1.488,
+    "gasoleoA": 1.664,
+    "estacionesG95": 374,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "21-06-2025",
+    "gasolina95_E5": 1.493,
+    "gasoleoA": 1.666,
+    "estacionesG95": 374,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "22-06-2025",
+    "gasolina95_E5": 1.494,
+    "gasoleoA": 1.667,
+    "estacionesG95": 374,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "23-06-2025",
+    "gasolina95_E5": 1.5,
+    "gasoleoA": 1.67,
+    "estacionesG95": 375,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "24-06-2025",
+    "gasolina95_E5": 1.503,
+    "gasoleoA": 1.673,
+    "estacionesG95": 375,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "25-06-2025",
+    "gasolina95_E5": 1.503,
+    "gasoleoA": 1.675,
+    "estacionesG95": 375,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "26-06-2025",
+    "gasolina95_E5": 1.505,
+    "gasoleoA": 1.674,
+    "estacionesG95": 375,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "27-06-2025",
+    "gasolina95_E5": 1.503,
+    "gasoleoA": 1.677,
+    "estacionesG95": 375,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "28-06-2025",
+    "gasolina95_E5": 1.502,
+    "gasoleoA": 1.673,
+    "estacionesG95": 375,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "29-06-2025",
+    "gasolina95_E5": 1.498,
+    "gasoleoA": 1.668,
+    "estacionesG95": 376,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "30-06-2025",
+    "gasolina95_E5": 1.496,
+    "gasoleoA": 1.666,
+    "estacionesG95": 377,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "01-07-2025",
+    "gasolina95_E5": 1.493,
+    "gasoleoA": 1.664,
+    "estacionesG95": 377,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "02-07-2025",
+    "gasolina95_E5": 1.491,
+    "gasoleoA": 1.661,
+    "estacionesG95": 376,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "03-07-2025",
+    "gasolina95_E5": 1.49,
+    "gasoleoA": 1.66,
+    "estacionesG95": 376,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "04-07-2025",
+    "gasolina95_E5": 1.489,
+    "gasoleoA": 1.664,
+    "estacionesG95": 377,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "05-07-2025",
+    "gasolina95_E5": 1.488,
+    "gasoleoA": 1.661,
+    "estacionesG95": 375,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "06-07-2025",
+    "gasolina95_E5": 1.488,
+    "gasoleoA": 1.661,
+    "estacionesG95": 375,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "07-07-2025",
+    "gasolina95_E5": 1.488,
+    "gasoleoA": 1.66,
+    "estacionesG95": 377,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "08-07-2025",
+    "gasolina95_E5": 1.489,
+    "gasoleoA": 1.66,
+    "estacionesG95": 377,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "09-07-2025",
+    "gasolina95_E5": 1.488,
+    "gasoleoA": 1.661,
+    "estacionesG95": 373,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "10-07-2025",
+    "gasolina95_E5": 1.489,
+    "gasoleoA": 1.662,
+    "estacionesG95": 373,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "11-07-2025",
+    "gasolina95_E5": 1.49,
+    "gasoleoA": 1.668,
+    "estacionesG95": 375,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "12-07-2025",
+    "gasolina95_E5": 1.49,
+    "gasoleoA": 1.664,
+    "estacionesG95": 375,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "13-07-2025",
+    "gasolina95_E5": 1.491,
+    "gasoleoA": 1.666,
+    "estacionesG95": 374,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "14-07-2025",
+    "gasolina95_E5": 1.493,
+    "gasoleoA": 1.666,
+    "estacionesG95": 373,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "15-07-2025",
+    "gasolina95_E5": 1.492,
+    "gasoleoA": 1.663,
+    "estacionesG95": 370,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "16-07-2025",
+    "gasolina95_E5": 1.492,
+    "gasoleoA": 1.663,
+    "estacionesG95": 371,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "17-07-2025",
+    "gasolina95_E5": 1.492,
+    "gasoleoA": 1.664,
+    "estacionesG95": 369,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "18-07-2025",
+    "gasolina95_E5": 1.49,
+    "gasoleoA": 1.665,
+    "estacionesG95": 368,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "19-07-2025",
+    "gasolina95_E5": 1.493,
+    "gasoleoA": 1.665,
+    "estacionesG95": 367,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "20-07-2025",
+    "gasolina95_E5": 1.49,
+    "gasoleoA": 1.661,
+    "estacionesG95": 368,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "21-07-2025",
+    "gasolina95_E5": 1.49,
+    "gasoleoA": 1.661,
+    "estacionesG95": 370,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "22-07-2025",
+    "gasolina95_E5": 1.492,
+    "gasoleoA": 1.665,
+    "estacionesG95": 371,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "23-07-2025",
+    "gasolina95_E5": 1.49,
+    "gasoleoA": 1.661,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "24-07-2025",
+    "gasolina95_E5": 1.488,
+    "gasoleoA": 1.657,
+    "estacionesG95": 375,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "25-07-2025",
+    "gasolina95_E5": 1.487,
+    "gasoleoA": 1.661,
+    "estacionesG95": 375,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "26-07-2025",
+    "gasolina95_E5": 1.487,
+    "gasoleoA": 1.657,
+    "estacionesG95": 374,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "27-07-2025",
+    "gasolina95_E5": 1.486,
+    "gasoleoA": 1.657,
+    "estacionesG95": 373,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "28-07-2025",
+    "gasolina95_E5": 1.485,
+    "gasoleoA": 1.657,
+    "estacionesG95": 374,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "29-07-2025",
+    "gasolina95_E5": 1.485,
+    "gasoleoA": 1.656,
+    "estacionesG95": 374,
+    "estacionesGasA": 116
+  },
+  {
+    "fecha": "30-07-2025",
+    "gasolina95_E5": 1.485,
+    "gasoleoA": 1.657,
+    "estacionesG95": 370,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "31-07-2025",
+    "gasolina95_E5": 1.485,
+    "gasoleoA": 1.656,
+    "estacionesG95": 370,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "01-08-2025",
+    "gasolina95_E5": 1.485,
+    "gasoleoA": 1.667,
+    "estacionesG95": 372,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "02-08-2025",
+    "gasolina95_E5": 1.484,
+    "gasoleoA": 1.666,
+    "estacionesG95": 372,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "03-08-2025",
+    "gasolina95_E5": 1.484,
+    "gasoleoA": 1.663,
+    "estacionesG95": 375,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "04-08-2025",
+    "gasolina95_E5": 1.484,
+    "gasoleoA": 1.661,
+    "estacionesG95": 378,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "05-08-2025",
+    "gasolina95_E5": 1.484,
+    "gasoleoA": 1.66,
+    "estacionesG95": 375,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "06-08-2025",
+    "gasolina95_E5": 1.484,
+    "gasoleoA": 1.66,
+    "estacionesG95": 376,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "07-08-2025",
+    "gasolina95_E5": 1.484,
+    "gasoleoA": 1.66,
+    "estacionesG95": 373,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "08-08-2025",
+    "gasolina95_E5": 1.483,
+    "gasoleoA": 1.664,
+    "estacionesG95": 374,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "09-08-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.659,
+    "estacionesG95": 374,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "10-08-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.659,
+    "estacionesG95": 374,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "11-08-2025",
+    "gasolina95_E5": 1.481,
+    "gasoleoA": 1.657,
+    "estacionesG95": 374,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "12-08-2025",
+    "gasolina95_E5": 1.481,
+    "gasoleoA": 1.658,
+    "estacionesG95": 371,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "13-08-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.661,
+    "estacionesG95": 370,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "14-08-2025",
+    "gasolina95_E5": 1.48,
+    "gasoleoA": 1.659,
+    "estacionesG95": 369,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "15-08-2025",
+    "gasolina95_E5": 1.478,
+    "gasoleoA": 1.661,
+    "estacionesG95": 369,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "16-08-2025",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.661,
+    "estacionesG95": 368,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "17-08-2025",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.662,
+    "estacionesG95": 366,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "18-08-2025",
+    "gasolina95_E5": 1.478,
+    "gasoleoA": 1.661,
+    "estacionesG95": 364,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "19-08-2025",
+    "gasolina95_E5": 1.477,
+    "gasoleoA": 1.658,
+    "estacionesG95": 361,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "20-08-2025",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.661,
+    "estacionesG95": 359,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "21-08-2025",
+    "gasolina95_E5": 1.476,
+    "gasoleoA": 1.658,
+    "estacionesG95": 359,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "22-08-2025",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.667,
+    "estacionesG95": 360,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "23-08-2025",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.662,
+    "estacionesG95": 359,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "24-08-2025",
+    "gasolina95_E5": 1.478,
+    "gasoleoA": 1.662,
+    "estacionesG95": 362,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "25-08-2025",
+    "gasolina95_E5": 1.478,
+    "gasoleoA": 1.663,
+    "estacionesG95": 364,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "26-08-2025",
+    "gasolina95_E5": 1.478,
+    "gasoleoA": 1.661,
+    "estacionesG95": 362,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "27-08-2025",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.662,
+    "estacionesG95": 364,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "28-08-2025",
+    "gasolina95_E5": 1.477,
+    "gasoleoA": 1.659,
+    "estacionesG95": 364,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "29-08-2025",
+    "gasolina95_E5": 1.477,
+    "gasoleoA": 1.663,
+    "estacionesG95": 364,
+    "estacionesGasA": 109
+  },
+  {
+    "fecha": "30-08-2025",
+    "gasolina95_E5": 1.476,
+    "gasoleoA": 1.658,
+    "estacionesG95": 365,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "31-08-2025",
+    "gasolina95_E5": 1.476,
+    "gasoleoA": 1.657,
+    "estacionesG95": 364,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "01-09-2025",
+    "gasolina95_E5": 1.476,
+    "gasoleoA": 1.657,
+    "estacionesG95": 369,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "02-09-2025",
+    "gasolina95_E5": 1.476,
+    "gasoleoA": 1.654,
+    "estacionesG95": 366,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "03-09-2025",
+    "gasolina95_E5": 1.476,
+    "gasoleoA": 1.653,
+    "estacionesG95": 369,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "04-09-2025",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.657,
+    "estacionesG95": 370,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "05-09-2025",
+    "gasolina95_E5": 1.48,
+    "gasoleoA": 1.662,
+    "estacionesG95": 369,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "06-09-2025",
+    "gasolina95_E5": 1.48,
+    "gasoleoA": 1.659,
+    "estacionesG95": 367,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "07-09-2025",
+    "gasolina95_E5": 1.48,
+    "gasoleoA": 1.659,
+    "estacionesG95": 365,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "08-09-2025",
+    "gasolina95_E5": 1.48,
+    "gasoleoA": 1.659,
+    "estacionesG95": 362,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "09-09-2025",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.658,
+    "estacionesG95": 363,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "10-09-2025",
+    "gasolina95_E5": 1.48,
+    "gasoleoA": 1.658,
+    "estacionesG95": 365,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "11-09-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.662,
+    "estacionesG95": 362,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "12-09-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.666,
+    "estacionesG95": 359,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "13-09-2025",
+    "gasolina95_E5": 1.481,
+    "gasoleoA": 1.661,
+    "estacionesG95": 359,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "14-09-2025",
+    "gasolina95_E5": 1.481,
+    "gasoleoA": 1.663,
+    "estacionesG95": 358,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "15-09-2025",
+    "gasolina95_E5": 1.481,
+    "gasoleoA": 1.66,
+    "estacionesG95": 363,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "16-09-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.66,
+    "estacionesG95": 359,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "17-09-2025",
+    "gasolina95_E5": 1.484,
+    "gasoleoA": 1.665,
+    "estacionesG95": 361,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "18-09-2025",
+    "gasolina95_E5": 1.481,
+    "gasoleoA": 1.662,
+    "estacionesG95": 357,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "19-09-2025",
+    "gasolina95_E5": 1.481,
+    "gasoleoA": 1.667,
+    "estacionesG95": 358,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "20-09-2025",
+    "gasolina95_E5": 1.481,
+    "gasoleoA": 1.662,
+    "estacionesG95": 358,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "21-09-2025",
+    "gasolina95_E5": 1.48,
+    "gasoleoA": 1.662,
+    "estacionesG95": 356,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "22-09-2025",
+    "gasolina95_E5": 1.481,
+    "gasoleoA": 1.659,
+    "estacionesG95": 359,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "23-09-2025",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.657,
+    "estacionesG95": 361,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "24-09-2025",
+    "gasolina95_E5": 1.478,
+    "gasoleoA": 1.654,
+    "estacionesG95": 362,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "25-09-2025",
+    "gasolina95_E5": 1.478,
+    "gasoleoA": 1.656,
+    "estacionesG95": 363,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "26-09-2025",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.66,
+    "estacionesG95": 363,
+    "estacionesGasA": 109
+  },
+  {
+    "fecha": "27-09-2025",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.658,
+    "estacionesG95": 365,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "28-09-2025",
+    "gasolina95_E5": 1.481,
+    "gasoleoA": 1.662,
+    "estacionesG95": 365,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "29-09-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.664,
+    "estacionesG95": 366,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "30-09-2025",
+    "gasolina95_E5": 1.485,
+    "gasoleoA": 1.668,
+    "estacionesG95": 367,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "01-10-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.665,
+    "estacionesG95": 366,
+    "estacionesGasA": 109
+  },
+  {
+    "fecha": "02-10-2025",
+    "gasolina95_E5": 1.48,
+    "gasoleoA": 1.662,
+    "estacionesG95": 368,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "03-10-2025",
+    "gasolina95_E5": 1.478,
+    "gasoleoA": 1.663,
+    "estacionesG95": 369,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "04-10-2025",
+    "gasolina95_E5": 1.476,
+    "gasoleoA": 1.656,
+    "estacionesG95": 367,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "05-10-2025",
+    "gasolina95_E5": 1.476,
+    "gasoleoA": 1.656,
+    "estacionesG95": 368,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "06-10-2025",
+    "gasolina95_E5": 1.475,
+    "gasoleoA": 1.654,
+    "estacionesG95": 369,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "07-10-2025",
+    "gasolina95_E5": 1.475,
+    "gasoleoA": 1.653,
+    "estacionesG95": 370,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "08-10-2025",
+    "gasolina95_E5": 1.474,
+    "gasoleoA": 1.652,
+    "estacionesG95": 371,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "09-10-2025",
+    "gasolina95_E5": 1.472,
+    "gasoleoA": 1.65,
+    "estacionesG95": 371,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "10-10-2025",
+    "gasolina95_E5": 1.472,
+    "gasoleoA": 1.654,
+    "estacionesG95": 368,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "11-10-2025",
+    "gasolina95_E5": 1.472,
+    "gasoleoA": 1.65,
+    "estacionesG95": 366,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "12-10-2025",
+    "gasolina95_E5": 1.472,
+    "gasoleoA": 1.648,
+    "estacionesG95": 363,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "13-10-2025",
+    "gasolina95_E5": 1.472,
+    "gasoleoA": 1.648,
+    "estacionesG95": 364,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "14-10-2025",
+    "gasolina95_E5": 1.47,
+    "gasoleoA": 1.646,
+    "estacionesG95": 369,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "15-10-2025",
+    "gasolina95_E5": 1.469,
+    "gasoleoA": 1.645,
+    "estacionesG95": 370,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "16-10-2025",
+    "gasolina95_E5": 1.466,
+    "gasoleoA": 1.643,
+    "estacionesG95": 369,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "17-10-2025",
+    "gasolina95_E5": 1.464,
+    "gasoleoA": 1.646,
+    "estacionesG95": 369,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "18-10-2025",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.64,
+    "estacionesG95": 367,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "19-10-2025",
+    "gasolina95_E5": 1.465,
+    "gasoleoA": 1.643,
+    "estacionesG95": 365,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "20-10-2025",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.643,
+    "estacionesG95": 366,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "21-10-2025",
+    "gasolina95_E5": 1.46,
+    "gasoleoA": 1.639,
+    "estacionesG95": 365,
+    "estacionesGasA": 109
+  },
+  {
+    "fecha": "22-10-2025",
+    "gasolina95_E5": 1.459,
+    "gasoleoA": 1.639,
+    "estacionesG95": 365,
+    "estacionesGasA": 109
+  },
+  {
+    "fecha": "23-10-2025",
+    "gasolina95_E5": 1.459,
+    "gasoleoA": 1.639,
+    "estacionesG95": 363,
+    "estacionesGasA": 109
+  },
+  {
+    "fecha": "24-10-2025",
+    "gasolina95_E5": 1.459,
+    "gasoleoA": 1.646,
+    "estacionesG95": 362,
+    "estacionesGasA": 108
+  },
+  {
+    "fecha": "25-10-2025",
+    "gasolina95_E5": 1.462,
+    "gasoleoA": 1.647,
+    "estacionesG95": 362,
+    "estacionesGasA": 108
+  },
+  {
+    "fecha": "26-10-2025",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.65,
+    "estacionesG95": 361,
+    "estacionesGasA": 107
+  },
+  {
+    "fecha": "27-10-2025",
+    "gasolina95_E5": 1.466,
+    "gasoleoA": 1.651,
+    "estacionesG95": 363,
+    "estacionesGasA": 109
+  },
+  {
+    "fecha": "28-10-2025",
+    "gasolina95_E5": 1.466,
+    "gasoleoA": 1.65,
+    "estacionesG95": 364,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "29-10-2025",
+    "gasolina95_E5": 1.467,
+    "gasoleoA": 1.651,
+    "estacionesG95": 365,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "30-10-2025",
+    "gasolina95_E5": 1.467,
+    "gasoleoA": 1.651,
+    "estacionesG95": 366,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "31-10-2025",
+    "gasolina95_E5": 1.468,
+    "gasoleoA": 1.654,
+    "estacionesG95": 367,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "01-11-2025",
+    "gasolina95_E5": 1.468,
+    "gasoleoA": 1.649,
+    "estacionesG95": 363,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "02-11-2025",
+    "gasolina95_E5": 1.468,
+    "gasoleoA": 1.649,
+    "estacionesG95": 367,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "03-11-2025",
+    "gasolina95_E5": 1.468,
+    "gasoleoA": 1.649,
+    "estacionesG95": 371,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "04-11-2025",
+    "gasolina95_E5": 1.47,
+    "gasoleoA": 1.652,
+    "estacionesG95": 367,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "05-11-2025",
+    "gasolina95_E5": 1.471,
+    "gasoleoA": 1.653,
+    "estacionesG95": 367,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "06-11-2025",
+    "gasolina95_E5": 1.472,
+    "gasoleoA": 1.654,
+    "estacionesG95": 371,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "07-11-2025",
+    "gasolina95_E5": 1.474,
+    "gasoleoA": 1.658,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "08-11-2025",
+    "gasolina95_E5": 1.474,
+    "gasoleoA": 1.654,
+    "estacionesG95": 372,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "09-11-2025",
+    "gasolina95_E5": 1.476,
+    "gasoleoA": 1.659,
+    "estacionesG95": 372,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "10-11-2025",
+    "gasolina95_E5": 1.477,
+    "gasoleoA": 1.659,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "11-11-2025",
+    "gasolina95_E5": 1.477,
+    "gasoleoA": 1.658,
+    "estacionesG95": 371,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "12-11-2025",
+    "gasolina95_E5": 1.477,
+    "gasoleoA": 1.656,
+    "estacionesG95": 369,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "13-11-2025",
+    "gasolina95_E5": 1.48,
+    "gasoleoA": 1.662,
+    "estacionesG95": 369,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "14-11-2025",
+    "gasolina95_E5": 1.481,
+    "gasoleoA": 1.667,
+    "estacionesG95": 368,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "15-11-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.664,
+    "estacionesG95": 369,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "16-11-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.664,
+    "estacionesG95": 369,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "17-11-2025",
+    "gasolina95_E5": 1.483,
+    "gasoleoA": 1.665,
+    "estacionesG95": 371,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "18-11-2025",
+    "gasolina95_E5": 1.484,
+    "gasoleoA": 1.664,
+    "estacionesG95": 370,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "19-11-2025",
+    "gasolina95_E5": 1.485,
+    "gasoleoA": 1.666,
+    "estacionesG95": 370,
+    "estacionesGasA": 109
+  },
+  {
+    "fecha": "20-11-2025",
+    "gasolina95_E5": 1.486,
+    "gasoleoA": 1.666,
+    "estacionesG95": 373,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "21-11-2025",
+    "gasolina95_E5": 1.487,
+    "gasoleoA": 1.67,
+    "estacionesG95": 369,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "22-11-2025",
+    "gasolina95_E5": 1.487,
+    "gasoleoA": 1.666,
+    "estacionesG95": 367,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "23-11-2025",
+    "gasolina95_E5": 1.488,
+    "gasoleoA": 1.667,
+    "estacionesG95": 366,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "24-11-2025",
+    "gasolina95_E5": 1.488,
+    "gasoleoA": 1.666,
+    "estacionesG95": 370,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "25-11-2025",
+    "gasolina95_E5": 1.488,
+    "gasoleoA": 1.664,
+    "estacionesG95": 371,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "26-11-2025",
+    "gasolina95_E5": 1.485,
+    "gasoleoA": 1.661,
+    "estacionesG95": 372,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "27-11-2025",
+    "gasolina95_E5": 1.484,
+    "gasoleoA": 1.659,
+    "estacionesG95": 371,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "28-11-2025",
+    "gasolina95_E5": 1.483,
+    "gasoleoA": 1.661,
+    "estacionesG95": 371,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "29-11-2025",
+    "gasolina95_E5": 1.484,
+    "gasoleoA": 1.658,
+    "estacionesG95": 371,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "30-11-2025",
+    "gasolina95_E5": 1.483,
+    "gasoleoA": 1.657,
+    "estacionesG95": 366,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "01-12-2025",
+    "gasolina95_E5": 1.483,
+    "gasoleoA": 1.657,
+    "estacionesG95": 368,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "02-12-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.657,
+    "estacionesG95": 373,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "03-12-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.657,
+    "estacionesG95": 375,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "04-12-2025",
+    "gasolina95_E5": 1.485,
+    "gasoleoA": 1.66,
+    "estacionesG95": 376,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "05-12-2025",
+    "gasolina95_E5": 1.484,
+    "gasoleoA": 1.662,
+    "estacionesG95": 376,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "06-12-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.654,
+    "estacionesG95": 374,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "07-12-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.655,
+    "estacionesG95": 374,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "08-12-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.655,
+    "estacionesG95": 374,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "09-12-2025",
+    "gasolina95_E5": 1.482,
+    "gasoleoA": 1.654,
+    "estacionesG95": 372,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "10-12-2025",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.65,
+    "estacionesG95": 373,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "11-12-2025",
+    "gasolina95_E5": 1.478,
+    "gasoleoA": 1.65,
+    "estacionesG95": 371,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "12-12-2025",
+    "gasolina95_E5": 1.478,
+    "gasoleoA": 1.656,
+    "estacionesG95": 374,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "13-12-2025",
+    "gasolina95_E5": 1.477,
+    "gasoleoA": 1.65,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "14-12-2025",
+    "gasolina95_E5": 1.474,
+    "gasoleoA": 1.646,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "15-12-2025",
+    "gasolina95_E5": 1.472,
+    "gasoleoA": 1.644,
+    "estacionesG95": 376,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "16-12-2025",
+    "gasolina95_E5": 1.471,
+    "gasoleoA": 1.645,
+    "estacionesG95": 376,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "17-12-2025",
+    "gasolina95_E5": 1.469,
+    "gasoleoA": 1.642,
+    "estacionesG95": 374,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "18-12-2025",
+    "gasolina95_E5": 1.467,
+    "gasoleoA": 1.64,
+    "estacionesG95": 372,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "19-12-2025",
+    "gasolina95_E5": 1.464,
+    "gasoleoA": 1.641,
+    "estacionesG95": 372,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "20-12-2025",
+    "gasolina95_E5": 1.462,
+    "gasoleoA": 1.636,
+    "estacionesG95": 369,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "21-12-2025",
+    "gasolina95_E5": 1.459,
+    "gasoleoA": 1.633,
+    "estacionesG95": 370,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "22-12-2025",
+    "gasolina95_E5": 1.457,
+    "gasoleoA": 1.632,
+    "estacionesG95": 370,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "23-12-2025",
+    "gasolina95_E5": 1.456,
+    "gasoleoA": 1.634,
+    "estacionesG95": 371,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "24-12-2025",
+    "gasolina95_E5": 1.456,
+    "gasoleoA": 1.634,
+    "estacionesG95": 372,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "25-12-2025",
+    "gasolina95_E5": 1.457,
+    "gasoleoA": 1.634,
+    "estacionesG95": 371,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "26-12-2025",
+    "gasolina95_E5": 1.456,
+    "gasoleoA": 1.635,
+    "estacionesG95": 365,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "27-12-2025",
+    "gasolina95_E5": 1.457,
+    "gasoleoA": 1.633,
+    "estacionesG95": 367,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "28-12-2025",
+    "gasolina95_E5": 1.457,
+    "gasoleoA": 1.633,
+    "estacionesG95": 367,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "29-12-2025",
+    "gasolina95_E5": 1.456,
+    "gasoleoA": 1.633,
+    "estacionesG95": 368,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "30-12-2025",
+    "gasolina95_E5": 1.457,
+    "gasoleoA": 1.637,
+    "estacionesG95": 366,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "31-12-2025",
+    "gasolina95_E5": 1.457,
+    "gasoleoA": 1.636,
+    "estacionesG95": 364,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "01-01-2026",
+    "gasolina95_E5": 1.457,
+    "gasoleoA": 1.636,
+    "estacionesG95": 363,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "02-01-2026",
+    "gasolina95_E5": 1.457,
+    "gasoleoA": 1.636,
+    "estacionesG95": 364,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "03-01-2026",
+    "gasolina95_E5": 1.456,
+    "gasoleoA": 1.636,
+    "estacionesG95": 363,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "04-01-2026",
+    "gasolina95_E5": 1.456,
+    "gasoleoA": 1.635,
+    "estacionesG95": 362,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "05-01-2026",
+    "gasolina95_E5": 1.455,
+    "gasoleoA": 1.634,
+    "estacionesG95": 368,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "06-01-2026",
+    "gasolina95_E5": 1.455,
+    "gasoleoA": 1.636,
+    "estacionesG95": 367,
+    "estacionesGasA": 109
+  },
+  {
+    "fecha": "07-01-2026",
+    "gasolina95_E5": 1.455,
+    "gasoleoA": 1.635,
+    "estacionesG95": 371,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "08-01-2026",
+    "gasolina95_E5": 1.455,
+    "gasoleoA": 1.633,
+    "estacionesG95": 373,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "09-01-2026",
+    "gasolina95_E5": 1.454,
+    "gasoleoA": 1.638,
+    "estacionesG95": 378,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "10-01-2026",
+    "gasolina95_E5": 1.453,
+    "gasoleoA": 1.634,
+    "estacionesG95": 378,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "11-01-2026",
+    "gasolina95_E5": 1.454,
+    "gasoleoA": 1.635,
+    "estacionesG95": 377,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "12-01-2026",
+    "gasolina95_E5": 1.453,
+    "gasoleoA": 1.636,
+    "estacionesG95": 376,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "13-01-2026",
+    "gasolina95_E5": 1.453,
+    "gasoleoA": 1.636,
+    "estacionesG95": 374,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "14-01-2026",
+    "gasolina95_E5": 1.453,
+    "gasoleoA": 1.635,
+    "estacionesG95": 374,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "15-01-2026",
+    "gasolina95_E5": 1.457,
+    "gasoleoA": 1.641,
+    "estacionesG95": 374,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "16-01-2026",
+    "gasolina95_E5": 1.458,
+    "gasoleoA": 1.648,
+    "estacionesG95": 374,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "17-01-2026",
+    "gasolina95_E5": 1.458,
+    "gasoleoA": 1.645,
+    "estacionesG95": 372,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "18-01-2026",
+    "gasolina95_E5": 1.458,
+    "gasoleoA": 1.644,
+    "estacionesG95": 372,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "19-01-2026",
+    "gasolina95_E5": 1.459,
+    "gasoleoA": 1.645,
+    "estacionesG95": 375,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "20-01-2026",
+    "gasolina95_E5": 1.46,
+    "gasoleoA": 1.646,
+    "estacionesG95": 372,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "21-01-2026",
+    "gasolina95_E5": 1.46,
+    "gasoleoA": 1.646,
+    "estacionesG95": 375,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "22-01-2026",
+    "gasolina95_E5": 1.464,
+    "gasoleoA": 1.651,
+    "estacionesG95": 373,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "23-01-2026",
+    "gasolina95_E5": 1.466,
+    "gasoleoA": 1.656,
+    "estacionesG95": 375,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "24-01-2026",
+    "gasolina95_E5": 1.467,
+    "gasoleoA": 1.653,
+    "estacionesG95": 376,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "25-01-2026",
+    "gasolina95_E5": 1.467,
+    "gasoleoA": 1.653,
+    "estacionesG95": 376,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "26-01-2026",
+    "gasolina95_E5": 1.468,
+    "gasoleoA": 1.654,
+    "estacionesG95": 376,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "27-01-2026",
+    "gasolina95_E5": 1.47,
+    "gasoleoA": 1.655,
+    "estacionesG95": 375,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "28-01-2026",
+    "gasolina95_E5": 1.47,
+    "gasoleoA": 1.655,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "29-01-2026",
+    "gasolina95_E5": 1.47,
+    "gasoleoA": 1.654,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "30-01-2026",
+    "gasolina95_E5": 1.472,
+    "gasoleoA": 1.66,
+    "estacionesG95": 374,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "31-01-2026",
+    "gasolina95_E5": 1.473,
+    "gasoleoA": 1.659,
+    "estacionesG95": 373,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "01-02-2026",
+    "gasolina95_E5": 1.475,
+    "gasoleoA": 1.662,
+    "estacionesG95": 373,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "02-02-2026",
+    "gasolina95_E5": 1.477,
+    "gasoleoA": 1.662,
+    "estacionesG95": 376,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "03-02-2026",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.664,
+    "estacionesG95": 371,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "04-02-2026",
+    "gasolina95_E5": 1.477,
+    "gasoleoA": 1.661,
+    "estacionesG95": 371,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "05-02-2026",
+    "gasolina95_E5": 1.476,
+    "gasoleoA": 1.661,
+    "estacionesG95": 371,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "06-02-2026",
+    "gasolina95_E5": 1.477,
+    "gasoleoA": 1.665,
+    "estacionesG95": 369,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "07-02-2026",
+    "gasolina95_E5": 1.477,
+    "gasoleoA": 1.662,
+    "estacionesG95": 369,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "08-02-2026",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.663,
+    "estacionesG95": 369,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "09-02-2026",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.664,
+    "estacionesG95": 370,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "10-02-2026",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.664,
+    "estacionesG95": 372,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "11-02-2026",
+    "gasolina95_E5": 1.48,
+    "gasoleoA": 1.665,
+    "estacionesG95": 372,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "12-02-2026",
+    "gasolina95_E5": 1.478,
+    "gasoleoA": 1.663,
+    "estacionesG95": 374,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "13-02-2026",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.668,
+    "estacionesG95": 375,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "14-02-2026",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.665,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "15-02-2026",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.664,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "16-02-2026",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.664,
+    "estacionesG95": 374,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "17-02-2026",
+    "gasolina95_E5": 1.479,
+    "gasoleoA": 1.665,
+    "estacionesG95": 374,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "18-02-2026",
+    "gasolina95_E5": 1.48,
+    "gasoleoA": 1.665,
+    "estacionesG95": 374,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "19-02-2026",
+    "gasolina95_E5": 1.481,
+    "gasoleoA": 1.666,
+    "estacionesG95": 372,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "20-02-2026",
+    "gasolina95_E5": 1.485,
+    "gasoleoA": 1.674,
+    "estacionesG95": 373,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "21-02-2026",
+    "gasolina95_E5": 1.486,
+    "gasoleoA": 1.673,
+    "estacionesG95": 374,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "22-02-2026",
+    "gasolina95_E5": 1.486,
+    "gasoleoA": 1.673,
+    "estacionesG95": 374,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "23-02-2026",
+    "gasolina95_E5": 1.488,
+    "gasoleoA": 1.674,
+    "estacionesG95": 377,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "24-02-2026",
+    "gasolina95_E5": 1.49,
+    "gasoleoA": 1.677,
+    "estacionesG95": 373,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "25-02-2026",
+    "gasolina95_E5": 1.492,
+    "gasoleoA": 1.681,
+    "estacionesG95": 374,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "26-02-2026",
+    "gasolina95_E5": 1.494,
+    "gasoleoA": 1.681,
+    "estacionesG95": 377,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "27-02-2026",
+    "gasolina95_E5": 1.496,
+    "gasoleoA": 1.686,
+    "estacionesG95": 377,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "28-02-2026",
+    "gasolina95_E5": 1.498,
+    "gasoleoA": 1.687,
+    "estacionesG95": 376,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "01-03-2026",
+    "gasolina95_E5": 1.499,
+    "gasoleoA": 1.688,
+    "estacionesG95": 376,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "02-03-2026",
+    "gasolina95_E5": 1.509,
+    "gasoleoA": 1.69,
+    "estacionesG95": 378,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "03-03-2026",
+    "gasolina95_E5": 1.526,
+    "gasoleoA": 1.696,
+    "estacionesG95": 380,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "04-03-2026",
+    "gasolina95_E5": 1.558,
+    "gasoleoA": 1.715,
+    "estacionesG95": 381,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "05-03-2026",
+    "gasolina95_E5": 1.586,
+    "gasoleoA": 1.744,
+    "estacionesG95": 381,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "06-03-2026",
+    "gasolina95_E5": 1.616,
+    "gasoleoA": 1.768,
+    "estacionesG95": 380,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "07-03-2026",
+    "gasolina95_E5": 1.634,
+    "gasoleoA": 1.787,
+    "estacionesG95": 381,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "08-03-2026",
+    "gasolina95_E5": 1.642,
+    "gasoleoA": 1.803,
+    "estacionesG95": 381,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "09-03-2026",
+    "gasolina95_E5": 1.661,
+    "gasoleoA": 1.815,
+    "estacionesG95": 381,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "10-03-2026",
+    "gasolina95_E5": 1.676,
+    "gasoleoA": 1.827,
+    "estacionesG95": 381,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "11-03-2026",
+    "gasolina95_E5": 1.697,
+    "gasoleoA": 1.855,
+    "estacionesG95": 380,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "12-03-2026",
+    "gasolina95_E5": 1.702,
+    "gasoleoA": 1.852,
+    "estacionesG95": 380,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "13-03-2026",
+    "gasolina95_E5": 1.718,
+    "gasoleoA": 1.873,
+    "estacionesG95": 380,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "14-03-2026",
+    "gasolina95_E5": 1.729,
+    "gasoleoA": 1.884,
+    "estacionesG95": 380,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "15-03-2026",
+    "gasolina95_E5": 1.736,
+    "gasoleoA": 1.894,
+    "estacionesG95": 380,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "16-03-2026",
+    "gasolina95_E5": 1.749,
+    "gasoleoA": 1.906,
+    "estacionesG95": 382,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "17-03-2026",
+    "gasolina95_E5": 1.761,
+    "gasoleoA": 1.92,
+    "estacionesG95": 383,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "18-03-2026",
+    "gasolina95_E5": 1.774,
+    "gasoleoA": 1.933,
+    "estacionesG95": 382,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "19-03-2026",
+    "gasolina95_E5": 1.784,
+    "gasoleoA": 1.943,
+    "estacionesG95": 382,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "20-03-2026",
+    "gasolina95_E5": 1.81,
+    "gasoleoA": 1.974,
+    "estacionesG95": 382,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "21-03-2026",
+    "gasolina95_E5": 1.81,
+    "gasoleoA": 1.966,
+    "estacionesG95": 382,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "22-03-2026",
+    "gasolina95_E5": 1.632,
+    "gasoleoA": 1.727,
+    "estacionesG95": 383,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "23-03-2026",
+    "gasolina95_E5": 1.604,
+    "gasoleoA": 1.714,
+    "estacionesG95": 383,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "24-03-2026",
+    "gasolina95_E5": 1.595,
+    "gasoleoA": 1.729,
+    "estacionesG95": 382,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "25-03-2026",
+    "gasolina95_E5": 1.587,
+    "gasoleoA": 1.723,
+    "estacionesG95": 382,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "26-03-2026",
+    "gasolina95_E5": 1.58,
+    "gasoleoA": 1.72,
+    "estacionesG95": 383,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "27-03-2026",
+    "gasolina95_E5": 1.564,
+    "gasoleoA": 1.71,
+    "estacionesG95": 385,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "28-03-2026",
+    "gasolina95_E5": 1.563,
+    "gasoleoA": 1.709,
+    "estacionesG95": 385,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "29-03-2026",
+    "gasolina95_E5": 1.562,
+    "gasoleoA": 1.709,
+    "estacionesG95": 385,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "30-03-2026",
+    "gasolina95_E5": 1.559,
+    "gasoleoA": 1.703,
+    "estacionesG95": 385,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "31-03-2026",
+    "gasolina95_E5": 1.556,
+    "gasoleoA": 1.701,
+    "estacionesG95": 385,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "01-04-2026",
+    "gasolina95_E5": 1.561,
+    "gasoleoA": 1.715,
+    "estacionesG95": 387,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "02-04-2026",
+    "gasolina95_E5": 1.561,
+    "gasoleoA": 1.712,
+    "estacionesG95": 387,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "03-04-2026",
+    "gasolina95_E5": 1.563,
+    "gasoleoA": 1.711,
+    "estacionesG95": 387,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "04-04-2026",
+    "gasolina95_E5": 1.565,
+    "gasoleoA": 1.71,
+    "estacionesG95": 387,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "05-04-2026",
+    "gasolina95_E5": 1.569,
+    "gasoleoA": 1.718,
+    "estacionesG95": 387,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "06-04-2026",
+    "gasolina95_E5": 1.573,
+    "gasoleoA": 1.72,
+    "estacionesG95": 387,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "07-04-2026",
+    "gasolina95_E5": 1.575,
+    "gasoleoA": 1.723,
+    "estacionesG95": 387,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "08-04-2026",
+    "gasolina95_E5": 1.576,
+    "gasoleoA": 1.723,
+    "estacionesG95": 386,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "09-04-2026",
+    "gasolina95_E5": 1.571,
+    "gasoleoA": 1.717,
+    "estacionesG95": 386,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "10-04-2026",
+    "gasolina95_E5": 1.558,
+    "gasoleoA": 1.705,
+    "estacionesG95": 384,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "11-04-2026",
+    "gasolina95_E5": 1.553,
+    "gasoleoA": 1.695,
+    "estacionesG95": 381,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "12-04-2026",
+    "gasolina95_E5": 1.552,
+    "gasoleoA": 1.695,
+    "estacionesG95": 382,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "13-04-2026",
+    "gasolina95_E5": 1.549,
+    "gasoleoA": 1.692,
+    "estacionesG95": 382,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "14-04-2026",
+    "gasolina95_E5": 1.543,
+    "gasoleoA": 1.691,
+    "estacionesG95": 384,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "15-04-2026",
+    "gasolina95_E5": 1.538,
+    "gasoleoA": 1.69,
+    "estacionesG95": 384,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "16-04-2026",
+    "gasolina95_E5": 1.53,
+    "gasoleoA": 1.683,
+    "estacionesG95": 385,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "17-04-2026",
+    "gasolina95_E5": 1.522,
+    "gasoleoA": 1.679,
+    "estacionesG95": 385,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "18-04-2026",
+    "gasolina95_E5": 1.519,
+    "gasoleoA": 1.675,
+    "estacionesG95": 383,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "19-04-2026",
+    "gasolina95_E5": 1.515,
+    "gasoleoA": 1.669,
+    "estacionesG95": 383,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "20-04-2026",
+    "gasolina95_E5": 1.51,
+    "gasoleoA": 1.665,
+    "estacionesG95": 380,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "21-04-2026",
+    "gasolina95_E5": 1.504,
+    "gasoleoA": 1.661,
+    "estacionesG95": 382,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "22-04-2026",
+    "gasolina95_E5": 1.502,
+    "gasoleoA": 1.661,
+    "estacionesG95": 383,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "23-04-2026",
+    "gasolina95_E5": 1.505,
+    "gasoleoA": 1.667,
+    "estacionesG95": 384,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "24-04-2026",
+    "gasolina95_E5": 1.514,
+    "gasoleoA": 1.687,
+    "estacionesG95": 384,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "25-04-2026",
+    "gasolina95_E5": 1.52,
+    "gasoleoA": 1.693,
+    "estacionesG95": 384,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "26-04-2026",
+    "gasolina95_E5": 1.522,
+    "gasoleoA": 1.695,
+    "estacionesG95": 384,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "27-04-2026",
+    "gasolina95_E5": 1.525,
+    "gasoleoA": 1.697,
+    "estacionesG95": 384,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "28-04-2026",
+    "gasolina95_E5": 1.526,
+    "gasoleoA": 1.698,
+    "estacionesG95": 385,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "29-04-2026",
+    "gasolina95_E5": 1.526,
+    "gasoleoA": 1.699,
+    "estacionesG95": 383,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "30-04-2026",
+    "gasolina95_E5": 1.528,
+    "gasoleoA": 1.705,
+    "estacionesG95": 384,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "01-05-2026",
+    "gasolina95_E5": 1.535,
+    "gasoleoA": 1.713,
+    "estacionesG95": 380,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "02-05-2026",
+    "gasolina95_E5": 1.537,
+    "gasoleoA": 1.715,
+    "estacionesG95": 380,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "03-05-2026",
+    "gasolina95_E5": 1.538,
+    "gasoleoA": 1.716,
+    "estacionesG95": 379,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "04-05-2026",
+    "gasolina95_E5": 1.543,
+    "gasoleoA": 1.719,
+    "estacionesG95": 379,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "05-05-2026",
+    "gasolina95_E5": 1.545,
+    "gasoleoA": 1.721,
+    "estacionesG95": 379,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "06-05-2026",
+    "gasolina95_E5": 1.548,
+    "gasoleoA": 1.722,
+    "estacionesG95": 378,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "07-05-2026",
+    "gasolina95_E5": 1.551,
+    "gasoleoA": 1.727,
+    "estacionesG95": 377,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "08-05-2026",
+    "gasolina95_E5": 1.546,
+    "gasoleoA": 1.724,
+    "estacionesG95": 373,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "09-05-2026",
+    "gasolina95_E5": 1.545,
+    "gasoleoA": 1.721,
+    "estacionesG95": 372,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "10-05-2026",
+    "gasolina95_E5": 1.545,
+    "gasoleoA": 1.719,
+    "estacionesG95": 372,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "11-05-2026",
+    "gasolina95_E5": 1.545,
+    "gasoleoA": 1.721,
+    "estacionesG95": 374,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "12-05-2026",
+    "gasolina95_E5": 1.545,
+    "gasoleoA": 1.718,
+    "estacionesG95": 372,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "13-05-2026",
+    "gasolina95_E5": 1.548,
+    "gasoleoA": 1.724,
+    "estacionesG95": 373,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "14-05-2026",
+    "gasolina95_E5": 1.554,
+    "gasoleoA": 1.73,
+    "estacionesG95": 375,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "15-05-2026",
+    "gasolina95_E5": 1.555,
+    "gasoleoA": 1.736,
+    "estacionesG95": 372,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "16-05-2026",
+    "gasolina95_E5": 1.555,
+    "gasoleoA": 1.734,
+    "estacionesG95": 371,
+    "estacionesGasA": 109
+  },
+  {
+    "fecha": "17-05-2026",
+    "gasolina95_E5": 1.558,
+    "gasoleoA": 1.739,
+    "estacionesG95": 371,
+    "estacionesGasA": 109
+  },
+  {
+    "fecha": "18-05-2026",
+    "gasolina95_E5": 1.56,
+    "gasoleoA": 1.739,
+    "estacionesG95": 375,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "19-05-2026",
+    "gasolina95_E5": 1.563,
+    "gasoleoA": 1.741,
+    "estacionesG95": 374,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "20-05-2026",
+    "gasolina95_E5": 1.573,
+    "gasoleoA": 1.755,
+    "estacionesG95": 375,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "21-05-2026",
+    "gasolina95_E5": 1.576,
+    "gasoleoA": 1.757,
+    "estacionesG95": 374,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "22-05-2026",
+    "gasolina95_E5": 1.577,
+    "gasoleoA": 1.765,
+    "estacionesG95": 376,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "23-05-2026",
+    "gasolina95_E5": 1.574,
+    "gasoleoA": 1.755,
+    "estacionesG95": 378,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "24-05-2026",
+    "gasolina95_E5": 1.572,
+    "gasoleoA": 1.752,
+    "estacionesG95": 378,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "25-05-2026",
+    "gasolina95_E5": 1.571,
+    "gasoleoA": 1.749,
+    "estacionesG95": 378,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "26-05-2026",
+    "gasolina95_E5": 1.567,
+    "gasoleoA": 1.744,
+    "estacionesG95": 379,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "27-05-2026",
+    "gasolina95_E5": 1.566,
+    "gasoleoA": 1.742,
+    "estacionesG95": 382,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "28-05-2026",
+    "gasolina95_E5": 1.56,
+    "gasoleoA": 1.736,
+    "estacionesG95": 380,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "29-05-2026",
+    "gasolina95_E5": 1.553,
+    "gasoleoA": 1.733,
+    "estacionesG95": 382,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "30-05-2026",
+    "gasolina95_E5": 1.548,
+    "gasoleoA": 1.723,
+    "estacionesG95": 382,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "31-05-2026",
+    "gasolina95_E5": 1.546,
+    "gasoleoA": 1.72,
+    "estacionesG95": 382,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "01-06-2026",
+    "gasolina95_E5": 1.541,
+    "gasoleoA": 1.716,
+    "estacionesG95": 382,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "02-06-2026",
+    "gasolina95_E5": 1.535,
+    "gasoleoA": 1.709,
+    "estacionesG95": 380,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "03-06-2026",
+    "gasolina95_E5": 1.533,
+    "gasoleoA": 1.705,
+    "estacionesG95": 386,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "04-06-2026",
+    "gasolina95_E5": 1.532,
+    "gasoleoA": 1.703,
+    "estacionesG95": 385,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "05-06-2026",
+    "gasolina95_E5": 1.53,
+    "gasoleoA": 1.706,
+    "estacionesG95": 387,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "06-06-2026",
+    "gasolina95_E5": 1.527,
+    "gasoleoA": 1.697,
+    "estacionesG95": 386,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "07-06-2026",
+    "gasolina95_E5": 1.525,
+    "gasoleoA": 1.694,
+    "estacionesG95": 385,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "08-06-2026",
+    "gasolina95_E5": 1.523,
+    "gasoleoA": 1.692,
+    "estacionesG95": 386,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "09-06-2026",
+    "gasolina95_E5": 1.521,
+    "gasoleoA": 1.691,
+    "estacionesG95": 386,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "10-06-2026",
+    "gasolina95_E5": 1.52,
+    "gasoleoA": 1.69,
+    "estacionesG95": 386,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "11-06-2026",
+    "gasolina95_E5": 1.514,
+    "gasoleoA": 1.682,
+    "estacionesG95": 385,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "12-06-2026",
+    "gasolina95_E5": 1.509,
+    "gasoleoA": 1.685,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "13-06-2026",
+    "gasolina95_E5": 1.507,
+    "gasoleoA": 1.68,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "14-06-2026",
+    "gasolina95_E5": 1.502,
+    "gasoleoA": 1.672,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "15-06-2026",
+    "gasolina95_E5": 1.497,
+    "gasoleoA": 1.668,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "16-06-2026",
+    "gasolina95_E5": 1.488,
+    "gasoleoA": 1.659,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "17-06-2026",
+    "gasolina95_E5": 1.48,
+    "gasoleoA": 1.65,
+    "estacionesG95": 387,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "18-06-2026",
+    "gasolina95_E5": 1.472,
+    "gasoleoA": 1.641,
+    "estacionesG95": 386,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "19-06-2026",
+    "gasolina95_E5": 1.466,
+    "gasoleoA": 1.639,
+    "estacionesG95": 386,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "20-06-2026",
+    "gasolina95_E5": 1.463,
+    "gasoleoA": 1.627,
+    "estacionesG95": 384,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "21-06-2026",
+    "gasolina95_E5": 1.462,
+    "gasoleoA": 1.628,
+    "estacionesG95": 384,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "22-06-2026",
+    "gasolina95_E5": 1.46,
+    "gasoleoA": 1.625,
+    "estacionesG95": 384,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "23-06-2026",
+    "gasolina95_E5": 1.457,
+    "gasoleoA": 1.623,
+    "estacionesG95": 383,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "24-06-2026",
+    "gasolina95_E5": 1.454,
+    "gasoleoA": 1.621,
+    "estacionesG95": 383,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "25-06-2026",
+    "gasolina95_E5": 1.45,
+    "gasoleoA": 1.617,
+    "estacionesG95": 383,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "26-06-2026",
+    "gasolina95_E5": 1.449,
+    "gasoleoA": 1.621,
+    "estacionesG95": 384,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "27-06-2026",
+    "gasolina95_E5": 1.448,
+    "gasoleoA": 1.617,
+    "estacionesG95": 384,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "28-06-2026",
+    "gasolina95_E5": 1.448,
+    "gasoleoA": 1.617,
+    "estacionesG95": 384,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "29-06-2026",
+    "gasolina95_E5": 1.446,
+    "gasoleoA": 1.617,
+    "estacionesG95": 382,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "30-06-2026",
+    "gasolina95_E5": 1.451,
+    "gasoleoA": 1.634,
+    "estacionesG95": 382,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "01-07-2026",
+    "gasolina95_E5": 1.53,
+    "gasoleoA": 1.743,
+    "estacionesG95": 386,
+    "estacionesGasA": 110
+  },
+  {
+    "fecha": "02-07-2026",
+    "gasolina95_E5": 1.537,
+    "gasoleoA": 1.724,
+    "estacionesG95": 390,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "03-07-2026",
+    "gasolina95_E5": 1.536,
+    "gasoleoA": 1.729,
+    "estacionesG95": 390,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "04-07-2026",
+    "gasolina95_E5": 1.536,
+    "gasoleoA": 1.722,
+    "estacionesG95": 390,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "05-07-2026",
+    "gasolina95_E5": 1.536,
+    "gasoleoA": 1.722,
+    "estacionesG95": 389,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "06-07-2026",
+    "gasolina95_E5": 1.535,
+    "gasoleoA": 1.722,
+    "estacionesG95": 389,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "07-07-2026",
+    "gasolina95_E5": 1.535,
+    "gasoleoA": 1.721,
+    "estacionesG95": 389,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "08-07-2026",
+    "gasolina95_E5": 1.538,
+    "gasoleoA": 1.726,
+    "estacionesG95": 390,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "09-07-2026",
+    "gasolina95_E5": 1.539,
+    "gasoleoA": 1.728,
+    "estacionesG95": 390,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "10-07-2026",
+    "gasolina95_E5": 1.551,
+    "gasoleoA": 1.747,
+    "estacionesG95": 390,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "11-07-2026",
+    "gasolina95_E5": 1.552,
+    "gasoleoA": 1.746,
+    "estacionesG95": 389,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "12-07-2026",
+    "gasolina95_E5": 1.553,
+    "gasoleoA": 1.747,
+    "estacionesG95": 389,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "13-07-2026",
+    "gasolina95_E5": 1.555,
+    "gasoleoA": 1.75,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "14-07-2026",
+    "gasolina95_E5": 1.557,
+    "gasoleoA": 1.75,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "15-07-2026",
+    "gasolina95_E5": 1.568,
+    "gasoleoA": 1.763,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "16-07-2026",
+    "gasolina95_E5": 1.581,
+    "gasoleoA": 1.779,
+    "estacionesG95": 385,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "17-07-2026",
+    "gasolina95_E5": 1.59,
+    "gasoleoA": 1.795,
+    "estacionesG95": 384,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "18-07-2026",
+    "gasolina95_E5": 1.597,
+    "gasoleoA": 1.8,
+    "estacionesG95": 385,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "19-07-2026",
+    "gasolina95_E5": 1.604,
+    "gasoleoA": 1.811,
+    "estacionesG95": 384,
+    "estacionesGasA": 111
+  },
+  {
+    "fecha": "20-07-2026",
+    "gasolina95_E5": 1.613,
+    "gasoleoA": 1.822,
+    "estacionesG95": 386,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "21-07-2026",
+    "gasolina95_E5": 1.623,
+    "gasoleoA": 1.829,
+    "estacionesG95": 387,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "22-07-2026",
+    "gasolina95_E5": 1.63,
+    "gasoleoA": 1.835,
+    "estacionesG95": 386,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "23-07-2026",
+    "gasolina95_E5": 1.638,
+    "gasoleoA": 1.842,
+    "estacionesG95": 385,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "24-07-2026",
+    "gasolina95_E5": 1.648,
+    "gasoleoA": 1.853,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "25-07-2026",
+    "gasolina95_E5": 1.655,
+    "gasoleoA": 1.855,
+    "estacionesG95": 387,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "26-07-2026",
+    "gasolina95_E5": 1.656,
+    "gasoleoA": 1.857,
+    "estacionesG95": 387,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "27-07-2026",
+    "gasolina95_E5": 1.662,
+    "gasoleoA": 1.861,
+    "estacionesG95": 387,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "28-07-2026",
+    "gasolina95_E5": 1.663,
+    "gasoleoA": 1.861,
+    "estacionesG95": 387,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "29-07-2026",
+    "gasolina95_E5": 1.665,
+    "gasoleoA": 1.861,
+    "estacionesG95": 389,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "30-07-2026",
+    "gasolina95_E5": 1.671,
+    "gasoleoA": 1.863,
+    "estacionesG95": 389,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "31-07-2026",
+    "gasolina95_E5": 1.68,
+    "gasoleoA": 1.878,
+    "estacionesG95": 389,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "01-08-2026",
+    "gasolina95_E5": 1.715,
+    "gasoleoA": 1.917,
+    "estacionesG95": 389,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "02-08-2026",
+    "gasolina95_E5": 1.717,
+    "gasoleoA": 1.92,
+    "estacionesG95": 389,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "03-08-2026",
+    "gasolina95_E5": 1.724,
+    "gasoleoA": 1.926,
+    "estacionesG95": 389,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "04-08-2026",
+    "gasolina95_E5": 1.727,
+    "gasoleoA": 1.925,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "05-08-2026",
+    "gasolina95_E5": 1.722,
+    "gasoleoA": 1.916,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "06-08-2026",
+    "gasolina95_E5": 1.714,
+    "gasoleoA": 1.904,
+    "estacionesG95": 387,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "07-08-2026",
+    "gasolina95_E5": 1.703,
+    "gasoleoA": 1.895,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "08-08-2026",
+    "gasolina95_E5": 1.702,
+    "gasoleoA": 1.891,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "09-08-2026",
+    "gasolina95_E5": 1.701,
+    "gasoleoA": 1.891,
+    "estacionesG95": 388,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "10-08-2026",
+    "gasolina95_E5": 1.7,
+    "gasoleoA": 1.888,
+    "estacionesG95": 388,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "11-08-2026",
+    "gasolina95_E5": 1.699,
+    "gasoleoA": 1.89,
+    "estacionesG95": 388,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "12-08-2026",
+    "gasolina95_E5": 1.705,
+    "gasoleoA": 1.898,
+    "estacionesG95": 388,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "13-08-2026",
+    "gasolina95_E5": 1.711,
+    "gasoleoA": 1.905,
+    "estacionesG95": 387,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "14-08-2026",
+    "gasolina95_E5": 1.715,
+    "gasoleoA": 1.911,
+    "estacionesG95": 385,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "15-08-2026",
+    "gasolina95_E5": 1.716,
+    "gasoleoA": 1.908,
+    "estacionesG95": 384,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "16-08-2026",
+    "gasolina95_E5": 1.716,
+    "gasoleoA": 1.908,
+    "estacionesG95": 382,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "17-08-2026",
+    "gasolina95_E5": 1.718,
+    "gasoleoA": 1.91,
+    "estacionesG95": 384,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "18-08-2026",
+    "gasolina95_E5": 1.722,
+    "gasoleoA": 1.916,
+    "estacionesG95": 381,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "19-08-2026",
+    "gasolina95_E5": 1.724,
+    "gasoleoA": 1.917,
+    "estacionesG95": 384,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "20-08-2026",
+    "gasolina95_E5": 1.73,
+    "gasoleoA": 1.925,
+    "estacionesG95": 384,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "21-08-2026",
+    "gasolina95_E5": 1.731,
+    "gasoleoA": 1.93,
+    "estacionesG95": 385,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "22-08-2026",
+    "gasolina95_E5": 1.732,
+    "gasoleoA": 1.928,
+    "estacionesG95": 384,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "23-08-2026",
+    "gasolina95_E5": 1.733,
+    "gasoleoA": 1.929,
+    "estacionesG95": 384,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "24-08-2026",
+    "gasolina95_E5": 1.735,
+    "gasoleoA": 1.929,
+    "estacionesG95": 385,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "25-08-2026",
+    "gasolina95_E5": 1.737,
+    "gasoleoA": 1.934,
+    "estacionesG95": 382,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "26-08-2026",
+    "gasolina95_E5": 1.739,
+    "gasoleoA": 1.934,
+    "estacionesG95": 382,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "27-08-2026",
+    "gasolina95_E5": 1.739,
+    "gasoleoA": 1.933,
+    "estacionesG95": 382,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "28-08-2026",
+    "gasolina95_E5": 1.74,
+    "gasoleoA": 1.939,
+    "estacionesG95": 384,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "29-08-2026",
+    "gasolina95_E5": 1.74,
+    "gasoleoA": 1.936,
+    "estacionesG95": 385,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "30-08-2026",
+    "gasolina95_E5": 1.741,
+    "gasoleoA": 1.936,
+    "estacionesG95": 384,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "31-08-2026",
+    "gasolina95_E5": 1.744,
+    "gasoleoA": 1.939,
+    "estacionesG95": 385,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "01-09-2026",
+    "gasolina95_E5": 1.789,
+    "gasoleoA": 1.984,
+    "estacionesG95": 384,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "02-09-2026",
+    "gasolina95_E5": 1.807,
+    "gasoleoA": 1.998,
+    "estacionesG95": 386,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "03-09-2026",
+    "gasolina95_E5": 1.82,
+    "gasoleoA": 2.01,
+    "estacionesG95": 386,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "04-09-2026",
+    "gasolina95_E5": 1.833,
+    "gasoleoA": 2.032,
+    "estacionesG95": 388,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "05-09-2026",
+    "gasolina95_E5": 1.837,
+    "gasoleoA": 2.032,
+    "estacionesG95": 387,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "06-09-2026",
+    "gasolina95_E5": 1.838,
+    "gasoleoA": 2.033,
+    "estacionesG95": 387,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "07-09-2026",
+    "gasolina95_E5": 1.844,
+    "gasoleoA": 2.038,
+    "estacionesG95": 387,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "08-09-2026",
+    "gasolina95_E5": 1.847,
+    "gasoleoA": 2.039,
+    "estacionesG95": 385,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "09-09-2026",
+    "gasolina95_E5": 1.855,
+    "gasoleoA": 2.047,
+    "estacionesG95": 386,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "10-09-2026",
+    "gasolina95_E5": 1.86,
+    "gasoleoA": 2.053,
+    "estacionesG95": 386,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "11-09-2026",
+    "gasolina95_E5": 1.867,
+    "gasoleoA": 2.063,
+    "estacionesG95": 386,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "12-09-2026",
+    "gasolina95_E5": 1.877,
+    "gasoleoA": 2.073,
+    "estacionesG95": 385,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "13-09-2026",
+    "gasolina95_E5": 1.883,
+    "gasoleoA": 2.084,
+    "estacionesG95": 385,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "14-09-2026",
+    "gasolina95_E5": 1.9,
+    "gasoleoA": 2.1,
+    "estacionesG95": 386,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "15-09-2026",
+    "gasolina95_E5": 1.913,
+    "gasoleoA": 2.109,
+    "estacionesG95": 386,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "16-09-2026",
+    "gasolina95_E5": 1.924,
+    "gasoleoA": 2.117,
+    "estacionesG95": 386,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "17-09-2026",
+    "gasolina95_E5": 1.929,
+    "gasoleoA": 2.123,
+    "estacionesG95": 387,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "18-09-2026",
+    "gasolina95_E5": 1.933,
+    "gasoleoA": 2.131,
+    "estacionesG95": 389,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "19-09-2026",
+    "gasolina95_E5": 1.936,
+    "gasoleoA": 2.128,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "20-09-2026",
+    "gasolina95_E5": 1.937,
+    "gasoleoA": 2.129,
+    "estacionesG95": 388,
+    "estacionesGasA": 112
+  },
+  {
+    "fecha": "21-09-2026",
+    "gasolina95_E5": 1.941,
+    "gasoleoA": 2.131,
+    "estacionesG95": 390,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "22-09-2026",
+    "gasolina95_E5": 1.942,
+    "gasoleoA": 2.13,
+    "estacionesG95": 391,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "23-09-2026",
+    "gasolina95_E5": 1.942,
+    "gasoleoA": 2.128,
+    "estacionesG95": 392,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "24-09-2026",
+    "gasolina95_E5": 1.943,
+    "gasoleoA": 2.13,
+    "estacionesG95": 388,
+    "estacionesGasA": 113
+  },
+  {
+    "fecha": "25-09-2026",
+    "gasolina95_E5": 1.946,
+    "gasoleoA": 2.137,
+    "estacionesG95": 389,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "26-09-2026",
+    "gasolina95_E5": 1.95,
+    "gasoleoA": 2.14,
+    "estacionesG95": 389,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "27-09-2026",
+    "gasolina95_E5": 1.949,
+    "gasoleoA": 2.139,
+    "estacionesG95": 389,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "28-09-2026",
+    "gasolina95_E5": 1.951,
+    "gasoleoA": 2.139,
+    "estacionesG95": 389,
+    "estacionesGasA": 114
+  },
+  {
+    "fecha": "29-09-2026",
+    "gasolina95_E5": 1.951,
+    "gasoleoA": 2.137,
+    "estacionesG95": 391,
+    "estacionesGasA": 115
+  },
+  {
+    "fecha": "30-09-2026",
+    "gasolina95_E5": 1.945,
+    "gasoleoA": 2.129,
+    "estacionesG95": 391,
+    "estacionesGasA": 115
+  }
+]

@@ -1,0 +1,214 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SlidersHorizontal, Cookie, ShieldCheck, ExternalLink, ArrowLeft } from "@lucide/astro";
+import { SITE_NAME, AUTHOR_NAME, AUTHOR_URL, GITHUB_URL, withBase } from "../lib/site";
+---
+
+<BaseLayout
+  title={`Política de Cookies y Privacidad | ${SITE_NAME}`}
+  description={`Información detallada sobre el uso de cookies, Google Consent Mode v2 y almacenamiento local en ${SITE_NAME}.`}
+  canonicalPath="cookies/"
+>
+  <!-- Cabecera de página -->
+  <section class="bg-slate-900 text-white py-12 lg:py-16 border-b border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+        Política de Cookies y Privacidad
+      </h1>
+      <p class="text-slate-200 text-base sm:text-lg leading-relaxed mb-6">
+        Información transparente sobre el almacenamiento local y las cookies analíticas opcionales que utilizamos en <strong>{SITE_NAME}</strong> para garantizar el servicio y analizar su uso de forma anónima.
+      </p>
+      <div class="flex flex-wrap items-center gap-3">
+        <button
+          type="button"
+          data-open-cookie-preferences
+          class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs sm:text-sm font-bold transition-colors cursor-pointer"
+        >
+          <SlidersHorizontal size={17} aria-hidden="true" />
+          <span>Configurar preferencias de cookies</span>
+        </button>
+        <a
+          href={withBase("")}
+          class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-700 text-xs sm:text-sm font-bold transition-colors"
+        >
+          <ArrowLeft size={16} aria-hidden="true" />
+          <span>Volver a precios de hoy</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenido principal -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 space-y-8 text-slate-700 text-sm sm:text-base leading-relaxed">
+
+    <!-- Qué son las cookies -->
+    <section class="surface-panel p-6 sm:p-8">
+      <h2 class="mb-3 text-xl font-extrabold text-slate-900 flex items-center gap-2.5">
+        <Cookie class="text-sky-700 shrink-0" size={22} aria-hidden="true" />
+        <span>¿Qué es una cookie y cómo protegemos tu privacidad?</span>
+      </h2>
+      <p class="mb-3">
+        Una <strong>cookie</strong> es un pequeño archivo de texto que los sitios web almacenan en tu navegador cuando los visitas. Permite recordar tus preferencias de configuración o recopilar estadísticas agregadas de uso.
+      </p>
+      <p>
+        En <strong>{SITE_NAME}</strong> aplicamos el principio de mínima intrusión: <strong>no mostramos publicidad, no comercializamos datos ni utilizamos cookies de seguimiento comercial o de redes sociales</strong>. Por defecto, las cookies analíticas permanecen desactivadas (<code>denied</code>) mediante <strong>Google Consent Mode v2</strong> salvo que decidas aceptarlas expresamente.
+      </p>
+    </section>
+
+    <!-- Tabla de cookies utilizadas -->
+    <section class="surface-panel p-6 sm:p-8">
+      <h2 class="mb-3 text-xl font-extrabold text-slate-900 flex items-center gap-2.5">
+        <ShieldCheck class="text-sky-700 shrink-0" size={22} aria-hidden="true" />
+        <span>Detalle de cookies y almacenamiento utilizado</span>
+      </h2>
+      <p class="mb-5">
+        Clasificamos las tecnologías de almacenamiento del sitio en dos únicas categorías:
+      </p>
+
+      <div class="overflow-x-auto border border-slate-200 rounded-xl">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="border-b border-slate-200 bg-slate-100 text-slate-900 font-bold uppercase text-xs">
+              <th class="p-3.5">Nombre</th>
+              <th class="p-3.5">Tipo / Proveedor</th>
+              <th class="p-3.5">Finalidad</th>
+              <th class="p-3.5">Duración</th>
+              <th class="p-3.5">Carácter</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200">
+            <tr>
+              <td class="p-3.5 font-mono font-bold text-slate-900">combustible_extremadura_cookie_consent</td>
+              <td class="p-3.5">Técnica propia (<code>localStorage</code>)</td>
+              <td class="p-3.5">Guarda tu elección (aceptar o rechazar analítica) para no volver a mostrar el banner en cada visita.</td>
+              <td class="p-3.5">Persistente</td>
+              <td class="p-3.5">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-bold rounded-full bg-emerald-100 text-emerald-900">
+                  Necesaria
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-mono font-bold text-sky-900">_ga</td>
+              <td class="p-3.5">Analítica (Google Analytics 4)</td>
+              <td class="p-3.5">Distingue visitas de usuarios de forma anónima y agregada para medir las consultas de precios en Extremadura.</td>
+              <td class="p-3.5">13 meses</td>
+              <td class="p-3.5">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-bold rounded-full bg-sky-100 text-sky-900">
+                  Opcional
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-mono font-bold text-sky-900">_ga_YSZC0MQCHF</td>
+              <td class="p-3.5">Analítica (Google Analytics 4)</td>
+              <td class="p-3.5">Mantiene el estado de la sesión anónima en Google Analytics mientras consultas las secciones del portal.</td>
+              <td class="p-3.5">13 meses</td>
+              <td class="p-3.5">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-bold rounded-full bg-sky-100 text-sky-900">
+                  Opcional
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Cómo gestionar o revocar el consentimiento -->
+    <section class="surface-panel p-6 sm:p-8">
+      <h2 class="mb-3 text-xl font-extrabold text-slate-900">
+        Cómo modificar o revocar tu consentimiento en cualquier momento
+      </h2>
+      <p class="mb-4">
+        Conforme a las directrices de la Agencia Española de Protección de Datos (AEPD) y el Reglamento General de Protección de Datos (RGPD), puedes cambiar o retirar tu consentimiento cuando quieras pulsando este botón:
+      </p>
+      <div class="mb-3">
+        <button
+          type="button"
+          data-open-cookie-preferences
+          class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-bold transition-colors cursor-pointer"
+        >
+          <SlidersHorizontal size={17} aria-hidden="true" />
+          <span>Cambiar mis preferencias de cookies</span>
+        </button>
+      </div>
+      <p class="text-xs text-slate-600">
+        También dispones del enlace permanente «Preferencias de cookies» en el pie de página de toda la web.
+      </p>
+    </section>
+
+    <!-- Gestión en el navegador -->
+    <section class="surface-panel p-6 sm:p-8">
+      <h2 class="mb-3 text-xl font-extrabold text-slate-900">
+        Desactivación o borrado de cookies desde tu navegador
+      </h2>
+      <p class="mb-4">
+        Adicionalmente, puedes bloquear o eliminar las cookies almacenadas en tu dispositivo desde la configuración de tu navegador:
+      </p>
+      <ul class="space-y-2 list-disc list-inside text-sm">
+        <li>
+          <a
+            href="https://support.google.com/chrome/answer/95647"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sky-800 underline font-bold hover:text-sky-950 inline-flex items-center gap-1"
+          >
+            <span>Google Chrome</span>
+            <ExternalLink size={14} aria-hidden="true" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sky-800 underline font-bold hover:text-sky-950 inline-flex items-center gap-1"
+          >
+            <span>Mozilla Firefox</span>
+            <ExternalLink size={14} aria-hidden="true" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://support.apple.com/es-es/guide/safari/sfri11471/mac"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sky-800 underline font-bold hover:text-sky-950 inline-flex items-center gap-1"
+          >
+            <span>Apple Safari</span>
+            <ExternalLink size={14} aria-hidden="true" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sky-800 underline font-bold hover:text-sky-950 inline-flex items-center gap-1"
+          >
+            <span>Microsoft Edge</span>
+            <ExternalLink size={14} aria-hidden="true" />
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Responsable -->
+    <section class="surface-panel p-6 sm:p-8">
+      <h2 class="mb-3 text-xl font-extrabold text-slate-900">
+        Responsable del sitio y contacto
+      </h2>
+      <p class="mb-2">
+        El responsable del portal <strong>{SITE_NAME}</strong> es <a href={AUTHOR_URL} target="_blank" rel="noopener noreferrer" class="font-bold text-sky-800 underline">{AUTHOR_NAME}</a>.
+      </p>
+      <p>
+        Puedes consultar el código fuente completo y contactar a través del repositorio oficial en GitHub:
+        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" class="font-bold text-sky-800 underline">
+          github.com/antoniohh/CombustibleExtremadura
+        </a>.
+      </p>
+    </section>
+
+  </div>
+</BaseLayout>

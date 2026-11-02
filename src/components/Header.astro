@@ -1,0 +1,140 @@
+---
+import { SITE_NAME, withBase } from "../lib/site";
+import { HOY_EXTREMADURA } from "../data/precios";
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 sm:h-20 gap-3">
+      
+      <!-- Logo SVG y Marca -->
+      <a href="/" class="flex items-center gap-3 group rounded-lg p-1 shrink-0" aria-label={`${SITE_NAME} - Inicio`}>
+        <img
+          src={withBase("assets/favicon.svg")}
+          alt=""
+          width="40"
+          height="40"
+          class="w-10 h-10 rounded-xl shadow-xs group-hover:scale-105 transition-transform"
+        />
+        <div>
+          <span class="block text-base sm:text-lg font-extrabold text-slate-900 tracking-tight leading-tight">
+            Combustible <span class="text-sky-700">Extremadura</span>
+          </span>
+          <span class="block text-xs font-medium text-slate-600">
+            Gasolina 95 y Diésel · Badajoz y Cáceres
+          </span>
+        </div>
+      </a>
+
+      <!-- Navegación Desktop en el orden exacto de secciones -->
+      <nav aria-label="Navegación principal" class="hidden xl:flex items-center gap-1">
+        <a href="/#precios-hoy" class="px-2.5 py-2 text-xs font-semibold text-slate-700 hover:text-sky-700 hover:bg-slate-100 rounded-lg transition-colors">
+          Hoy y Localidades
+        </a>
+        <a href="/#comparativa-provincias" class="px-2.5 py-2 text-xs font-semibold text-slate-700 hover:text-sky-700 hover:bg-slate-100 rounded-lg transition-colors">
+          Badajoz vs Cáceres
+        </a>
+        <a href="/#todas-las-poblaciones" class="px-2.5 py-2 text-xs font-semibold text-slate-700 hover:text-sky-700 hover:bg-slate-100 rounded-lg transition-colors">
+          179 Municipios
+        </a>
+        <a href="/#historico" class="px-2.5 py-2 text-xs font-semibold text-slate-700 hover:text-sky-700 hover:bg-slate-100 rounded-lg transition-colors">
+          Histórico 2025-2026
+        </a>
+        <a href="/#guia-ahorro" class="px-2.5 py-2 text-xs font-semibold text-slate-700 hover:text-sky-700 hover:bg-slate-100 rounded-lg transition-colors">
+          Guía Práctica
+        </a>
+        <a href="/#preguntas-frecuentes" class="px-2.5 py-2 text-xs font-semibold text-slate-700 hover:text-sky-700 hover:bg-slate-100 rounded-lg transition-colors">
+          FAQ
+        </a>
+        <a href="/#api-miteco" class="px-2.5 py-2 text-xs font-semibold text-slate-700 hover:text-sky-700 hover:bg-slate-100 rounded-lg transition-colors">
+          API MITECO
+        </a>
+      </nav>
+
+      <!-- Estado de sincronización diaria 06:00 AM -->
+      <div class="hidden sm:flex items-center gap-2 shrink-0">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-50 border border-emerald-300/80 rounded-full text-xs font-semibold text-emerald-900">
+          <span class="pulse-dot"></span>
+          <span>Hoy · {HOY_EXTREMADURA.extremadura.totalEstaciones} gasolineras</span>
+        </div>
+      </div>
+
+      <!-- Botón Menú Móvil -->
+      <div class="flex xl:hidden">
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100"
+          aria-label="Abrir menú de secciones"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Menú Móvil desplegable -->
+  <div id="mobile-menu" class="hidden xl:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-4 space-y-1">
+    <a href="/#precios-hoy" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-800 hover:bg-slate-100 hover:text-sky-700">
+      Precio de Hoy y Principales Localidades
+    </a>
+    <a href="/#comparativa-provincias" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-800 hover:bg-slate-100 hover:text-sky-700">
+      Comparativa Hoy: Badajoz vs Cáceres
+    </a>
+    <a href="/#todas-las-poblaciones" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-800 hover:bg-slate-100 hover:text-sky-700">
+      Buscador de los 179 Municipios
+    </a>
+    <a href="/#historico" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-800 hover:bg-slate-100 hover:text-sky-700">
+      Evolución Histórica 2025 y 2026
+    </a>
+    <a href="/#guia-ahorro" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-800 hover:bg-slate-100 hover:text-sky-700">
+      Guía Práctica de Ahorro en Extremadura
+    </a>
+    <a href="/#preguntas-frecuentes" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-800 hover:bg-slate-100 hover:text-sky-700">
+      Preguntas Frecuentes (FAQ)
+    </a>
+    <a href="/#api-miteco" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-800 hover:bg-slate-100 hover:text-sky-700">
+      API Oficial de MITECO
+    </a>
+    <div class="pt-3 mt-2 border-t border-slate-200 flex items-center justify-between text-xs text-slate-700">
+      <span>Actualización diaria 06:00h</span>
+      <span class="inline-flex items-center gap-1.5 font-semibold text-emerald-800">
+        <span class="pulse-dot"></span> {HOY_EXTREMADURA.fechaLegible}
+      </span>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  if (btn && menu) {
+    btn.addEventListener("click", () => {
+      const isHidden = menu.classList.toggle("hidden");
+      btn.setAttribute("aria-expanded", String(!isHidden));
+    });
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.add("hidden");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  // Al pulsar "Hoy y Localidades" en la página principal, subir hasta arriba del todo (scrollY = 0)
+  // para que la barra fija nunca recorte el título principal
+  document.querySelectorAll('a[href="/#precios-hoy"], a[href="#precios-hoy"]').forEach((link) => {
+    link.addEventListener("click", (e) => {
+      if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        history.replaceState(null, "", "/");
+      }
+    });
+  });
+</script>

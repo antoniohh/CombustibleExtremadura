@@ -1,0 +1,328 @@
+---
+import { Cookie, X, SlidersHorizontal, Check, ShieldCheck } from "@lucide/astro";
+import { withBase } from "../lib/site";
+---
+
+<!-- Banner flotante inferior de aviso de cookies -->
+<aside
+  id="cookie-banner"
+  class="fixed inset-x-0 bottom-0 z-[9999] bg-slate-950/95 text-slate-100 border-t border-slate-700/90 backdrop-blur-md shadow-2xl px-4 py-4 sm:px-6 sm:py-5"
+  aria-label="Aviso de cookies y privacidad"
+  hidden
+>
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 sm:gap-6">
+    <div class="flex items-start gap-3.5 min-w-0 flex-1">
+      <div
+        class="w-11 h-11 rounded-xl bg-sky-950 border border-sky-700/70 text-sky-300 flex items-center justify-center shrink-0 mt-0.5"
+        aria-hidden="true"
+      >
+        <Cookie size={24} />
+      </div>
+      <div class="text-xs sm:text-sm leading-relaxed">
+        <p class="font-extrabold text-white text-sm sm:text-base mb-1">
+          Uso de cookies en Combustible Extremadura
+        </p>
+        <p class="text-slate-200 max-w-4xl">
+          Utilizamos únicamente cookies analíticas opcionales (Google Analytics 4) para medir de forma anónima y agregada las consultas de precios de gasolineras en Extremadura y mejorar la herramienta. No mostramos publicidad ni compartimos datos personales. Puedes aceptar, rechazar o configurar tu elección en cualquier momento.
+          <a href={withBase("cookies/")} class="font-bold text-sky-300 hover:text-white underline ml-1">
+            Política de cookies
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 shrink-0">
+      <button
+        type="button"
+        id="cookie-btn-accept"
+        class="px-4 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs sm:text-sm font-bold transition-colors cursor-pointer text-center"
+      >
+        Aceptar todas
+      </button>
+      <button
+        type="button"
+        id="cookie-btn-reject"
+        class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-600 text-xs sm:text-sm font-bold transition-colors cursor-pointer text-center"
+      >
+        Rechazar no esenciales
+      </button>
+      <button
+        type="button"
+        id="cookie-btn-prefs"
+        class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-sky-300 border border-slate-700 text-xs sm:text-sm font-bold transition-colors cursor-pointer"
+      >
+        <SlidersHorizontal size={16} aria-hidden="true" />
+        <span>Configurar</span>
+      </button>
+    </div>
+  </div>
+</aside>
+
+<!-- Modal de configuración de preferencias de cookies -->
+<div
+  id="cookie-modal"
+  class="fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-xs"
+  aria-hidden="true"
+  hidden
+>
+  <div
+    class="cookie-modal-box w-full max-w-xl max-h-[90vh] flex flex-col bg-white text-slate-900 rounded-2xl border border-slate-300 shadow-2xl overflow-hidden focus:outline-none"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cookie-modal-title"
+    tabindex="-1"
+  >
+    <!-- Cabecera del Modal -->
+    <div class="flex items-center justify-between px-6 py-4 bg-slate-900 text-white border-b border-slate-800">
+      <div class="flex items-center gap-2.5">
+        <ShieldCheck size={22} class="text-sky-400 shrink-0" aria-hidden="true" />
+        <h2 id="cookie-modal-title" class="text-base sm:text-lg font-extrabold tracking-tight text-white">
+          Preferencias de privacidad y cookies
+        </h2>
+      </div>
+      <button
+        type="button"
+        id="cookie-modal-close"
+        class="w-9 h-9 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 flex items-center justify-center transition-colors cursor-pointer"
+        aria-label="Cerrar panel de preferencias de cookies"
+      >
+        <X size={20} aria-hidden="true" />
+      </button>
+    </div>
+
+    <!-- Cuerpo del Modal -->
+    <div class="p-6 overflow-y-auto space-y-5 text-sm text-slate-700">
+      <p class="leading-relaxed">
+        En <strong>Combustible Extremadura</strong> respetamos tu privacidad. A continuación puedes activar o desactivar las cookies analíticas opcionales. Tienes toda la información técnica detallada en nuestra
+        <a href={withBase("cookies/")} class="font-bold text-sky-700 hover:text-sky-900 underline">
+          Política de cookies
+        </a>.
+      </p>
+
+      <div class="divide-y divide-slate-200 border border-slate-200 rounded-xl bg-slate-50">
+        <!-- Categoría 1: Técnicas -->
+        <div class="p-4">
+          <div class="flex items-center justify-between gap-3 mb-1.5">
+            <h3 class="font-extrabold text-slate-900 text-sm">
+              Cookies técnicas y de almacenamiento local
+            </h3>
+            <span class="px-2.5 py-0.5 text-xs font-bold rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300">
+              Siempre activas
+            </span>
+          </div>
+          <p class="text-xs text-slate-700 leading-relaxed">
+            Imprescindibles para el funcionamiento de la página y para recordar tu decisión sobre este aviso de privacidad en <code>localStorage</code> (<code>combustible_extremadura_cookie_consent</code>). No recopilan ningún dato personal.
+          </p>
+        </div>
+
+        <!-- Categoría 2: Analíticas -->
+        <div class="p-4">
+          <div class="flex items-center justify-between gap-3 mb-1.5">
+            <div>
+              <h3 class="font-extrabold text-slate-900 text-sm">
+                Cookies analíticas (Google Analytics 4)
+              </h3>
+              <span class="inline-block mt-0.5 px-2 py-0.5 text-[11px] font-bold rounded-full bg-sky-100 text-sky-900 border border-sky-200">
+                Opcionales
+              </span>
+            </div>
+
+            <label class="cookie-switch" for="cookie-switch-analytics">
+              <input type="checkbox" id="cookie-switch-analytics" />
+              <span class="cookie-switch__slider"></span>
+              <span class="sr-only">Permitir cookies analíticas de Google Analytics</span>
+            </label>
+          </div>
+          <p class="text-xs text-slate-700 leading-relaxed mt-1">
+            Nos ayudan a entender de forma anónima cuántas personas consultan el precio diario de la gasolina y el diésel en Badajoz y Cáceres mediante Google Consent Mode v2 (<code>_ga</code> y <code>_ga_YSZC0MQCHF</code> con IP anonimizada).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pie del Modal -->
+    <div class="px-6 py-4 bg-slate-100 border-t border-slate-200 flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-2.5">
+      <button
+        type="button"
+        id="cookie-modal-save"
+        class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-sky-700 hover:bg-sky-600 text-white text-xs sm:text-sm font-bold transition-colors cursor-pointer"
+      >
+        <Check size={16} aria-hidden="true" />
+        <span>Guardar selección</span>
+      </button>
+      <button
+        type="button"
+        id="cookie-modal-accept"
+        class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-bold transition-colors cursor-pointer"
+      >
+        Aceptar todas
+      </button>
+      <button
+        type="button"
+        id="cookie-modal-reject"
+        class="px-4 py-2.5 rounded-xl bg-white hover:bg-slate-200 text-slate-800 border border-slate-300 text-xs sm:text-sm font-bold transition-colors cursor-pointer"
+      >
+        Rechazar todas
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cookie-switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 26px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  .cookie-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .cookie-switch__slider {
+    position: absolute;
+    inset: 0;
+    background-color: #cbd5e1;
+    border-radius: 26px;
+    transition: background-color 180ms ease;
+  }
+
+  .cookie-switch__slider::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.25);
+    transition: transform 180ms ease;
+  }
+
+  .cookie-switch input:checked + .cookie-switch__slider {
+    background-color: #0369a1;
+  }
+
+  .cookie-switch input:focus-visible + .cookie-switch__slider {
+    outline: 2px solid #0284c7;
+    outline-offset: 2px;
+  }
+
+  .cookie-switch input:checked + .cookie-switch__slider::before {
+    transform: translateX(22px);
+  }
+</style>
+
+<script>
+  (function () {
+    const STORAGE_KEY = "combustible_extremadura_cookie_consent";
+    const banner = document.getElementById("cookie-banner");
+    const modal = document.getElementById("cookie-modal");
+    const modalBox = modal?.querySelector(".cookie-modal-box") as HTMLElement | null;
+    const analyticsSwitch = document.getElementById("cookie-switch-analytics") as HTMLInputElement | null;
+
+    const getConsent = (): string | null => {
+      try {
+        return localStorage.getItem(STORAGE_KEY);
+      } catch {
+        return null;
+      }
+    };
+
+    const applyConsent = (isGranted: boolean) => {
+      try {
+        localStorage.setItem(STORAGE_KEY, isGranted ? "granted" : "denied");
+      } catch {}
+
+      if (typeof (window as any).gtag === "function") {
+        (window as any).gtag("consent", "update", {
+          analytics_storage: isGranted ? "granted" : "denied"
+        });
+      }
+
+      if (analyticsSwitch) {
+        analyticsSwitch.checked = isGranted;
+      }
+
+      hideBanner();
+      closeModal();
+    };
+
+    const showBanner = () => {
+      if (!banner) return;
+      banner.hidden = false;
+    };
+
+    const hideBanner = () => {
+      if (!banner) return;
+      banner.hidden = true;
+    };
+
+    const openModal = () => {
+      if (!modal) return;
+      const current = getConsent();
+      if (analyticsSwitch) {
+        analyticsSwitch.checked = current === "granted";
+      }
+      modal.hidden = false;
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      modalBox?.focus();
+    };
+
+    const closeModal = () => {
+      if (!modal) return;
+      modal.hidden = true;
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    };
+
+    const consent = getConsent();
+    if (analyticsSwitch) {
+      analyticsSwitch.checked = consent === "granted";
+    }
+
+    if (!consent) {
+      setTimeout(showBanner, 250);
+    }
+
+    document.getElementById("cookie-btn-accept")?.addEventListener("click", () => applyConsent(true));
+    document.getElementById("cookie-btn-reject")?.addEventListener("click", () => applyConsent(false));
+    document.getElementById("cookie-btn-prefs")?.addEventListener("click", openModal);
+
+    document.getElementById("cookie-modal-close")?.addEventListener("click", closeModal);
+    document.getElementById("cookie-modal-accept")?.addEventListener("click", () => applyConsent(true));
+    document.getElementById("cookie-modal-reject")?.addEventListener("click", () => applyConsent(false));
+    document.getElementById("cookie-modal-save")?.addEventListener("click", () => {
+      const isGranted = Boolean(analyticsSwitch && analyticsSwitch.checked);
+      applyConsent(isGranted);
+    });
+
+    modal?.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal && !modal.hidden) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      const target = e.target as HTMLElement | null;
+      const trigger = target?.closest("[data-open-cookie-preferences]");
+      if (trigger) {
+        e.preventDefault();
+        openModal();
+      }
+    });
+  })();
+</script>

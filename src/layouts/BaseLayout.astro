@@ -1,0 +1,264 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CookieBanner from "../components/CookieBanner.astro";
+import {
+  SITE,
+  SITE_NAME,
+  SITE_DESCRIPTION,
+  SITE_KEYWORDS,
+  AUTHOR_NAME,
+  AUTHOR_URL,
+  absoluteUrl,
+  withBase
+} from "../lib/site";
+import { HOY_EXTREMADURA, FAQS_SEO, fmtPrecio } from "../data/precios";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+  ogType?: "website" | "article";
+}
+
+const g95Hoy = fmtPrecio(HOY_EXTREMADURA.extremadura.mediaGasolina95);
+const gasAHoy = fmtPrecio(HOY_EXTREMADURA.extremadura.mediaGasoleoA);
+
+const defaultTitle = `Precio del Combustible en Extremadura Hoy (${HOY_EXTREMADURA.fechaLegible}) | Gasolina 95: ${g95Hoy} € · Diésel: ${gasAHoy} €`;
+const defaultDesc = `Precio actualizado hoy (${HOY_EXTREMADURA.fechaLegible}) en las ${HOY_EXTREMADURA.extremadura.totalEstaciones} gasolineras de Extremadura: Gasolina 95 E5 a ${g95Hoy} €/L y Gasóleo A a ${gasAHoy} €/L. Comparativa Badajoz vs Cáceres, buscador de los ${HOY_EXTREMADURA.totalMunicipiosConEstacion} municipios e histórico 2025-2026.`;
+
+const {
+  title = defaultTitle,
+  description = defaultDesc || SITE_DESCRIPTION,
+  canonicalPath = "",
+  ogType = "website",
+} = Astro.props;
+
+const canonical = absoluteUrl(canonicalPath);
+const ogImage = absoluteUrl("assets/og-image.png");
+const logoUrl = absoluteUrl("assets/logo.svg");
+
+// Schema.org Structured Data (SEO Exhaustivo)
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE}/#website`,
+      "url": SITE,
+      "name": SITE_NAME,
+      "alternateName": "Precio Gasolina y Diésel Extremadura Hoy",
+      "description": SITE_DESCRIPTION,
+      "inLanguage": "es-ES",
+      "publisher": {
+        "@type": "Person",
+        "name": AUTHOR_NAME,
+        "url": AUTHOR_URL,
+        "image": logoUrl
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${canonical}#webpage`,
+      "url": canonical,
+      "name": title,
+      "description": description,
+      "datePublished": "2025-01-01T06:00:00+01:00",
+      "dateModified": new Date().toISOString(),
+      "isPartOf": { "@id": `${SITE}/#website` },
+      "inLanguage": "es-ES",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": ogImage,
+        "width": 1200,
+        "height": 630
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Precio Combustible Extremadura Hoy",
+            "item": SITE
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Dataset",
+      "@id": `${SITE}/#dataset`,
+      "name": "Precios Diarios e Históricos (2025-2026) de Gasolina 95 E5 y Gasóleo A en Extremadura",
+      "description": "Conjunto de datos diarios y serie histórica (2025-2026) de precios de venta al público de Gasolina 95 E5 y Gasóleo A en las estaciones de servicio de Badajoz, Cáceres y los 179 municipios con surtidor en Extremadura.",
+      "url": canonical,
+      "sameAs": "https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/FiltroCCAA/11",
+      "keywords": SITE_KEYWORDS,
+      "temporalCoverage": "2025-01-01/2026-12-31",
+      "spatialCoverage": [
+        {
+          "@type": "Place",
+          "name": "Extremadura, España",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "39.1667",
+            "longitude": "-6.1667"
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "Provincia de Badajoz, España"
+        },
+        {
+          "@type": "Place",
+          "name": "Provincia de Cáceres, España"
+        }
+      ],
+      "creator": {
+        "@type": "Person",
+        "name": AUTHOR_NAME,
+        "url": AUTHOR_URL
+      },
+      "isAccessibleForFree": true,
+      "license": "https://opensource.org/licenses/MIT",
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": absoluteUrl("datos/hoy_extremadura.json"),
+          "name": "Precios del día en Extremadura por municipio y provincia (JSON)"
+        },
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": absoluteUrl("datos/historico_extremadura_2026.json"),
+          "name": "Serie histórica diaria Extremadura 2025-2026 (JSON)"
+        },
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": absoluteUrl("datos/historico_provincias_extremadura_2026.json"),
+          "name": "Serie histórica diaria Badajoz y Cáceres 2025-2026 (JSON)"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": `Precios medios de combustible hoy (${HOY_EXTREMADURA.fechaLegible}) en las principales localidades de Extremadura`,
+      "numberOfItems": HOY_EXTREMADURA.principalesLocalidades.length,
+      "itemListElement": HOY_EXTREMADURA.principalesLocalidades.map((loc, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": `${loc.municipio} (${loc.provincia}): Gasolina 95 a ${fmtPrecio(loc.mediaGasolina95)} €/L · Gasóleo A a ${fmtPrecio(loc.mediaGasoleoA)} €/L`
+      }))
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${SITE}/#faq`,
+      "mainEntity": FAQS_SEO.map((faq) => ({
+        "@type": "Question",
+        "name": faq.pregunta,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.respuesta
+        }
+      }))
+    }
+  ]
+};
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <!-- Google Consent Mode v2 & Google tag (gtag.js) -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      var savedConsent = null;
+      try {
+        savedConsent = localStorage.getItem('combustible_extremadura_cookie_consent');
+      } catch (e) {}
+
+      var isGranted = savedConsent === 'granted';
+
+      gtag('consent', 'default', {
+        'analytics_storage': isGranted ? 'granted' : 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+
+      gtag('js', new Date());
+      gtag('config', 'G-YSZC0MQCHF', {
+        'anonymize_ip': true
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSZC0MQCHF"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={SITE_KEYWORDS.join(", ")} />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="author" content={AUTHOR_NAME} />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Canonical & Sitemap -->
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" type="application/xml" href={withBase("sitemap.xml")} />
+    <link rel="manifest" href={withBase("site.webmanifest")} />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Precio del Combustible en Extremadura Hoy: Gasolina 95 y Diésel en Badajoz y Cáceres" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="Precio del Combustible en Extremadura Hoy: Gasolina 95 y Diésel en Badajoz y Cáceres" />
+
+    <!-- Geo Tags (Extremadura / España) -->
+    <meta name="geo.region" content="ES-EX" />
+    <meta name="geo.placename" content="Extremadura, Badajoz, Cáceres" />
+    <meta name="geo.position" content="39.1667;-6.1667" />
+    <meta name="ICBM" content="39.1667, -6.1667" />
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/svg+xml" href={withBase("assets/favicon.svg")} />
+    <link rel="icon" type="image/x-icon" href={withBase("favicon.ico")} />
+    <link rel="apple-touch-icon" sizes="180x180" href={withBase("assets/apple-touch-icon.png")} />
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+
+  <body class="bg-slate-50 text-slate-900">
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+    <Header />
+
+    <main id="contenido-principal" class="flex-1">
+      <slot />
+    </main>
+
+    <Footer />
+    <CookieBanner />
+  </body>
+</html>

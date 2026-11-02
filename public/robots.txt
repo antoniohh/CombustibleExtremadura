@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://combustible.antoniohorrillo.com/sitemap.xml
+Host: https://combustible.antoniohorrillo.com

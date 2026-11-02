@@ -1,0 +1,43 @@
+name: Release Combustible Extremadura
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Europe/Madrid
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Compilar sitio estático con Astro
+        run: npm run build:fast
+
+      - name: Crear paquete ZIP de producción
+        run: |
+          cd dist
+          zip -r "../combustible-extremadura-${GITHUB_REF_NAME}.zip" .
+
+      - name: Publicar Release en GitHub
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Combustible Extremadura ${{ github.ref_name }}
+          files: combustible-extremadura-${{ github.ref_name }}.zip
+          generate_release_notes: true
+          make_latest: true
