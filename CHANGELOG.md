@@ -2,6 +2,35 @@
 
 Todas las versiones relevantes de **Combustible Extremadura**. El proyecto sigue [Versionado Semántico](https://semver.org/lang/es/).
 
+## [1.2.0] — 2026-11-03
+
+Versión de optimización y simplificación visual de la interfaz: aligera drásticamente la carga de contenidos en portada, transforma la apertura en banners compactos de alta legibilidad, sintetiza el bloque comparativo Badajoz vs. Cáceres y elimina tablas, textos teóricos y gráficos redundantes para priorizar la rapidez y claridad de consulta.
+
+### Añadido
+
+- **Instalación PWA en Chrome Móvil** ([`InstallPrompt.astro`](src/components/InstallPrompt.astro), [`sw.js`](public/sw.js), [`site.webmanifest`](public/site.webmanifest)):
+  - Detección del evento nativo `beforeinstallprompt` en Chrome para Android/móvil para invitar al usuario a instalar la app en su pantalla de inicio.
+  - Implementación de Service Worker (`public/sw.js`) con soporte offline para cumplir los estándares de instalabilidad PWA de Google.
+  - Actualización de `site.webmanifest` con iconos maskable y arranque autónomo (`display: standalone`).
+
+### Cambiado
+
+- **Barra inferior del pie de página simplificada** ([`Footer.astro`](src/components/Footer.astro)):
+  - Sustituida por `© 2026 Combustible Extremadura · Creado por Antonio Horrillo` con enlace a `https://antoniohorrillo.com` y distintivo en vivo `Actualización diaria a las 06:00 h` a la derecha.
+- **Banners compactos de cotización diaria en apertura** ([`index.astro`](src/pages/index.astro)):
+  - Sustitución de las tarjetas verticales de apertura por dos **banners estilizados y compactos** (`Gasolina 95 E5` y `Gasóleo A`), con precio medio en formato destacado, número de estaciones, mínimo regional con municipio y coste medio de 50L.
+- **Simplificación del bloque comparativo Badajoz vs. Cáceres** ([`index.astro`](src/pages/index.astro)):
+  - Reemplazo de las tres columnas densas por una franja superior de **Veredicto Territorial** (diferencia directa en céntimos y ahorro por depósito) y dos columnas limpias (Badajoz a la izquierda, Cáceres a la derecha) con medias y mínimos provinciales de cada carburante.
+  - Eliminación de métricas secundarias y textos de horquilla para evitar la sobrecarga cognitiva.
+
+### Eliminado
+
+- **Sección API Oficial MITECO y Captura de Datos**: retirada la sección completa `#api-miteco`, sus enlaces en la cabecera y el pie de página, y las constantes auxiliares (`API_MITECO`, cURL y comandos de script).
+- **Textos teóricos de la Guía Práctica**: eliminados los 6 artículos de contexto logístico (Exolum, peaje en autovías, efecto lunes, frontera con Portugal, cooperativas agrarias y neumáticos) para mantener la sección centrada exclusivamente en la calculadora interactiva de repostaje y ahorro anual.
+- **Gráficos y bloques históricos redundantes**: eliminados los gráficos secundarios de *Serie Provincial Cáceres vs. Badajoz* y *Anomalía del Diésel*, el bloque textual de conclusiones 2025–2026 y la tabla consolidada mes a mes, apoyándose directamente en el gráfico principal de evolución y en el gráfico de medias mensuales.
+- **Preguntas frecuentes depuradas**: eliminadas 3 preguntas redundantes de `FAQS_SEO` en [`precios.ts`](src/data/precios.ts).
+- **Código JS cliente sin uso** ([`spa.ts`](src/scripts/spa.ts)): eliminados los listeners y funciones de renderizado de los componentes retirados (`inicializarTablaHistorica`, conmutadores huérfanos).
+
 ## [1.1.0] — 2026-11-02
 
 Nueva versión que incorpora paneles destacados con el Top 5 diario de las dos capitales de provincia (**Badajoz Capital** y **Cáceres Capital**) en la portada principal y renueva por completo la identidad visual, iconos y tarjeta Open Graph generados con Nano Banana.

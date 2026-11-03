@@ -332,10 +332,8 @@ export const API_MITECO = {
   ]
 };
 
-// FAQs dinámicas enriquecidas con los datos reales del día y del histórico 2025-2026
+// FAQs dinámicas enriquecidas con los datos reales del día
 const extHoy = HOY_EXTREMADURA.extremadura;
-const badHoy = HOY_EXTREMADURA.provincias.badajoz;
-const cacHoy = HOY_EXTREMADURA.provincias.caceres;
 const minG95Hoy = extHoy.minGasolina95;
 const minGasAHoy = extHoy.minGasoleoA;
 
@@ -351,24 +349,9 @@ export const FAQS_SEO = [
     respuesta: `Según los registros oficiales remitidos hoy al MITECO, el surtidor público más económico de Extremadura para Gasolina 95 E5 está en ${minG95Hoy?.municipio} (${minG95Hoy?.provincia}), en la estación ${minG95Hoy?.rotulo} (${minG95Hoy?.direccion}), con un precio de ${fmtPrecio(minG95Hoy?.precio)} €/litro. En cuanto al Gasóleo A (diésel), el precio más bajo de hoy se encuentra en ${minGasAHoy?.municipio} (${minGasAHoy?.provincia}), en ${minGasAHoy?.rotulo} (${minGasAHoy?.direccion}), a ${fmtPrecio(minGasAHoy?.precio)} €/litro.`
   },
   {
-    categoria: "Comparativa Provincial",
-    pregunta: "¿Dónde es más barato repostar hoy, en la provincia de Badajoz o en la de Cáceres?",
-    respuesta: `En la jornada de hoy (${HOY_EXTREMADURA.fechaLegible}), la provincia de Badajoz registra una media de ${fmtPrecio(badHoy.mediaGasolina95)} €/L en Gasolina 95 y ${fmtPrecio(badHoy.mediaGasoleoA)} €/L en Gasóleo A (${badHoy.totalEstaciones} estaciones), frente a los ${fmtPrecio(cacHoy.mediaGasolina95)} €/L en Gasolina 95 y ${fmtPrecio(cacHoy.mediaGasoleoA)} €/L en Gasóleo A de la provincia de Cáceres (${cacHoy.totalEstaciones} estaciones). En diésel, repostar hoy en Badajoz supone un ahorro medio de ${fmtPrecio(Math.abs(HOY_EXTREMADURA.comparativaHoy.diferenciaGasoleoACentimos), 1)} céntimos por litro (${fmtPrecio(HOY_EXTREMADURA.comparativaHoy.ahorroDeposito50LGasoleoA, 2)} € por depósito de 50 L).`
-  },
-  {
     categoria: "Localidades",
     pregunta: "¿Cuánto cuesta hoy la gasolina y el diésel en Badajoz capital, Cáceres, Mérida, Plasencia y Don Benito?",
     respuesta: `En las principales ciudades extremeñas los promedios de hoy son: Badajoz capital (${fmtPrecio(HOY_EXTREMADURA.principalesLocalidades.find(p => p.municipio === "Badajoz")?.mediaGasolina95)} €/L en G95 y ${fmtPrecio(HOY_EXTREMADURA.principalesLocalidades.find(p => p.municipio === "Badajoz")?.mediaGasoleoA)} €/L en diésel), Cáceres capital (${fmtPrecio(HOY_EXTREMADURA.principalesLocalidades.find(p => p.municipio === "Cáceres")?.mediaGasolina95)} €/L y ${fmtPrecio(HOY_EXTREMADURA.principalesLocalidades.find(p => p.municipio === "Cáceres")?.mediaGasoleoA)} €/L), Mérida (${fmtPrecio(HOY_EXTREMADURA.principalesLocalidades.find(p => p.municipio === "Mérida")?.mediaGasolina95)} €/L y ${fmtPrecio(HOY_EXTREMADURA.principalesLocalidades.find(p => p.municipio === "Mérida")?.mediaGasoleoA)} €/L), Plasencia (${fmtPrecio(HOY_EXTREMADURA.principalesLocalidades.find(p => p.municipio === "Plasencia")?.mediaGasolina95)} €/L y ${fmtPrecio(HOY_EXTREMADURA.principalesLocalidades.find(p => p.municipio === "Plasencia")?.mediaGasoleoA)} €/L) y Don Benito (${fmtPrecio(HOY_EXTREMADURA.principalesLocalidades.find(p => p.municipio === "Don Benito")?.mediaGasolina95)} €/L y ${fmtPrecio(HOY_EXTREMADURA.principalesLocalidades.find(p => p.municipio === "Don Benito")?.mediaGasoleoA)} €/L).`
-  },
-  {
-    categoria: "Histórico 2025–2026",
-    pregunta: "¿Cómo ha evolucionado el precio del combustible en Extremadura entre 2025 y 2026?",
-    respuesta: `El análisis de los ${RESUMEN_HISTORICO.totalDiasAnalizados} días monitorizados entre enero de 2025 y finales de 2026 muestra dos etapas muy marcadas: durante 2025 el precio medio anual en Extremadura se mantuvo contenido en ${fmtPrecio(RESUMEN_HISTORICO.media2025G95)} €/L para la gasolina 95 y ${fmtPrecio(RESUMEN_HISTORICO.media2025GasA)} €/L para el diésel (tocando suelo en mayo de 2025 y junio de 2026 en torno a ${fmtPrecio(RESUMEN_HISTORICO.diaMinG95.precio)} €/L). Sin embargo, en el tercer trimestre de 2026 se produjo una fuerte escalada hasta alcanzar máximos el ${RESUMEN_HISTORICO.diaMaxG95.fecha} con ${fmtPrecio(RESUMEN_HISTORICO.diaMaxG95.precio)} €/L en gasolina 95 y ${fmtPrecio(RESUMEN_HISTORICO.diaMaxGasA.precio)} €/L en gasóleo A.`
-  },
-  {
-    categoria: "Anomalía del Diésel",
-    pregunta: "¿Por qué el Gasóleo A (diésel) es más caro que la Gasolina 95 en Extremadura?",
-    respuesta: `Hoy el litro de Gasóleo A en Extremadura supera al de Gasolina 95 E5 en +${fmtPrecio((extHoy.diferencialDieselGasolina ?? 0) * 100, 1)} céntimos por litro (${fmtPrecio(extHoy.mediaGasoleoA)} €/L frente a ${fmtPrecio(extHoy.mediaGasolina95)} €/L). Esta inversión respecto al patrón histórico se explica por la menor capacidad europea de refino de destilados medios, la fuerte demanda de transporte pesado y maquinaria agraria en campañas de regadío en las Vegas del Guadiana, y el consumo estacional de calefacción en comarcas del norte cacereño.`
   },
   {
     categoria: "Calidad y Ahorro",

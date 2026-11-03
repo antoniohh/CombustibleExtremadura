@@ -1,6 +1,6 @@
 # Combustible Extremadura
 
-[![Versión](https://img.shields.io/badge/versi%C3%B3n-1.1.0-0284c7?style=for-the-badge)](CHANGELOG.md)
+[![Versión](https://img.shields.io/badge/versi%C3%B3n-1.2.0-0284c7?style=for-the-badge)](CHANGELOG.md)
 [![Astro](https://img.shields.io/badge/Astro-7.4.2-BC52EE?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.3.3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Chart.js](https://img.shields.io/badge/Chart.js-4.5.1-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)](https://www.chartjs.org)
@@ -18,20 +18,22 @@ Aplicación web estática (SPA) para la consulta diaria e histórica del **preci
 
 ## 🎯 Características Principales
 
-1. **Precio Diario (Hoy), Top 5 en Badajoz y Cáceres Capital y Principales Localidades:**
+1. **Cotización Diaria en Banners Compactos, Top 5 en Badajoz y Cáceres y Principales Localidades:**
    - Captura diaria de las **422 estaciones de servicio** de Extremadura desde la API oficial del MITECO (`FiltroCCAA/11`).
-   - Compilación automática todos los días a las **06:00 AM** mediante GitHub Actions (`.github/workflows/deploy.yml`) para que a las 07:00 AM estén publicados los precios vigentes del día.
-   - Paneles destacados en portada con medias autonómicas, **Top 5 de gasolineras más baratas hoy en Extremadura**, y dos cajas específicas para las dos capitales de provincia (**Badajoz Capital** con 41 EESS y **Cáceres Capital** con 15 EESS) con sus precios medios/mínimos y su **Top 5 hoy** (selector interactivo Diésel / Gasolina 95).
+   - Compilación automática todos los días a las **06:00 AM** mediante GitHub Actions (`.github/workflows/deploy.yml`) para que a primera hora de la mañana estén publicadas las tarifas del día.
+   - Banners compactos y directos de cotización media regional para **Gasolina 95 E5** y **Gasóleo A (Diésel)** con mínimo diario y coste de 50L.
+   - Dos paneles específicos para las capitales de provincia (**Badajoz Capital** con 41 EESS y **Cáceres Capital** con 15 EESS) con sus precios medios/mínimos y su **Top 5 hoy** (selector interactivo Diésel / Gasolina 95).
    - Tabla en vivo de las **16 principales localidades de Extremadura** (Badajoz, Cáceres, Mérida, Plasencia, Don Benito, Almendralejo, Villanueva de la Serena, Navalmoral de la Mata, Zafra, Montijo, Trujillo, Villafranca de los Barros, Miajadas, Coria, Olivenza y Jerez de los Caballeros).
-2. **Comparativa Hoy Badajoz vs. Cáceres:**
-   - Medias provinciales del día (Badajoz y Cáceres), ahorro en depósito de 50 litros, estaciones por debajo de la media autonómica y top 5 de gasolineras más baratas hoy en cada provincia.
+2. **Comparativa Hoy Badajoz vs. Cáceres (Veredicto y Cara a Cara):**
+   - Veredicto superior territorial directo con la brecha por litro y el ahorro estimado por depósito entre ambas provincias.
+   - Duelo cara a cara simplificado con medias, mínimos y tablas de las 5 estaciones más económicas de cada provincia.
 3. **Explorador Interactivo de los 179 Municipios:**
    - Buscador instantáneo por municipio o código postal, filtros por provincia e inicial alfabética, ordenación por precio más barato y desplegable con todas las gasolineras y horarios de cada localidad.
-4. **Serie Histórica Completa (2025 y 2026):**
+4. **Serie Histórica Consolidada (2025 y 2026):**
    - Más de 630 días de registros diarios consolidados en `public/datos/historico_extremadura_2026.json` y `public/datos/historico_provincias_extremadura_2026.json`.
-   - 4 gráficos interactivos con Chart.js (curva diaria con filtros por año y provincia, comparativa histórica Badajoz vs Cáceres, evolución de la prima del diésel y medias mensuales), récords y tabla mensual.
-5. **Guía Práctica Extensa y Calculadora de Ahorro:**
-   - Calculadora interactiva de repostaje y ahorro anual más guía técnica sobre trazabilidad Exolum (Mérida/Badajoz), rutas A-5 y A-66, frontera con Portugal y cooperativas agrarias.
+   - Gráfico interactivo con Chart.js de evolución diaria (filtros por periodo y ámbito provincial) y gráfico comparativo de medias mensuales.
+5. **Calculadora Interactiva de Repostaje y Ahorro:**
+   - Ajuste de litros, consumo y kilometraje anual para calcular el ahorro real repostando en las estaciones más económicas frente a la media.
 6. **SEO Técnico y Privacidad (RGPD / AEPD):**
    - Marcado estructurado Schema.org (`WebSite`, `WebPage`, `Dataset`, `ItemList` y `FAQPage` dinámica con los precios del día).
    - Activos vectoriales y Open Graph (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, `logo.svg`, `og-image.png`, `robots.txt`, `sitemap.xml`, `site.webmanifest` y `CNAME`).

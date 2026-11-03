@@ -2,11 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import {
   HOY_EXTREMADURA,
-  MESES_HISTORICO,
   RESUMEN_HISTORICO,
   TOP_MUNICIPIOS_BARATOS_G95,
   TOP_MUNICIPIOS_BARATOS_GASA,
-  API_MITECO,
   FAQS_SEO,
   fmtPrecio
 } from "../data/precios";
@@ -50,22 +48,6 @@ const caceresCiudadTopGasolina = [...caceresCiudadPublicas]
 const LETRAS_MUNICIPIOS = [
   "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "Z"
 ];
-
-const curlCode = `# 1. Capturar todas las estaciones activas hoy en Extremadura (CCAA 11)
-curl -s "https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/FiltroCCAA/11" \\
-  -H "Accept: application/json" -o hoy_extremadura_raw.json
-
-# 2. Consultar histórico de un día concreto en Extremadura (Ej: Gasóleo A = ID 3)
-curl -s "https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestresHist/FiltroCCAAProducto/30-09-2026/11/3" \\
-  -H "Accept: application/json" -o historico_dia.json`;
-
-const scriptsRepoCode = `# Actualizar precios de HOY (se ejecuta automáticamente a las 06:00 AM en GitHub Actions)
-npm run actualizar:hoy
-
-# Actualizar incrementalmente los JSON históricos al cierre de cada mes (ejecución manual)
-npm run historico:mes
-# O indicando un rango de fechas específico:
-node scripts/actualizar_historico_mes.mjs 2026-10-01 2026-10-31`;
 ---
 
 <BaseLayout>
@@ -97,198 +79,68 @@ node scripts/actualizar_historico_mes.mjs 2026-10-01 2026-10-31`;
         </div>
       </div>
 
-      <!-- Paneles Principales de Precio de Hoy en Extremadura -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
+      <!-- Banners de Cotización Media Hoy en Extremadura (Gasolina 95 E5 y Gasóleo A) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
 
-        <!-- Panel Gasolina 95 E5 Hoy -->
-        <div class="lg:col-span-4 rounded-2xl bg-slate-950/90 border border-sky-500/40 p-6 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-2 pb-4 border-b border-slate-800">
-              <div class="flex items-center gap-2.5">
-                <span class="w-3 h-3 rounded-full bg-sky-400"></span>
-                <h2 class="text-base font-bold text-white tracking-normal">Gasolina 95 E5 · Hoy</h2>
-              </div>
-              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-sky-950 text-sky-200 border border-sky-700/60 num-tabular">
+        <!-- Banner Gasolina 95 E5 -->
+        <div class="rounded-xl bg-slate-950/85 border border-sky-500/40 p-4 sm:px-5 sm:py-3.5 flex flex-col justify-between gap-2.5 shadow-sm">
+          <div class="flex items-center justify-between gap-3">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-sky-400 shrink-0"></span>
+              <h2 class="text-sm sm:text-base font-bold text-white tracking-tight">Gasolina 95 E5</h2>
+              <span class="text-[11px] font-semibold text-slate-400 bg-slate-900 border border-slate-800 px-2 py-0.5 rounded-full num-tabular">
                 {extremadura.estacionesGasolina95} EESS
               </span>
             </div>
-
-            <div class="my-5 flex items-baseline justify-between gap-4">
-              <div>
-                <span class="block text-xs font-semibold text-sky-200 mb-1">Media Extremadura hoy</span>
-                <div class="flex items-baseline gap-1.5">
-                  <span class="text-4xl sm:text-5xl font-black text-white num-tabular">
-                    {fmtPrecio(extremadura.mediaGasolina95)}
-                  </span>
-                  <span class="text-base font-bold text-sky-300">€/L</span>
-                </div>
-              </div>
-              <div class="text-right">
-                <span class="block text-xs font-semibold text-slate-300 mb-1">Depósito 50L (media)</span>
-                <span class="text-xl font-extrabold text-sky-200 num-tabular">
-                  {fmtPrecio(extremadura.costeDeposito50L.gasolina95Media, 2)} €
-                </span>
-              </div>
+            <div class="flex items-baseline gap-1.5 shrink-0">
+              <span class="text-xs text-sky-300 font-semibold hidden sm:inline">Media hoy:</span>
+              <span class="text-2xl sm:text-3xl font-black text-white num-tabular">
+                {fmtPrecio(extremadura.mediaGasolina95)}
+              </span>
+              <span class="text-xs font-bold text-sky-300">€/L</span>
             </div>
           </div>
 
-          <!-- Mínimo y Máximo del día en Extremadura -->
-          <div class="space-y-2.5 pt-4 border-t border-slate-800 text-xs">
-            <div class="flex items-start justify-between gap-3 bg-emerald-950/50 border border-emerald-700/50 rounded-xl p-3">
-              <div>
-                <span class="block font-bold text-emerald-300">Mínimo hoy en Extremadura</span>
-                <span class="block text-slate-200 font-semibold mt-0.5">
-                  {extremadura.minGasolina95?.rotulo} · {extremadura.minGasolina95?.municipio}
-                </span>
-                <span class="block text-slate-300 text-[11px]">{extremadura.minGasolina95?.direccion}</span>
-              </div>
-              <div class="text-right shrink-0">
-                <span class="block text-lg font-black text-emerald-300 num-tabular">
-                  {fmtPrecio(extremadura.minGasolina95?.precio)} €/L
-                </span>
-                <span class="block text-[11px] text-emerald-200 num-tabular">
-                  50L: {fmtPrecio(extremadura.costeDeposito50L.gasolina95Min, 2)} €
-                </span>
-              </div>
+          <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 pt-2 border-t border-slate-800/80 text-xs text-slate-300">
+            <div class="truncate">
+              <span class="text-emerald-400 font-semibold">Mín. regional:</span>
+              <strong class="text-white num-tabular font-bold ml-1">{fmtPrecio(extremadura.minGasolina95?.precio)} €/L</strong>
+              <span class="text-slate-400 text-[11px] ml-1 truncate">({extremadura.minGasolina95?.rotulo} · {extremadura.minGasolina95?.municipio})</span>
             </div>
-
-            <div class="flex items-center justify-between px-2 pt-1 text-slate-300">
-              <span>Máximo hoy ({extremadura.maxGasolina95?.municipio}): <strong class="text-white num-tabular">{fmtPrecio(extremadura.maxGasolina95?.precio)} €/L</strong></span>
-              <span class="text-emerald-300 font-bold num-tabular">
-                Ahorro máx: {fmtPrecio(extremadura.costeDeposito50L.ahorroMaxGasolina95_50L, 2)} €/dep.
-              </span>
+            <div class="shrink-0 text-slate-400 text-[11px] num-tabular">
+              Depósito 50L: <strong class="text-slate-200 font-semibold">{fmtPrecio(extremadura.costeDeposito50L.gasolina95Media, 2)} €</strong>
             </div>
           </div>
         </div>
 
-        <!-- Panel Gasóleo A (Diésel) Hoy -->
-        <div class="lg:col-span-4 rounded-2xl bg-slate-950/90 border border-amber-500/40 p-6 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-2 pb-4 border-b border-slate-800">
-              <div class="flex items-center gap-2.5">
-                <span class="w-3 h-3 rounded-full bg-amber-400"></span>
-                <h2 class="text-base font-bold text-white tracking-normal">Gasóleo A (Diésel) · Hoy</h2>
-              </div>
-              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-950 text-amber-200 border border-amber-700/60 num-tabular">
+        <!-- Banner Gasóleo A (Diésel) -->
+        <div class="rounded-xl bg-slate-950/85 border border-amber-500/40 p-4 sm:px-5 sm:py-3.5 flex flex-col justify-between gap-2.5 shadow-sm">
+          <div class="flex items-center justify-between gap-3">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400 shrink-0"></span>
+              <h2 class="text-sm sm:text-base font-bold text-white tracking-tight">Gasóleo A (Diésel)</h2>
+              <span class="text-[11px] font-semibold text-slate-400 bg-slate-900 border border-slate-800 px-2 py-0.5 rounded-full num-tabular">
                 {extremadura.estacionesGasoleoA} EESS
               </span>
             </div>
-
-            <div class="my-5 flex items-baseline justify-between gap-4">
-              <div>
-                <span class="block text-xs font-semibold text-amber-200 mb-1">Media Extremadura hoy</span>
-                <div class="flex items-baseline gap-1.5">
-                  <span class="text-4xl sm:text-5xl font-black text-white num-tabular">
-                    {fmtPrecio(extremadura.mediaGasoleoA)}
-                  </span>
-                  <span class="text-base font-bold text-amber-300">€/L</span>
-                </div>
-              </div>
-              <div class="text-right">
-                <span class="block text-xs font-semibold text-slate-300 mb-1">Depósito 50L (media)</span>
-                <span class="text-xl font-extrabold text-amber-200 num-tabular">
-                  {fmtPrecio(extremadura.costeDeposito50L.gasoleoAMedia, 2)} €
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mínimo y Máximo del día en Extremadura -->
-          <div class="space-y-2.5 pt-4 border-t border-slate-800 text-xs">
-            <div class="flex items-start justify-between gap-3 bg-emerald-950/50 border border-emerald-700/50 rounded-xl p-3">
-              <div>
-                <span class="block font-bold text-emerald-300">Mínimo hoy en Extremadura</span>
-                <span class="block text-slate-200 font-semibold mt-0.5">
-                  {extremadura.minGasoleoA?.rotulo} · {extremadura.minGasoleoA?.municipio}
-                </span>
-                <span class="block text-slate-300 text-[11px]">{extremadura.minGasoleoA?.direccion}</span>
-              </div>
-              <div class="text-right shrink-0">
-                <span class="block text-lg font-black text-emerald-300 num-tabular">
-                  {fmtPrecio(extremadura.minGasoleoA?.precio)} €/L
-                </span>
-                <span class="block text-[11px] text-emerald-200 num-tabular">
-                  50L: {fmtPrecio(extremadura.costeDeposito50L.gasoleoAMin, 2)} €
-                </span>
-              </div>
-            </div>
-
-            <div class="flex items-center justify-between px-2 pt-1 text-slate-300">
-              <span>Máximo hoy ({extremadura.maxGasoleoA?.municipio}): <strong class="text-white num-tabular">{fmtPrecio(extremadura.maxGasoleoA?.precio)} €/L</strong></span>
-              <span class="text-emerald-300 font-bold num-tabular">
-                Ahorro máx: {fmtPrecio(extremadura.costeDeposito50L.ahorroMaxGasoleoA_50L, 2)} €/dep.
+            <div class="flex items-baseline gap-1.5 shrink-0">
+              <span class="text-xs text-amber-300 font-semibold hidden sm:inline">Media hoy:</span>
+              <span class="text-2xl sm:text-3xl font-black text-white num-tabular">
+                {fmtPrecio(extremadura.mediaGasoleoA)}
               </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Panel Top 5 Gasolineras Más Baratas Hoy en Extremadura -->
-        <div class="lg:col-span-4 rounded-2xl bg-slate-950/90 border border-slate-700 p-6 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-2 pb-3 border-b border-slate-800 mb-3">
-              <h2 class="text-base font-bold text-white tracking-normal">Top 5 Más Baratas Hoy</h2>
-              <div class="inline-flex rounded-lg bg-slate-900 p-0.5 border border-slate-700" role="tablist">
-                <button
-                  type="button"
-                  role="tab"
-                  data-top-tab="gasoleo"
-                  aria-selected="true"
-                  class="px-2.5 py-1 rounded-md text-xs font-bold text-slate-200 aria-selected:bg-amber-600 aria-selected:text-white transition-colors"
-                >
-                  Diésel
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  data-top-tab="gasolina"
-                  aria-selected="false"
-                  class="px-2.5 py-1 rounded-md text-xs font-bold text-slate-200 aria-selected:bg-sky-600 aria-selected:text-white transition-colors"
-                >
-                  Gasolina 95
-                </button>
-              </div>
-            </div>
-
-            <!-- Lista Top 5 Diésel -->
-            <div data-top-panel="gasoleo" class="divide-y divide-slate-800/90 text-xs">
-              {extremadura.topBaratasGasoleoA.slice(0, 5).map((est) => (
-                <div class="py-2.5 flex items-center justify-between gap-2">
-                  <div class="min-w-0">
-                    <span class="block font-bold text-white truncate">
-                      {est?.rotulo} · <span class="text-amber-300">{est?.municipio}</span>
-                    </span>
-                    <span class="block text-slate-300 text-[11px] truncate">{est?.direccion}</span>
-                  </div>
-                  <span class="font-black text-sm text-emerald-300 num-tabular shrink-0">
-                    {fmtPrecio(est?.precio)} €
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <!-- Lista Top 5 Gasolina 95 -->
-            <div data-top-panel="gasolina" class="hidden divide-y divide-slate-800/90 text-xs">
-              {extremadura.topBaratasGasolina95.slice(0, 5).map((est) => (
-                <div class="py-2.5 flex items-center justify-between gap-2">
-                  <div class="min-w-0">
-                    <span class="block font-bold text-white truncate">
-                      {est?.rotulo} · <span class="text-sky-300">{est?.municipio}</span>
-                    </span>
-                    <span class="block text-slate-300 text-[11px] truncate">{est?.direccion}</span>
-                  </div>
-                  <span class="font-black text-sm text-emerald-300 num-tabular shrink-0">
-                    {fmtPrecio(est?.precio)} €
-                  </span>
-                </div>
-              ))}
+              <span class="text-xs font-bold text-amber-300">€/L</span>
             </div>
           </div>
 
-          <div class="pt-3 mt-2 border-t border-slate-800 flex items-center justify-between text-xs text-slate-300">
-            <span>Brecha Diésel − Gasolina hoy:</span>
-            <span class="font-bold text-amber-300 num-tabular">
-              +{fmtPrecio((extremadura.diferencialDieselGasolina ?? 0) * 100, 1)} cts/L
-            </span>
+          <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 pt-2 border-t border-slate-800/80 text-xs text-slate-300">
+            <div class="truncate">
+              <span class="text-emerald-400 font-semibold">Mín. regional:</span>
+              <strong class="text-white num-tabular font-bold ml-1">{fmtPrecio(extremadura.minGasoleoA?.precio)} €/L</strong>
+              <span class="text-slate-400 text-[11px] ml-1 truncate">({extremadura.minGasoleoA?.rotulo} · {extremadura.minGasoleoA?.municipio})</span>
+            </div>
+            <div class="shrink-0 text-slate-400 text-[11px] num-tabular">
+              Depósito 50L: <strong class="text-slate-200 font-semibold">{fmtPrecio(extremadura.costeDeposito50L.gasoleoAMedia, 2)} €</strong>
+            </div>
           </div>
         </div>
 
@@ -646,147 +498,91 @@ node scripts/actualizar_historico_mes.mjs 2026-10-01 2026-10-31`;
         </p>
       </div>
 
-      <!-- Resumen Ejecutivo del duelo provincial de hoy -->
-      <div class="surface-panel p-6 sm:p-8 mb-10">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-slate-200">
+      <!-- Resumen Comparativo Badajoz vs Cáceres -->
+      <div class="surface-panel p-5 sm:p-6 mb-8">
+        <!-- Veredicto del día en formato banner resumen -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-slate-900 text-white rounded-xl px-4 py-3 mb-5 text-xs sm:text-sm">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
+            <span class="font-bold">Diferencia hoy:</span>
+            <span class="text-slate-200">
+              En Diésel, <strong class="text-emerald-300 font-bold">{comparativaHoy.provinciaMasBarataGasoleoA}</strong> es <strong class="text-white num-tabular font-bold">{fmtPrecio(Math.abs(comparativaHoy.diferenciaGasoleoACentimos), 1)} cts/L</strong> más barata (-{fmtPrecio(comparativaHoy.ahorroDeposito50LGasoleoA, 2)} €/depósito).
+            </span>
+          </div>
+          <div class="text-slate-300 text-xs sm:text-right shrink-0">
+            Gasolina 95: <strong class="text-sky-300 font-bold">{comparativaHoy.provinciaMasBarataGasolina95}</strong> a <strong class="text-white num-tabular font-bold">{fmtPrecio(Math.abs(comparativaHoy.diferenciaGasolina95Centimos), 1)} cts/L</strong> menos.
+          </div>
+        </div>
 
-          <!-- Columna 1: Provincia de Badajoz Hoy -->
-          <div class=" lg:pr-6">
-            <div class="flex items-center justify-between mb-4">
-              <div class="flex items-center gap-2.5">
-                <span class="w-3 h-3 rounded-full bg-sky-600"></span>
-                <h3 class="text-xl font-extrabold text-slate-900">Provincia de Badajoz</h3>
+        <!-- Cara a cara provincial en dos columnas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+
+          <!-- Badajoz -->
+          <div class="md:pr-5">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-600"></span>
+                <h3 class="font-extrabold text-slate-900 text-base sm:text-lg">Badajoz</h3>
               </div>
-              <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-sky-50 text-sky-900 border border-sky-200 num-tabular">
+              <span class="text-xs font-semibold text-slate-600 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded-md num-tabular">
                 {badajoz.totalEstaciones} EESS · {badajoz.totalMunicipios} municipios
               </span>
             </div>
 
-            <div class="grid grid-cols-2 gap-4 py-3 border-y border-slate-200 my-4">
-              <div>
-                <span class="block text-xs font-semibold text-slate-600">Gasolina 95 hoy</span>
-                <span class="text-2xl sm:text-3xl font-black text-sky-800 num-tabular">
+            <div class="grid grid-cols-2 gap-3">
+              <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+                <span class="block text-[11px] font-semibold text-slate-500">Gasolina 95 hoy</span>
+                <span class="text-xl sm:text-2xl font-black text-sky-800 num-tabular">
                   {fmtPrecio(badajoz.mediaGasolina95)} €
                 </span>
-                <span class="block text-xs text-slate-600 mt-1 num-tabular">
-                  50L: <strong>{fmtPrecio(badajoz.costeDeposito50L.gasolina95Media, 2)} €</strong>
+                <span class="block text-[11px] text-slate-600 mt-1 truncate">
+                  Mín: <strong class="text-slate-900 font-bold">{fmtPrecio(badajoz.minGasolina95?.precio)} €</strong> ({badajoz.minGasolina95?.municipio})
                 </span>
               </div>
-              <div>
-                <span class="block text-xs font-semibold text-slate-600">Gasóleo A hoy</span>
-                <span class="text-2xl sm:text-3xl font-black text-amber-800 num-tabular">
+
+              <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+                <span class="block text-[11px] font-semibold text-slate-500">Gasóleo A hoy</span>
+                <span class="text-xl sm:text-2xl font-black text-amber-800 num-tabular">
                   {fmtPrecio(badajoz.mediaGasoleoA)} €
                 </span>
-                <span class="block text-xs text-slate-600 mt-1 num-tabular">
-                  50L: <strong>{fmtPrecio(badajoz.costeDeposito50L.gasoleoAMedia, 2)} €</strong>
+                <span class="block text-[11px] text-slate-600 mt-1 truncate">
+                  Mín: <strong class="text-slate-900 font-bold">{fmtPrecio(badajoz.minGasoleoA?.precio)} €</strong> ({badajoz.minGasoleoA?.municipio})
                 </span>
               </div>
             </div>
-
-            <dl class="space-y-2 text-xs text-slate-700">
-              <div class="flex justify-between">
-                <dt>Gasolina 95 más barata hoy:</dt>
-                <dd class="font-bold text-slate-900 num-tabular">
-                  {fmtPrecio(badajoz.minGasolina95?.precio)} € ({badajoz.minGasolina95?.municipio})
-                </dd>
-              </div>
-              <div class="flex justify-between">
-                <dt>Diésel más barato hoy:</dt>
-                <dd class="font-bold text-slate-900 num-tabular">
-                  {fmtPrecio(badajoz.minGasoleoA?.precio)} € ({badajoz.minGasoleoA?.municipio})
-                </dd>
-              </div>
-              <div class="flex justify-between">
-                <dt>Surtidores bajo media regional (Diésel):</dt>
-                <dd class="font-bold text-emerald-800 num-tabular">
-                  {badajoz.bajoMediaRegionalGasA} de {badajoz.estacionesGasoleoA} estaciones
-                </dd>
-              </div>
-            </dl>
           </div>
 
-          <!-- Columna 2: Provincia de Cáceres Hoy -->
-          <div class="pt-6 lg:pt-0 lg:px-6">
-            <div class="flex items-center justify-between mb-4">
-              <div class="flex items-center gap-2.5">
-                <span class="w-3 h-3 rounded-full bg-amber-600"></span>
-                <h3 class="text-xl font-extrabold text-slate-900">Provincia de Cáceres</h3>
+          <!-- Cáceres -->
+          <div class="pt-5 md:pt-0 md:pl-5">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span>
+                <h3 class="font-extrabold text-slate-900 text-base sm:text-lg">Cáceres</h3>
               </div>
-              <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-900 border border-amber-200 num-tabular">
+              <span class="text-xs font-semibold text-slate-600 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded-md num-tabular">
                 {caceres.totalEstaciones} EESS · {caceres.totalMunicipios} municipios
               </span>
             </div>
 
-            <div class="grid grid-cols-2 gap-4 py-3 border-y border-slate-200 my-4">
-              <div>
-                <span class="block text-xs font-semibold text-slate-600">Gasolina 95 hoy</span>
-                <span class="text-2xl sm:text-3xl font-black text-sky-800 num-tabular">
+            <div class="grid grid-cols-2 gap-3">
+              <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+                <span class="block text-[11px] font-semibold text-slate-500">Gasolina 95 hoy</span>
+                <span class="text-xl sm:text-2xl font-black text-sky-800 num-tabular">
                   {fmtPrecio(caceres.mediaGasolina95)} €
                 </span>
-                <span class="block text-xs text-slate-600 mt-1 num-tabular">
-                  50L: <strong>{fmtPrecio(caceres.costeDeposito50L.gasolina95Media, 2)} €</strong>
+                <span class="block text-[11px] text-slate-600 mt-1 truncate">
+                  Mín: <strong class="text-slate-900 font-bold">{fmtPrecio(caceres.minGasolina95?.precio)} €</strong> ({caceres.minGasolina95?.municipio})
                 </span>
               </div>
-              <div>
-                <span class="block text-xs font-semibold text-slate-600">Gasóleo A hoy</span>
-                <span class="text-2xl sm:text-3xl font-black text-amber-800 num-tabular">
+
+              <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+                <span class="block text-[11px] font-semibold text-slate-500">Gasóleo A hoy</span>
+                <span class="text-xl sm:text-2xl font-black text-amber-800 num-tabular">
                   {fmtPrecio(caceres.mediaGasoleoA)} €
                 </span>
-                <span class="block text-xs text-slate-600 mt-1 num-tabular">
-                  50L: <strong>{fmtPrecio(caceres.costeDeposito50L.gasoleoAMedia, 2)} €</strong>
+                <span class="block text-[11px] text-slate-600 mt-1 truncate">
+                  Mín: <strong class="text-slate-900 font-bold">{fmtPrecio(caceres.minGasoleoA?.precio)} €</strong> ({caceres.minGasoleoA?.municipio})
                 </span>
-              </div>
-            </div>
-
-            <dl class="space-y-2 text-xs text-slate-700">
-              <div class="flex justify-between">
-                <dt>Gasolina 95 más barata hoy:</dt>
-                <dd class="font-bold text-slate-900 num-tabular">
-                  {fmtPrecio(caceres.minGasolina95?.precio)} € ({caceres.minGasolina95?.municipio})
-                </dd>
-              </div>
-              <div class="flex justify-between">
-                <dt>Diésel más barato hoy:</dt>
-                <dd class="font-bold text-slate-900 num-tabular">
-                  {fmtPrecio(caceres.minGasoleoA?.precio)} € ({caceres.minGasoleoA?.municipio})
-                </dd>
-              </div>
-              <div class="flex justify-between">
-                <dt>Surtidores bajo media regional (Diésel):</dt>
-                <dd class="font-bold text-emerald-800 num-tabular">
-                  {caceres.bajoMediaRegionalGasA} de {caceres.estacionesGasoleoA} estaciones
-                </dd>
-              </div>
-            </dl>
-          </div>
-
-          <!-- Columna 3: Veredicto y Brecha Hoy -->
-          <div class="pt-6 lg:pt-0 lg:pl-6 flex flex-col justify-between">
-            <div>
-              <h3 class="text-lg font-extrabold text-slate-900 mb-3">
-                Diferencia Territorial Hoy
-              </h3>
-              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4">
-                En <strong>Gasóleo A</strong>, la provincia de <strong>{comparativaHoy.provinciaMasBarataGasoleoA}</strong> es hoy <strong class="text-emerald-800 num-tabular">{fmtPrecio(Math.abs(comparativaHoy.diferenciaGasoleoACentimos), 1)} céntimos por litro</strong> más económica de media ({fmtPrecio(comparativaHoy.ahorroDeposito50LGasoleoA, 2)} € de diferencia en un depósito de 50 L). En <strong>Gasolina 95</strong>, la diferencia media provincial hoy es de <strong class="num-tabular">{fmtPrecio(Math.abs(comparativaHoy.diferenciaGasolina95Centimos), 1)} cts/L</strong> a favor de <strong>{comparativaHoy.provinciaMasBarataGasolina95}</strong>.
-              </p>
-            </div>
-
-            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2 text-xs">
-              <div class="flex items-center justify-between">
-                <span class="font-semibold text-slate-700">Horquilla hoy en Badajoz (Diésel):</span>
-                <span class="font-bold text-slate-900 num-tabular">
-                  {fmtPrecio(badajoz.minGasoleoA?.precio)} € → {fmtPrecio(badajoz.maxGasoleoA?.precio)} €
-                </span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="font-semibold text-slate-700">Horquilla hoy en Cáceres (Diésel):</span>
-                <span class="font-bold text-slate-900 num-tabular">
-                  {fmtPrecio(caceres.minGasoleoA?.precio)} € → {fmtPrecio(caceres.maxGasoleoA?.precio)} €
-                </span>
-              </div>
-              <div class="pt-2 border-t border-slate-200 flex items-center justify-between text-emerald-800 font-bold">
-                <span>Ahorro eligiendo la más barata de tu provincia:</span>
-                <span class="num-tabular">hasta {fmtPrecio(badajoz.costeDeposito50L.ahorroVsMediaGasoleoA_50L, 2)} € / 50L</span>
               </div>
             </div>
           </div>
@@ -1186,50 +982,7 @@ node scripts/actualizar_historico_mes.mjs 2026-10-01 2026-10-31`;
         </div>
       </div>
 
-      <!-- GRÁFICOS 2 Y 3 EN PARALELO: COMPARATIVA PROVINCIAL Y DIFERENCIAL DIÉSEL-GASOLINA -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-
-        <!-- Gráfico 2: Badajoz vs Cáceres en el tiempo -->
-        <div class="surface-panel p-6">
-          <div class="flex flex-wrap items-center justify-between gap-2 pb-4 mb-4 border-b border-slate-200">
-            <div>
-              <h3 class="text-base sm:text-lg font-extrabold text-slate-900">
-                Serie Provincial: Cáceres vs. Badajoz
-              </h3>
-              <p class="text-xs text-slate-600">Brecha diaria sostenida entre ambas provincias (2025–2026)</p>
-            </div>
-            <div class="inline-flex rounded-xl bg-slate-100 p-1 border border-slate-200" role="group">
-              <button type="button" data-prov-fuel="gasoleo" aria-selected="true" class="tab-btn px-2.5 py-1 rounded-lg text-xs font-bold text-slate-800">
-                Gasóleo A
-              </button>
-              <button type="button" data-prov-fuel="gasolina" aria-selected="false" class="tab-btn px-2.5 py-1 rounded-lg text-xs font-bold text-slate-800">
-                Gasolina 95
-              </button>
-            </div>
-          </div>
-          <div class="chart-box">
-            <canvas id="chart-comparativa-provincias" aria-label="Gráfico comparativo histórico entre Badajoz y Cáceres"></canvas>
-          </div>
-        </div>
-
-        <!-- Gráfico 3: Evolución del Diferencial (Gasóleo - Gasolina) -->
-        <div class="surface-panel p-6">
-          <div class="pb-4 mb-4 border-b border-slate-200">
-            <h3 class="text-base sm:text-lg font-extrabold text-slate-900">
-              La Anomalía del Diésel: Prima sobre la Gasolina 95
-            </h3>
-            <p class="text-xs text-slate-600">
-              Diferencial diario (Gasóleo A menos Gasolina 95) expresado en céntimos por litro
-            </p>
-          </div>
-          <div class="chart-box">
-            <canvas id="chart-diferencial" aria-label="Gráfico del sobrecoste del diésel frente a la gasolina 95 en Extremadura"></canvas>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- GRÁFICO 4: HISTOGRAMA DE MEDIAS MENSUALES (2025 - 2026) -->
+      <!-- GRÁFICO: HISTOGRAMA DE MEDIAS MENSUALES (2025 - 2026) -->
       <div class="surface-panel p-6 sm:p-8 mb-12">
         <div class="pb-4 mb-5 border-b border-slate-200">
           <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">
@@ -1241,113 +994,6 @@ node scripts/actualizar_historico_mes.mjs 2026-10-01 2026-10-31`;
         </div>
         <div class="chart-box">
           <canvas id="chart-medias-mensuales" aria-label="Gráfico de barras con las medias mensuales de combustible en Extremadura"></canvas>
-        </div>
-      </div>
-
-      <!-- CONCLUSIONES DEL ANÁLISIS HISTÓRICO 2025-2026 -->
-      <div class="surface-panel p-6 sm:p-8 mb-12 bg-slate-50">
-        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mb-6">
-          Radiografía y Conclusiones de la Evolución 2025–2026 en Extremadura
-        </h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h4 class="text-base font-extrabold text-slate-900 mb-2">
-              Del valle de estabilidad en 2025 al repunte estival de 2026
-            </h4>
-            <p class="text-sm text-slate-700 leading-relaxed">
-              Durante todo 2025 el mercado extremeño disfrutó de una notable contención tras el primer bimestre: la Gasolina 95 promedió <strong class="num-tabular">{fmtPrecio(RESUMEN_HISTORICO.media2025G95)} €/L</strong> en el conjunto del año (con mínimos en mayo de 2025 de <strong class="num-tabular">1,462 €/L</strong> de media mensual). Sin embargo, a partir de julio de 2026 la curva rompió al alza hasta alcanzar en septiembre de 2026 medias de <strong class="num-tabular">1,896 €/L</strong> en gasolina y <strong class="num-tabular">2,089 €/L</strong> en diésel.
-            </p>
-          </div>
-
-          <div>
-            <h4 class="text-base font-extrabold text-slate-900 mb-2">
-              Inversión estructural del diésel (+15 a +20 cts/L sobre la gasolina)
-            </h4>
-            <p class="text-sm text-slate-700 leading-relaxed">
-              Lejos de su ventaja histórica, el Gasóleo A ha mantenido durante los 638 días analizados una prima constante por encima de la Gasolina 95 E5 en Extremadura. Esta brecha penaliza especialmente al sector agrario de las Vegas del Guadiana y Tierra de Barros, así como a las flotas de distribución regional por la A-5 y la A-66.
-            </p>
-          </div>
-
-          <div>
-            <h4 class="text-base font-extrabold text-slate-900 mb-2">
-              La brecha estructural Cáceres vs. Badajoz no se cierra
-            </h4>
-            <p class="text-sm text-slate-700 leading-relaxed">
-              Tanto en las fases de bajada (primavera de 2025 y junio de 2026) como en los picos inflacionarios (marzo y septiembre de 2026), la provincia de Cáceres ha soportado sistemáticamente precios entre <strong>2,5 y 3,6 céntimos por litro superiores</strong> a los de Badajoz debido a su orografía, dispersión municipal y menor penetración de operadores automáticos independientes.
-            </p>
-          </div>
-
-          <div>
-            <h4 class="text-base font-extrabold text-slate-900 mb-2">
-              Corrección de otoño y dispersión récord entre surtidores
-            </h4>
-            <p class="text-sm text-slate-700 leading-relaxed">
-              Con la entrada de noviembre de 2026, las medias regionales han moderado su cotización hasta los <strong class="num-tabular">{fmtPrecio(extremadura.mediaGasolina95)} €/L</strong> en Gasolina 95 y <strong class="num-tabular">{fmtPrecio(extremadura.mediaGasoleoA)} €/L</strong> en Gasóleo A, pero la diferencia entre el surtidor más barato y el más caro de Extremadura en un mismo día supera los <strong>45 céntimos por litro</strong>, haciendo imprescindible comparar antes de repostar.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- TABLA MENSUAL CONSOLIDADA 2025 Y 2026 -->
-      <div class="surface-panel overflow-hidden">
-        <div class="px-6 py-4 bg-slate-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div>
-            <h3 class="font-bold text-base">
-              Tabla Histórica Mes a Mes (Enero 2025 – Septiembre 2026)
-            </h3>
-            <p class="text-xs text-slate-300">
-              Medias mensuales consolidadas en Extremadura, Badajoz y Cáceres (€/L)
-            </p>
-          </div>
-          <div class="inline-flex rounded-xl bg-slate-800 p-1 border border-slate-700 self-start sm:self-auto" role="group">
-            <button type="button" data-hist-year="todos" aria-selected="true" class="px-3 py-1 rounded-lg text-xs font-bold text-slate-200 aria-selected:bg-sky-600 aria-selected:text-white">
-              Todos ({MESES_HISTORICO.length})
-            </button>
-            <button type="button" data-hist-year="2026" aria-selected="false" class="px-3 py-1 rounded-lg text-xs font-bold text-slate-200 aria-selected:bg-sky-600 aria-selected:text-white">
-              2026
-            </button>
-            <button type="button" data-hist-year="2025" aria-selected="false" class="px-3 py-1 rounded-lg text-xs font-bold text-slate-200 aria-selected:bg-sky-600 aria-selected:text-white">
-              2025
-            </button>
-          </div>
-        </div>
-
-        <div class="overflow-x-auto max-h-[520px]">
-          <table class="w-full text-left text-xs sm:text-sm">
-            <thead class="bg-slate-100 text-xs font-bold uppercase text-slate-700 border-b border-slate-200 sticky top-0">
-              <tr>
-                <th class="px-5 py-3.5">Mes / Año</th>
-                <th class="px-4 py-3.5 text-right">Extremadura G95</th>
-                <th class="px-4 py-3.5 text-right">Extremadura Diésel</th>
-                <th class="px-4 py-3.5 text-right">Badajoz (G95 / Diésel)</th>
-                <th class="px-4 py-3.5 text-right">Cáceres (G95 / Diésel)</th>
-                <th class="px-5 py-3.5 text-right">Brecha Diésel−G95</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-200">
-              {[...MESES_HISTORICO].reverse().map((m) => (
-                <tr data-row-year={m.anio} class="hover:bg-slate-50">
-                  <td class="px-5 py-3 font-bold text-slate-900">{m.mesLargo}</td>
-                  <td class="px-4 py-3 text-right font-bold text-sky-800 num-tabular">
-                    {fmtPrecio(m.extremadura.gasolina95)} €/L
-                  </td>
-                  <td class="px-4 py-3 text-right font-bold text-amber-900 num-tabular">
-                    {fmtPrecio(m.extremadura.gasoleoA)} €/L
-                  </td>
-                  <td class="px-4 py-3 text-right text-slate-700 num-tabular">
-                    {fmtPrecio(m.badajoz.gasolina95)} / <strong>{fmtPrecio(m.badajoz.gasoleoA)} €</strong>
-                  </td>
-                  <td class="px-4 py-3 text-right text-slate-700 num-tabular">
-                    {fmtPrecio(m.caceres.gasolina95)} / <strong>{fmtPrecio(m.caceres.gasoleoA)} €</strong>
-                  </td>
-                  <td class="px-5 py-3 text-right font-bold text-slate-800 num-tabular">
-                    +{fmtPrecio(m.extremadura.diferencial * 100, 1)} cts
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
       </div>
 
@@ -1472,83 +1118,6 @@ node scripts/actualizar_historico_mes.mjs 2026-10-01 2026-10-31`;
         </div>
       </div>
 
-      <!-- 6 Bloques Extensos de la Guía Práctica -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <article class="surface-panel p-6">
-          <h3 class="text-lg font-extrabold text-slate-900 mb-2.5">
-            Trazabilidad Exolum (CLH Mérida y Badajoz) y Calidad del Combustible
-          </h3>
-          <p class="text-sm text-slate-700 leading-relaxed mb-3">
-            Tanto las estaciones abanderadas tradicionales (Repsol, Cepsa/Moeve, BP, Galp) como las cadenas automatizadas o cooperativas que operan en Extremadura se abastecen de las mismas instalaciones logísticas de <strong>Exolum (antigua CLH)</strong> situadas en Mérida y Badajoz.
-          </p>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            El producto base cumple estrictamente las especificaciones europeas <strong>EN 228</strong> (Gasolina 95 E5) y <strong>EN 590</strong> (Gasóleo A). La única diferencia reside en los paquetes de aditivos detergentes, antiespumantes y mejoradores de cetano añadidos en el brazo de carga.
-          </p>
-        </article>
-
-        <article class="surface-panel p-6">
-          <h3 class="text-lg font-extrabold text-slate-900 mb-2.5">
-            Peaje Invisible en Autovías (A-5, A-66 y EX-A1) frente a Polígonos
-          </h3>
-          <p class="text-sm text-slate-700 leading-relaxed mb-3">
-            Los surtidores ubicados directamente en las áreas de servicio de la <strong>Autovía del Suroeste (A-5)</strong> y la <strong>Ruta de la Plata (A-66)</strong> aplican sobreprecios de entre <strong>10 y 18 céntimos por litro</strong> respecto a las estaciones situadas a menos de 1,5 km del enlace.
-          </p>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Entrar dos minutos en áreas como el <em>Polígono El Nevero</em> (Badajoz), <em>El Prado</em> (Mérida), <em>Las Capellanías</em> (Cáceres) o los accesos industriales de Don Benito, Plasencia, Navalmoral o Zafra ahorra entre 6 y 10 euros por depósito.
-          </p>
-        </article>
-
-        <article class="surface-panel p-6">
-          <h3 class="text-lg font-extrabold text-slate-900 mb-2.5">
-            El "Efecto Lunes" y Horarios de Notificación al MITECO
-          </h3>
-          <p class="text-sm text-slate-700 leading-relaxed mb-3">
-            El análisis estadístico de las variaciones intra-semanales confirma que los <strong>lunes y martes por la mañana</strong> concentran las tarifas medias más bajas en Badajoz y Cáceres, cuando los operadores ajustan márgenes para captar al transporte profesional.
-          </p>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            A partir del jueves a mediodía y especialmente en vísperas de puentes festivos o desplazamientos estivales, los precios experimentan ajustes al alza de entre 1,5 y 3 céntimos por litro.
-          </p>
-        </article>
-
-        <article class="surface-panel p-6">
-          <h3 class="text-lg font-extrabold text-slate-900 mb-2.5">
-            El Factor Frontera con Portugal (La Raya Extremeña)
-          </h3>
-          <p class="text-sm text-slate-700 leading-relaxed mb-3">
-            En Portugal la carga impositiva sobre los carburantes (ISP + tasa de carbono + IVA al 23%) mantiene el litro de gasolina y gasóleo notablemente por encima del precio español en localidades vecinas como Elvas, Campo Maior, Castelo de Vide o Idanha-a-Nova.
-          </p>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Esta afluencia constante de conductores portugueses hacia Badajoz, Olivenza, Valencia de Alcántara o Moraleja multiplica el volumen de rotación de las estaciones rayanas y fomenta una fuerte competencia de precios.
-          </p>
-        </article>
-
-        <article class="surface-panel p-6">
-          <h3 class="text-lg font-extrabold text-slate-900 mb-2.5">
-            Cooperativas Agrarias Abiertas al Público ("Tipo Venta P")
-          </h3>
-          <p class="text-sm text-slate-700 leading-relaxed mb-3">
-            Extremadura cuenta con una extensa red de cooperativas agroalimentarias (en comarcas como Vegas Altas, Tierra de Barros, La Serena o La Vera) que disponen de surtidores de Gasóleo A y Gasolina 95 abiertos a cualquier ciudadano no socio (<em>Tipo Venta P</em> en MITECO).
-          </p>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Al operar con márgenes comerciales mínimos de servicio a su comarca, suelen encabezar diariamente el ranking de las estaciones más baratas de toda la comunidad autónoma.
-          </p>
-        </article>
-
-        <article class="surface-panel p-6">
-          <h3 class="text-lg font-extrabold text-slate-900 mb-2.5">
-            Eficiencia Térmica y Neumáticos en el Clima Extremeño
-          </h3>
-          <p class="text-sm text-slate-700 leading-relaxed mb-3">
-            Los contrastes térmicos entre el invierno en el norte de Cáceres y los veranos de más de 40 °C en las cuencas del Guadiana y del Tajo alteran hasta en 0,3 bares la presión de los neumáticos, incrementando la resistencia a la rodadura.
-          </p>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Revisar presiones en frío una vez al mes y moderar el crucero de 130 km/h a 115–120 km/h en los largos tramos rectos de la A-5 y A-66 reduce el consumo real entre 0,6 y 0,9 litros cada 100 km.
-          </p>
-        </article>
-
-      </div>
-
     </div>
   </section>
 
@@ -1595,99 +1164,6 @@ node scripts/actualizar_historico_mes.mjs 2026-10-01 2026-10-31`;
             </div>
           </details>
         ))}
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============================================================
-       7. SECCIÓN FINAL: LA API OFICIAL DE MITECO Y AUTOMATIZACIÓN
-       ============================================================ -->
-  <section id="api-miteco" class="scroll-mt-16 sm:scroll-mt-20 py-16 lg:py-24 bg-slate-900 text-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="max-w-3xl mb-12">
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
-          API Oficial de MITECO y Arquitectura de Captura de Datos
-        </h2>
-        <p class="text-slate-200 text-base sm:text-lg leading-relaxed">
-          Todos los precios publicados proceden sin intermediarios de la <strong>API REST pública del Ministerio para la Transición Ecológica y el Reto Demográfico (MITECO)</strong>, regulada por la <strong>Orden ITC/2308/2007</strong> que obliga a todas las estaciones de servicio a comunicar cualquier cambio de precios en menos de una hora.
-        </p>
-      </div>
-
-      <!-- Arquitectura de Doble Flujo: Diario (06:00 AM GitHub Actions) + Histórico Manual -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <div class="bg-slate-950/90 border border-slate-800 rounded-2xl p-6">
-          <h3 class="text-base font-extrabold text-sky-300 mb-2">
-            Captura Diaria Automática (06:00 AM)
-          </h3>
-          <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
-            Un flujo programado en <strong>GitHub Actions</strong> ejecuta cada mañana a las 06:00h (hora peninsular española) el script <code class="text-sky-300">scripts/actualizar_precios_hoy.mjs</code> contra el endpoint autonómico <code class="text-sky-300">FiltroCCAA/11</code>, recompila Astro y despliega la SPA en GitHub Pages antes de las 07:00h.
-          </p>
-        </div>
-
-        <div class="bg-slate-950/90 border border-slate-800 rounded-2xl p-6">
-          <h3 class="text-base font-extrabold text-amber-300 mb-2">
-            Series Históricas 2025–2026 en JSON
-          </h3>
-          <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
-            Dado que reconstruir cientos de días requiere miles de llamadas al archivo histórico del Ministerio, las series diarias consolidadas (<code class="text-amber-300">historico_extremadura_2026.json</code> y <code class="text-amber-300">historico_provincias_extremadura_2026.json</code>) se actualizan manualmente al cierre de cada mes mediante los scripts de <code class="text-amber-300">/scripts</code>.
-          </p>
-        </div>
-
-        <div class="bg-slate-950/90 border border-slate-800 rounded-2xl p-6">
-          <h3 class="text-base font-extrabold text-emerald-300 mb-2">
-            Acceso Público sin API Key
-          </h3>
-          <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
-            El servicio REST del MITECO es abierto, gratuito y no requiere autenticación. Recuerda reemplazar la coma decimal (<code class="text-emerald-300">"1,928"</code> → <code class="text-emerald-300">1.928</code>) al procesar los campos <code class="text-emerald-300">Precio Gasolina 95 E5</code> y <code class="text-emerald-300">Precio Gasoleo A</code>.
-          </p>
-        </div>
-      </div>
-
-      <!-- Catálogo de Endpoints REST para Extremadura -->
-      <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden mb-10">
-        <div class="px-6 py-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between">
-          <h3 class="font-bold text-white text-sm sm:text-base">
-            Endpoints REST Oficiales del MITECO para Extremadura
-          </h3>
-          <span class="text-xs font-mono text-sky-300">HTTPS GET · JSON</span>
-        </div>
-        <div class="divide-y divide-slate-800">
-          {API_MITECO.endpoints.map((ep) => (
-            <div class="p-5 sm:p-6">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-1.5">
-                <span class="font-bold text-white text-sm sm:text-base">{ep.nombre}</span>
-                <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-slate-900 text-sky-300 border border-slate-700 self-start sm:self-auto">
-                  {ep.metodo} · {ep.formato}
-                </span>
-              </div>
-              <p class="text-xs text-slate-300 mb-3">{ep.descripcion}</p>
-              <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800 font-mono text-xs text-emerald-300 overflow-x-auto select-all">
-                {ep.url}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <!-- Ejemplos de Código cURL y Comandos de Scripts del Proyecto -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-        <div class="bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden">
-          <div class="px-5 py-3 bg-slate-900 border-b border-slate-800 flex items-center justify-between text-xs">
-            <span class="font-bold text-white">Peticiones directas cURL a MITECO</span>
-            <span class="text-slate-300">Terminal / Bash</span>
-          </div>
-          <pre class="p-5 overflow-x-auto text-xs text-slate-200 font-mono"><code>{curlCode}</code></pre>
-        </div>
-
-        <div class="bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden">
-          <div class="px-5 py-3 bg-slate-900 border-b border-slate-800 flex items-center justify-between text-xs">
-            <span class="font-bold text-white">Scripts incluidos en este repositorio (/scripts)</span>
-            <span class="text-sky-300">Node.js CLI</span>
-          </div>
-          <pre class="p-5 overflow-x-auto text-xs text-sky-200 font-mono"><code>{scriptsRepoCode}</code></pre>
-        </div>
       </div>
 
     </div>

@@ -1,0 +1,112 @@
+---
+import { withBase } from "../lib/site";
+---
+
+<!-- Banner de instalación PWA (para Chrome en móvil) -->
+<aside
+  id="pwa-install-banner"
+  class="fixed bottom-0 inset-x-0 z-40 p-3 sm:p-4 transition-transform duration-300 transform translate-y-full hidden"
+  role="dialog"
+  aria-labelledby="pwa-install-title"
+  aria-describedby="pwa-install-desc"
+>
+  <div class="max-w-md mx-auto bg-slate-900/95 backdrop-blur-md border border-slate-700/80 rounded-2xl p-4 shadow-2xl text-white flex items-center justify-between gap-3">
+    <div class="flex items-center gap-3 min-w-0">
+      <img
+        src={withBase("assets/icon-192.png")}
+        alt="Icono Combustible Extremadura"
+        width="44"
+        height="44"
+        class="w-11 h-11 rounded-xl shrink-0 border border-slate-700 bg-slate-950 p-0.5"
+      />
+      <div class="min-w-0">
+        <h3 id="pwa-install-title" class="font-extrabold text-sm sm:text-base text-white tracking-tight truncate">
+          Instalar Combustible Extremadura
+        </h3>
+        <p id="pwa-install-desc" class="text-xs text-slate-300 leading-snug line-clamp-2">
+          Añade la app a tu móvil para consultar los precios hoy al instante.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-2 shrink-0">
+      <button
+        id="pwa-install-btn"
+        type="button"
+        class="px-3.5 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs transition-colors shadow-sm cursor-pointer whitespace-nowrap"
+      >
+        Instalar
+      </button>
+      <button
+        id="pwa-dismiss-btn"
+        type="button"
+        class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer"
+        aria-label="Cerrar aviso de instalación"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</aside>
+
+<script>
+  let deferredPrompt: any = null;
+  const banner = document.getElementById("pwa-install-banner");
+  const installBtn = document.getElementById("pwa-install-btn");
+  const dismissBtn = document.getElementById("pwa-dismiss-btn");
+
+  const isStandalone = window.matchMedia("(display-mode: standalone)").matches;
+
+  if (!isStandalone) {
+    window.addEventListener("beforeinstallprompt", (e) => {
+      // Prevenir el infobar automático por defecto de Chrome para mostrar el diálogo personalizado
+      e.preventDefault();
+      deferredPrompt = e;
+
+      // Mostrar el banner en Chrome móvil si no ha sido descartado en la sesión
+      if (banner && !sessionStorage.getItem("pwa_install_dismissed")) {
+        banner.classList.remove("hidden");
+        // Permitir repaint para la transición CSS
+        requestAnimationFrame(() => {
+          banner.classList.remove("translate-y-full");
+        });
+      }
+    });
+
+    if (installBtn) {
+      installBtn.addEventListener("click", async () => {
+        if (!deferredPrompt) return;
+        // Mostrar la ventana nativa de instalación de Chrome
+        deferredPrompt.prompt();
+        const choice = await deferredPrompt.userChoice;
+        if (choice.outcome === "accepted") {
+          console.log("El usuario instaló la PWA de Combustible Extremadura");
+        }
+        deferredPrompt = null;
+        ocultarBanner();
+      });
+    }
+
+    if (dismissBtn) {
+      dismissBtn.addEventListener("click", () => {
+        sessionStorage.setItem("pwa_install_dismissed", "1");
+        ocultarBanner();
+      });
+    }
+
+    window.addEventListener("appinstalled", () => {
+      deferredPrompt = null;
+      ocultarBanner();
+    });
+  }
+
+  function ocultarBanner() {
+    if (!banner) return;
+    banner.classList.add("translate-y-full");
+    setTimeout(() => {
+      banner.classList.add("hidden");
+    }, 300);
+  }
+</script>

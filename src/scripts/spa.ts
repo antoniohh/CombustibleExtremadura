@@ -67,28 +67,9 @@ function normalizarBusqueda(str: string): string {
 }
 
 // ============================================================
-// 1. CONMUTADOR TOP BARATAS HOY (GASOLINA 95 vs DIÉSEL)
+// 1. CONMUTADOR TOP BARATAS (BADAJOZ Y CÁCERES CAPITAL)
 // ============================================================
 function inicializarTabsTopHoy() {
-  const btns = document.querySelectorAll<HTMLButtonElement>("[data-top-tab]");
-  const panels = document.querySelectorAll<HTMLElement>("[data-top-panel]");
-  if (btns.length) {
-    btns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const target = btn.getAttribute("data-top-tab");
-        btns.forEach((b) => b.setAttribute("aria-selected", String(b === btn)));
-        panels.forEach((p) => {
-          if (p.getAttribute("data-top-panel") === target) {
-            p.classList.remove("hidden");
-          } else {
-            p.classList.add("hidden");
-          }
-        });
-      });
-    });
-  }
-
-  // Conmutadores independientes por provincia (Badajoz / Cáceres)
   const groups = document.querySelectorAll<HTMLElement>("[data-top-group]");
   groups.forEach((group) => {
     const groupBtns = group.querySelectorAll<HTMLButtonElement>("[data-group-tab]");
@@ -430,8 +411,6 @@ function inicializarExploradorPoblaciones() {
 // ============================================================
 async function inicializarGraficosHistoricos() {
   const canvasEvolucion = document.getElementById("chart-evolucion-diaria") as HTMLCanvasElement | null;
-  const canvasProvincias = document.getElementById("chart-comparativa-provincias") as HTMLCanvasElement | null;
-  const canvasDiferencial = document.getElementById("chart-diferencial") as HTMLCanvasElement | null;
   const canvasMensual = document.getElementById("chart-medias-mensuales") as HTMLCanvasElement | null;
 
   if (!canvasEvolucion) return;
@@ -457,7 +436,6 @@ async function inicializarGraficosHistoricos() {
     let rangoActual = "todo"; // todo | 2025 | 2026 | 90d
     let regionActual = "extremadura"; // extremadura | badajoz | caceres
     let chartEvolucion: Chart | null = null;
-    let chartProv: Chart | null = null;
 
     function filtrarSeriePorRango<T extends { fecha: string }>(arr: T[]): T[] {
       if (rangoActual === "2025") return arr.filter((d) => d.fecha.endsWith("-2025"));
@@ -581,158 +559,7 @@ async function inicializarGraficosHistoricos() {
 
     renderizarEvolucion();
 
-    // Gráfico 2: Comparativa histórica Badajoz vs Cáceres
-    let combProvActual: "gasoleo" | "gasolina" = "gasoleo";
-
-    function renderizarComparativaProv() {
-      if (!canvasProvincias) return;
-      if (chartProv) chartProv.destroy();
-
-      const etiquetas = rawProv.map((d) => fmtFechaEje(d.fecha));
-      const esGasoleo = combProvActual === "gasoleo";
-
-      const datosBadajoz = rawProv.map((d) =>
-        esGasoleo ? d.badajoz?.gasoleoA : d.badajoz?.gasolina95_E5
-      );
-      const datosCaceres = rawProv.map((d) =>
-        esGasoleo ? d.caceres?.gasoleoA : d.caceres?.gasolina95_E5
-      );
-
-      chartProv = new Chart(canvasProvincias, {
-        type: "line",
-        data: {
-          labels: etiquetas,
-          datasets: [
-            {
-              label: `Cáceres (${esGasoleo ? "Gasóleo A" : "Gasolina 95"})`,
-              data: datosCaceres,
-              borderColor: esGasoleo ? "#92400e" : "#1e3a8a",
-              borderDash: [4, 4],
-              borderWidth: 2.2,
-              pointRadius: 0,
-              tension: 0.25,
-              fill: false
-            },
-            {
-              label: `Badajoz (${esGasoleo ? "Gasóleo A" : "Gasolina 95"})`,
-              data: datosBadajoz,
-              borderColor: esGasoleo ? "#f59e0b" : "#0284c7",
-              borderWidth: 2.2,
-              pointRadius: 0,
-              tension: 0.25,
-              fill: false
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          interaction: { mode: "index", intersect: false },
-          plugins: {
-            legend: {
-              position: "top",
-              align: "start",
-              labels: { font: { family: FUENTE_GRAFICO, size: 12, weight: 600 }, color: "#0f172a" }
-            },
-            tooltip: {
-              backgroundColor: "#0f172a",
-              callbacks: {
-                label: (ctx) => ` ${ctx.dataset.label}: ${fmtPrecio(ctx.parsed.y)}`
-              }
-            }
-          },
-          scales: {
-            x: {
-              grid: { display: false },
-              ticks: { color: "#334155", font: { family: FUENTE_GRAFICO, size: 11 }, maxTicksLimit: 7 }
-            },
-            y: {
-              grid: { color: "#e2e8f0" },
-              ticks: {
-                color: "#334155",
-                font: { family: FUENTE_GRAFICO, size: 11 },
-                callback: (v) => `${Number(v).toFixed(2).replace(".", ",")} €`
-              }
-            }
-          }
-        }
-      });
-    }
-
-    document.querySelectorAll<HTMLButtonElement>("[data-prov-fuel]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        combProvActual = (btn.getAttribute("data-prov-fuel") as "gasoleo" | "gasolina") || "gasoleo";
-        document
-          .querySelectorAll<HTMLButtonElement>("[data-prov-fuel]")
-          .forEach((b) => b.setAttribute("aria-selected", String(b === btn)));
-        renderizarComparativaProv();
-      });
-    });
-
-    renderizarComparativaProv();
-
-    // Gráfico 3: Diferencial Diésel − Gasolina (céntimos/litro)
-    if (canvasDiferencial) {
-      const etiquetas = rawExt.map((d) => fmtFechaEje(d.fecha));
-      const datosDif = rawExt.map((d) =>
-        d.gasoleoA !== null && d.gasolina95_E5 !== null
-          ? Number(((d.gasoleoA - d.gasolina95_E5) * 100).toFixed(1))
-          : null
-      );
-
-      new Chart(canvasDiferencial, {
-        type: "line",
-        data: {
-          labels: etiquetas,
-          datasets: [
-            {
-              label: "Sobrecoste del Diésel frente a Gasolina 95 (cts/L)",
-              data: datosDif,
-              borderColor: "#334155",
-              backgroundColor: "rgba(51, 65, 85, 0.12)",
-              borderWidth: 2.2,
-              pointRadius: 0,
-              tension: 0.25,
-              fill: true
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          interaction: { mode: "index", intersect: false },
-          plugins: {
-            legend: {
-              position: "top",
-              align: "start",
-              labels: { font: { family: FUENTE_GRAFICO, size: 12, weight: 600 }, color: "#0f172a" }
-            },
-            tooltip: {
-              backgroundColor: "#0f172a",
-              callbacks: {
-                label: (ctx) => ` Diferencial: +${fmtNum(ctx.parsed.y, 1)} cts/L`
-              }
-            }
-          },
-          scales: {
-            x: {
-              grid: { display: false },
-              ticks: { color: "#334155", font: { family: FUENTE_GRAFICO, size: 11 }, maxTicksLimit: 7 }
-            },
-            y: {
-              grid: { color: "#e2e8f0" },
-              ticks: {
-                color: "#334155",
-                font: { family: FUENTE_GRAFICO, size: 11 },
-                callback: (v) => `+${Number(v).toFixed(0)} cts`
-              }
-            }
-          }
-        }
-      });
-    }
-
-    // Gráfico 4: Barras de Medias Mensuales (2025 - 2026)
+    // Gráfico: Barras de Medias Mensuales (2025 - 2026)
     if (canvasMensual) {
       const agrupado = new Map<string, { g: number[]; d: number[] }>();
       rawExt.forEach((r) => {
@@ -820,31 +647,7 @@ async function inicializarGraficosHistoricos() {
 }
 
 // ============================================================
-// 4. FILTRO DE AÑO EN TABLA MENSUAL HISTÓRICA
-// ============================================================
-function inicializarTablaHistorica() {
-  const btns = document.querySelectorAll<HTMLButtonElement>("[data-hist-year]");
-  const filas = document.querySelectorAll<HTMLTableRowElement>("[data-row-year]");
-  if (!btns.length) return;
-
-  btns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const anio = btn.getAttribute("data-hist-year") || "todos";
-      btns.forEach((b) => b.setAttribute("aria-selected", String(b === btn)));
-      filas.forEach((fila) => {
-        const filaAnio = fila.getAttribute("data-row-year");
-        if (anio === "todos" || filaAnio === anio) {
-          fila.classList.remove("hidden");
-        } else {
-          fila.classList.add("hidden");
-        }
-      });
-    });
-  });
-}
-
-// ============================================================
-// 5. CALCULADORA INTERACTIVA DE REPOSTAJE Y AHORRO ANUAL
+// 4. CALCULADORA INTERACTIVA DE REPOSTAJE Y AHORRO ANUAL
 // ============================================================
 function inicializarCalculadoraAhorro() {
   const form = document.getElementById("calculadora-repostaje");
@@ -899,6 +702,5 @@ document.addEventListener("DOMContentLoaded", () => {
   inicializarTabsTopHoy();
   inicializarExploradorPoblaciones();
   inicializarGraficosHistoricos();
-  inicializarTablaHistorica();
   inicializarCalculadoraAhorro();
 });
