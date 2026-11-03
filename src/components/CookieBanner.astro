@@ -23,7 +23,7 @@ import { withBase } from "../lib/site";
           Uso de cookies en Combustible Extremadura
         </p>
         <p class="text-slate-200 max-w-4xl">
-          Utilizamos únicamente cookies analíticas opcionales (Google Analytics 4) para medir de forma anónima y agregada las consultas de precios de gasolineras en Extremadura y mejorar la herramienta. No mostramos publicidad ni compartimos datos personales. Puedes aceptar, rechazar o configurar tu elección en cualquier momento.
+          Utilizamos Google Analytics 4 con Consent Mode v2 para medir de forma anónima y agregada las consultas de precios de gasolineras en Extremadura. Solo guardamos cookies y registramos métricas si nos das tu permiso. No mostramos publicidad personalizada ni compartimos datos con terceros. Puedes aceptar, rechazar o configurar tu elección en cualquier momento.
           <a href={withBase("cookies/")} class="font-bold text-sky-300 hover:text-white underline ml-1">
             Política de cookies
           </a>.
@@ -241,8 +241,12 @@ import { withBase } from "../lib/site";
       } catch {}
 
       if (typeof (window as any).gtag === "function") {
+        const state = isGranted ? "granted" : "denied";
         (window as any).gtag("consent", "update", {
-          analytics_storage: isGranted ? "granted" : "denied"
+          analytics_storage: state,
+          ad_storage: state,
+          ad_user_data: state,
+          ad_personalization: state,
         });
       }
 

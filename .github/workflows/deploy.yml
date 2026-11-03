@@ -4,9 +4,9 @@ on:
   push:
     branches: [main]
   schedule:
-    # Ejecución diaria a las 06:00 AM hora peninsular española (CET UTC+1 = 05:00 UTC)
-    # para que a las 07:00 AM todos los conductores tengan los precios del día actualizados
-    - cron: "0 5 * * *"
+    # Programado a primera hora (00:12 UTC = 01:12 CET invierno / 02:12 CEST verano)
+    # para compensar el retardo de colas de GitHub Actions (~6-7 h) y desplegar sobre las 07:30 - 08:00 AM
+    - cron: "12 0 * * *"
   workflow_dispatch:
 
 permissions:

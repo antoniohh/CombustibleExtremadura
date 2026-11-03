@@ -175,26 +175,54 @@ const jsonLd = {
     <!-- Google Consent Mode v2 & Google tag (gtag.js) -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
 
       var savedConsent = null;
       try {
-        savedConsent = localStorage.getItem('combustible_extremadura_cookie_consent');
+        savedConsent = localStorage.getItem("combustible_extremadura_cookie_consent");
       } catch (e) {}
 
-      var isGranted = savedConsent === 'granted';
-
-      gtag('consent', 'default', {
-        'analytics_storage': isGranted ? 'granted' : 'denied',
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'wait_for_update': 500
+      // 1. Regla específica primero: Territorios bajo RGPD (EEE + Reino Unido + Suiza).
+      // Bloqueo estricto por defecto hasta que el usuario interactúe con el banner.
+      gtag("consent", "default", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        wait_for_update: 500,
+        region: [
+          "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR",
+          "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU",
+          "MT", "NL", "NO", "PL", "PT", "RO", "SK", "SI", "ES", "SE",
+          "GB", "CH",
+        ],
       });
 
-      gtag('js', new Date());
-      gtag('config', 'G-YSZC0MQCHF', {
-        'anonymize_ip': true
+      // 2. Regla global (resto del mundo fuera del EEE): concedido por defecto.
+      gtag("consent", "default", {
+        analytics_storage: "granted",
+        ad_storage: "granted",
+        ad_user_data: "granted",
+        ad_personalization: "granted",
+      });
+
+      // 3. Si el usuario ya tomó una decisión previa, se envía 'update' inmediatamente
+      // en <head> antes de gtag('config') para que Google registre la transición
+      // default -> update ('r' si aceptó, 'q' si rechazó) en el parámetro gcd.
+      if (savedConsent === "granted" || savedConsent === "denied") {
+        gtag("consent", "update", {
+          analytics_storage: savedConsent,
+          ad_storage: savedConsent,
+          ad_user_data: savedConsent,
+          ad_personalization: savedConsent,
+        });
+      }
+
+      gtag("js", new Date());
+      gtag("config", "G-YSZC0MQCHF", {
+        anonymize_ip: true,
       });
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSZC0MQCHF"></script>

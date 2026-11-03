@@ -115,6 +115,34 @@ import { SITE_NAME, AUTHOR_NAME, AUTHOR_URL, GITHUB_URL, withBase } from "../lib
       </div>
     </section>
 
+    <!-- Arquitectura de Google Consent Mode v2 -->
+    <section class="surface-panel p-6 sm:p-8">
+      <h2 class="mb-3 text-xl font-extrabold text-slate-900 flex items-center gap-2.5">
+        <ShieldCheck class="text-sky-700 shrink-0" size={22} aria-hidden="true" />
+        <span>Funcionamiento de Google Consent Mode v2</span>
+      </h2>
+      <p class="mb-3">
+        En cumplimiento riguroso del Reglamento General de Protección de Datos (RGPD) y las directrices de la Agencia Española de Protección de Datos (AEPD), implementamos la especificación técnica oficial <strong>Google Consent Mode v2</strong>:
+      </p>
+      <ul class="space-y-2 list-disc list-inside text-sm mb-4">
+        <li>
+          <strong>Visitantes del Espacio Económico Europeo (España y UE), Reino Unido y Suiza:</strong> Todas las señales de almacenamiento y analítica (<code>analytics_storage</code>, <code>ad_storage</code>, <code>ad_user_data</code> y <code>ad_personalization</code>) nacen <strong>estrictamente denegadas (<code>denied</code>)</strong> por defecto en la cabecera.
+        </li>
+        <li>
+          <strong>Si rechazas las cookies o no interactúas:</strong> No se almacena ninguna cookie en tu navegador. Google Analytics opera únicamente con pings de medición agregada sin cookies ni identificadores de usuario persistentes.
+        </li>
+        <li>
+          <strong>Si aceptas las cookies:</strong> Se concede la medición estadística y se activan las cookies de sesión (<code>_ga</code>, <code>_ga_YSZC0MQCHF</code>). Las 4 señales de consentimiento se actualizan a <code>granted</code> para certificar la autorización ante Google, garantizando que <strong>en ningún caso Combustible Extremadura realiza publicidad personalizada ni comercializa datos</strong>.
+        </li>
+        <li>
+          <strong>Visitantes internacionales (fuera del EEE):</strong> El consentimiento nace concedido conforme a los marcos normativos aplicables en sus territorios.
+        </li>
+      </ul>
+      <p class="text-xs text-slate-600">
+        Tu elección se conserva en <code>localStorage</code> (<code>combustible_extremadura_cookie_consent</code>) únicamente en tu propio dispositivo para recordar tu preferencia.
+      </p>
+    </section>
+
     <!-- Cómo gestionar o revocar el consentimiento -->
     <section class="surface-panel p-6 sm:p-8">
       <h2 class="mb-3 text-xl font-extrabold text-slate-900">

@@ -2,6 +2,22 @@
 
 Todas las versiones relevantes de **Combustible Extremadura**. El proyecto sigue [Versionado Semántico](https://semver.org/lang/es/).
 
+## [1.2.1] — 2026-11-03
+
+Implementación completa de Google Consent Mode v2 delimitado por región y actualización de la política de privacidad y cookies.
+
+### Añadido y Mejorado
+
+- **Google Consent Mode v2 por Región ([`BaseLayout.astro`](src/layouts/BaseLayout.astro))**:
+  - Declaración del estado predeterminado `denied` delimitado específicamente a los 30 países del Espacio Económico Europeo (EEE), Reino Unido y Suiza (`region: ['AT', 'BE', ... 'GB', 'CH']`).
+  - Habilitación por defecto para tráfico internacional fuera del EEE conforme a las directrices de Google Analytics 4, evitando la penalización de tasa de consentimiento del 0 %.
+  - Sincronización inmediata de la decisión previa (`consent update`) en el `<head>` antes de `gtag('config')` para una transición limpia y sin advertencias en Google Tag Assistant.
+- **Transmisión Completa de Señales de Consentimiento ([`CookieBanner.astro`](src/components/CookieBanner.astro))**:
+  - Actualización del manejador `applyConsent` para enviar el cuarteto completo de señales (`analytics_storage`, `ad_storage`, `ad_user_data` y `ad_personalization`).
+  - Texto del banner ajustado para mayor precisión: aclara que solo se guardan cookies y registran métricas con permiso, sin publicidad personalizada ni compartición con terceros.
+- **Sección Técnica en Política de Cookies ([`cookies.astro`](src/pages/cookies.astro))**:
+  - Incorporada nueva sección detallando la operativa técnica de Consent Mode v2, la navegación sin cookies ante el rechazo y la garantía de ausencia de perfilado comercial.
+
 ## [1.2.0] — 2026-11-03
 
 Versión de optimización y simplificación visual de la interfaz: aligera drásticamente la carga de contenidos en portada, transforma la apertura en banners compactos de alta legibilidad, sintetiza el bloque comparativo Badajoz vs. Cáceres y elimina tablas, textos teóricos y gráficos redundantes para priorizar la rapidez y claridad de consulta.
