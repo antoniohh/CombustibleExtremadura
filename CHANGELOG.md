@@ -2,6 +2,21 @@
 
 Todas las versiones relevantes de **Combustible Extremadura**. El proyecto sigue [Versionado Semántico](https://semver.org/lang/es/).
 
+## [1.2.2] — 2026-11-09
+
+Versión de optimización SEO y metadatos sociales que desacopla fechas fijas y precios volátiles de los títulos y descripciones HTML, erradica el riesgo de desactualización en snippets de Google SERP, sanea las tarjetas Open Graph y dinamiza el `<lastmod>` del sitemap.
+
+### Corregido y Optimizado
+
+- **Desacoplamiento de Fechas Fijas y Precios en Metadatos SEO ([`src/layouts/BaseLayout.astro`](src/layouts/BaseLayout.astro))**:
+  - Sustitución de la interpolación de fechas cerradas `(${HOY_EXTREMADURA.fechaLegible})` y precios diarios en céntimos por un título atemporal de alta relevancia: `Precio del Combustible en Extremadura Hoy | Gasolina 95 y Diésel (Badajoz y Cáceres)`.
+  - Redacción de una meta-descripción orientada a intención de búsqueda y maximización de CTR sin riesgo de quedar obsoleta entre ciclos de rastreo de Googlebot.
+  - La fecha en curso (`{fechaLegible}`) y el registro MITECO (`{fechaMiteco}`) se mantienen plenamente destacados en el Hero para los visitantes del portal.
+- **Sincronización Limpia de Open Graph y Twitter Cards ([`src/layouts/BaseLayout.astro`](src/layouts/BaseLayout.astro))**:
+  - Las etiquetas `og:title`, `twitter:title`, `og:description` y `twitter:description` quedan protegidas frente a información caducada al heredar los nuevos valores consolidados.
+- **Automatización de `<lastmod>` en Sitemap ([`scripts/actualizar_precios_hoy.mjs`](scripts/actualizar_precios_hoy.mjs), [`public/sitemap.xml`](public/sitemap.xml))**:
+  - Inclusión de actualización programada de la etiqueta `<lastmod>` con la fecha del día en curso en cada ejecución de la tarea matinal de las 06:00h, ofreciendo una señal activa de frescura a los rastreadores de motores de búsqueda.
+
 ## [1.2.1] — 2026-11-03
 
 Implementación completa de Google Consent Mode v2 delimitado por región y actualización de la política de privacidad y cookies.

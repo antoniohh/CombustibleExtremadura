@@ -23,11 +23,8 @@ interface Props {
   ogType?: "website" | "article";
 }
 
-const g95Hoy = fmtPrecio(HOY_EXTREMADURA.extremadura.mediaGasolina95);
-const gasAHoy = fmtPrecio(HOY_EXTREMADURA.extremadura.mediaGasoleoA);
-
-const defaultTitle = `Precio del Combustible en Extremadura Hoy (${HOY_EXTREMADURA.fechaLegible}) | Gasolina 95: ${g95Hoy} € · Diésel: ${gasAHoy} €`;
-const defaultDesc = `Precio actualizado hoy (${HOY_EXTREMADURA.fechaLegible}) en las ${HOY_EXTREMADURA.extremadura.totalEstaciones} gasolineras de Extremadura: Gasolina 95 E5 a ${g95Hoy} €/L y Gasóleo A a ${gasAHoy} €/L. Comparativa Badajoz vs Cáceres, buscador de los ${HOY_EXTREMADURA.totalMunicipiosConEstacion} municipios e histórico 2025-2026.`;
+const defaultTitle = "Precio del Combustible en Extremadura Hoy | Gasolina 95 y Diésel (Badajoz y Cáceres)";
+const defaultDesc = "Consulta el precio de la gasolina 95 y diésel hoy en las 422 gasolineras de Extremadura. Compara precios entre Badajoz y Cáceres, encuentra la gasolinera más barata de tu municipio y consulta el histórico oficial MITECO.";
 
 const {
   title = defaultTitle,

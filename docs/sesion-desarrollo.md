@@ -174,3 +174,15 @@ CombustibleExtremadura/
   - Nueva barra inferior del footer: `© 2026 Combustible Extremadura · Creado por Antonio Horrillo` con distintivo de actualización diaria a las 06:00 h.
   - Soporte e invitación nativa para instalar la aplicación en Chrome móvil mediante Service Worker y prompt PWA.
 - Empaquetado final en `release/combustible-extremadura-v1.2.0.zip` (`SHA256: 8a2c0dcbfac8f754e46f3e276504e8a11569e47c37cc322d43bc4d6a5d3442a0`) y `release/RELEASE_NOTES_v1.2.0.md`.
+
+### 5.5. Release `v1.2.1`
+- Implementación de Google Consent Mode v2 delimitado por región (bloqueo estricto por defecto en los 30 territorios del EEE, Reino Unido y Suiza).
+- Cuarteto completo de señales (`analytics_storage`, `ad_storage`, `ad_user_data`, `ad_personalization`) en el banner de cookies y documentación técnica en `/cookies/`.
+- Empaquetado final en `release/combustible-extremadura-v1.2.1.zip` y `release/RELEASE_NOTES_v1.2.1.md`.
+
+### 5.6. Release `v1.2.2`
+- Desacoplamiento de fechas fijas y precios diarios en `<title>` y `<meta name="description">` en `src/layouts/BaseLayout.astro`.
+- Erradicación de la obsolescencia temporal en Google SERPs que provocaba snippets congelados en fechas del pasado y penalización de CTR.
+- Saneamiento y blindaje atemporal de las tarjetas Open Graph y Twitter Cards.
+- Automatización de `<lastmod>` dinámico en `public/sitemap.xml` tras cada descarga matinal en `scripts/actualizar_precios_hoy.mjs`.
+- Empaquetado final en `release/combustible-extremadura-v1.2.2.zip` y `release/RELEASE_NOTES_v1.2.2.md`.

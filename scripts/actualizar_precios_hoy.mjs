@@ -366,6 +366,38 @@ async function main() {
     await fs.writeFile(outSrcPath, jsonString, 'utf-8');
     await fs.writeFile(outPublicPath, jsonString, 'utf-8');
 
+    // Actualizar sitemap.xml con lastmod para avisar a motores de búsqueda del refresco diario
+    const sitemapPath = path.join(ROOT_DIR, 'public', 'sitemap.xml');
+    try {
+      const fechaHoyISO = new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'Europe/Madrid',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).format(new Date());
+
+      const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://combustible.antoniohorrillo.com/</loc>
+    <lastmod>${fechaHoyISO}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://combustible.antoniohorrillo.com/cookies/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+</urlset>
+`;
+      await fs.writeFile(sitemapPath, sitemapXml, 'utf-8');
+      console.log(`✓ Sitemap actualizado con lastmod: ${fechaHoyISO}`);
+    } catch (errSitemap) {
+      console.warn('⚠ No se pudo actualizar el sitemap:', errSitemap.message);
+    }
+
     console.log(`✓ Datos del día actualizados correctamente (${raw.Fecha})`);
     console.log(`  - Estaciones procesadas: ${estaciones.length} en ${todasLasPoblaciones.length} municipios`);
     console.log(`  - Media Extremadura Gasolina 95 E5: ${statsExtremadura.mediaGasolina95} €/L | Gasóleo A: ${statsExtremadura.mediaGasoleoA} €/L`);
