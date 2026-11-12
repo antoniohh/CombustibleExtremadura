@@ -1,6 +1,6 @@
 # Combustible Extremadura
 
-[![Versión](https://img.shields.io/badge/versi%C3%B3n-1.2.2-0284c7?style=for-the-badge)](CHANGELOG.md)
+[![Versión](https://img.shields.io/badge/versi%C3%B3n-1.3.0-0284c7?style=for-the-badge)](CHANGELOG.md)
 [![Astro](https://img.shields.io/badge/Astro-7.4.2-BC52EE?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.3.3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Chart.js](https://img.shields.io/badge/Chart.js-4.5.1-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)](https://www.chartjs.org)
@@ -38,6 +38,9 @@ Aplicación web estática (SPA) para la consulta diaria e histórica del **preci
    - Marcado estructurado Schema.org (`WebSite`, `WebPage`, `Dataset`, `ItemList` y `FAQPage` dinámica con los precios del día).
    - Activos vectoriales y Open Graph (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, `logo.svg`, `og-image.png`, `robots.txt`, `sitemap.xml`, `site.webmanifest` y `CNAME`).
    - Cumplimiento de privacidad con **Google Consent Mode v2** (bloqueo analítico previo por defecto), banner y modal de configuración (`CookieBanner.astro`) y página de [Política de Cookies](/cookies/) (`src/pages/cookies.astro`).
+7. **Ecosistema y Red de Proyectos Abiertos:**
+   - Barra superior unificada (`NetworkBar.astro`) 100% responsiva con acceso inmediato y swipe táctil fluido entre proyectos del ecosistema: *Combustible Extremadura*, *Luz Extremadura*, *Embalses Extremadura* y *GlucoLuna*.
+   - Módulo enlazado en pie de página con *anchor texts* semánticos optimizados para SEO y traspaso de autoridad inter-dominio (*link equity*).
 
 ---
 

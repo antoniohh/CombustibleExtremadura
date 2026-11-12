@@ -1,0 +1,110 @@
+---
+import { Zap, Fuel, Droplets, Moon } from "@lucide/astro";
+
+interface Props {
+  currentProject: "luz" | "combustible" | "embalses" | "glucoluna";
+}
+
+const { currentProject } = Astro.props;
+
+const projects = [
+  {
+    id: "luz",
+    name: "Luz Extremadura",
+    shortName: "Luz",
+    url: "https://luz.antoniohorrillo.com/",
+    title: "Precio de la luz hoy en Extremadura hora a hora (PVPC)",
+    icon: Zap,
+    color: "text-amber-400",
+    activeClasses: "bg-amber-400/15 text-amber-300 border-amber-400/30",
+  },
+  {
+    id: "combustible",
+    name: "Combustible Extremadura",
+    shortName: "Combustible",
+    url: "https://combustible.antoniohorrillo.com/",
+    title: "Gasolineras más baratas de Extremadura hoy",
+    icon: Fuel,
+    color: "text-sky-400",
+    activeClasses: "bg-sky-400/15 text-sky-300 border-sky-400/30",
+  },
+  {
+    id: "embalses",
+    name: "Embalses Extremadura",
+    shortName: "Embalses",
+    url: "https://embalses.antoniohorrillo.com/",
+    title: "Nivel de agua y estado de los embalses de Extremadura",
+    icon: Droplets,
+    color: "text-cyan-400",
+    activeClasses: "bg-cyan-400/15 text-cyan-300 border-cyan-400/30",
+  },
+  {
+    id: "glucoluna",
+    name: "GlucoLuna",
+    shortName: "GlucoLuna",
+    url: "https://glucoluna.antoniohorrillo.com/",
+    title: "Calendario y control nocturno de glucosa",
+    icon: Moon,
+    color: "text-indigo-400",
+    activeClasses: "bg-indigo-400/15 text-indigo-300 border-indigo-400/30",
+  },
+] as const;
+---
+
+<nav aria-label="Red de proyectos y paneles abiertos" class="bg-slate-950 text-slate-300 text-xs border-b border-slate-800/80 relative z-30 font-sans print:hidden">
+  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-9">
+      
+      <!-- Identidad de la Red -->
+      <a
+        href="https://antoniohorrillo.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 py-1 pr-2.5 sm:pr-3 text-slate-400 hover:text-white transition-colors shrink-0 group border-r border-slate-800/90 sm:border-0"
+        title="Antonio Horrillo - Proyectos y paneles abiertos"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 group-hover:scale-125 transition-transform" aria-hidden="true"></span>
+        <span class="hidden sm:inline font-semibold text-slate-300 group-hover:text-white tracking-tight">Red Antonio Horrillo</span>
+        <span class="sm:hidden font-semibold text-slate-300 text-[11px] tracking-tight">Red</span>
+      </a>
+
+      <!-- Lista de proyectos: 100% responsive con scroll suave táctil -->
+      <div class="flex items-center gap-1 sm:gap-1.5 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden pl-2 sm:pl-0 py-1">
+        {projects.map((project) => {
+          const isCurrent = project.id === currentProject;
+          const Icon = project.icon;
+
+          if (isCurrent) {
+            return (
+              <span
+                class={`inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md text-[11px] sm:text-xs font-semibold shrink-0 border ${project.activeClasses} cursor-default select-none`}
+                aria-current="page"
+                title={`${project.title} (estás aquí)`}
+              >
+                <Icon class={`w-3.5 h-3.5 shrink-0 ${project.color}`} aria-hidden="true" />
+                <span class="sm:hidden">{project.shortName}</span>
+                <span class="hidden sm:inline">{project.name}</span>
+                <span class="hidden md:inline-block text-[9px] uppercase tracking-wider px-1 py-0.5 rounded bg-white/10 text-slate-200 font-medium leading-none">
+                  Actual
+                </span>
+              </span>
+            );
+          }
+
+          return (
+            <a
+              href={project.url}
+              class="inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md text-[11px] sm:text-xs text-slate-400 hover:text-white hover:bg-slate-900 transition-all shrink-0 group"
+              title={project.title}
+            >
+              <Icon class={`w-3.5 h-3.5 shrink-0 opacity-70 group-hover:opacity-100 transition-opacity ${project.color}`} aria-hidden="true" />
+              <span class="sm:hidden group-hover:text-white transition-colors">{project.shortName}</span>
+              <span class="hidden sm:inline group-hover:text-white transition-colors">{project.name}</span>
+            </a>
+          );
+        })}
+      </div>
+
+    </div>
+  </div>
+</nav>

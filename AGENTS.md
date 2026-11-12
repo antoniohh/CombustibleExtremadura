@@ -44,3 +44,10 @@ Este documento define las reglas operativas, de arquitectura y de publicación d
 
 - **Contraste y legibilidad:** Cumplir siempre ratios WCAG AA/AAA, especialmente en cabeceras oscuras (`bg-slate-900` / `bg-slate-950`) y tablas numéricas (`font-variant-numeric: tabular-nums`).
 - **Privacidad (RGPD / AEPD):** Mantener Google Consent Mode v2 con `analytics_storage: 'denied'` por defecto en `src/layouts/BaseLayout.astro`, gestión mediante `src/components/CookieBanner.astro` y detalle completo en `src/pages/cookies.astro`.
+
+---
+
+## 5. Ecosistema de Red y Enlazado Inter-Dominio
+
+- **Componente `NetworkBar.astro`:** Barra superior unificada de 36px que enlaza los proyectos del ecosistema (*Combustible*, *Luz*, *Embalses*, *GlucoLuna* y `antoniohorrillo.com`). Debe mantenerse 100% responsiva (scroll horizontal táctil en viewport móvil sin alterar la altura del viewport ni provocar desbordamientos horizontales).
+- **Enlazado en `Footer.astro`:** Columna dedicada a la Red de Proyectos con enlaces semánticos y textos de ancla descriptivos (*anchor text* SEO) para la transmisión limpia de autoridad de dominio (*link equity*).

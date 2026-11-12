@@ -5,10 +5,10 @@ import { HOY_EXTREMADURA } from "../data/precios";
 
 <footer class="bg-slate-950 text-slate-200 border-t border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
       
       <!-- Columna 1: Marca y Descripción -->
-      <div class="md:col-span-2 space-y-4">
+      <div class="space-y-4">
         <div class="flex items-center gap-3">
           <img
             src={withBase("assets/icon-192.png")}
@@ -56,10 +56,62 @@ import { HOY_EXTREMADURA } from "../data/precios";
         </ul>
       </div>
 
-      <!-- Columna 3: Fuente de Datos y Privacidad -->
+      <!-- Columna 3: Red de Proyectos -->
       <div>
         <h3 class="text-sm font-bold uppercase tracking-wider text-white mb-4">
-          Fuente Oficial y Privacidad
+          Red de Proyectos
+        </h3>
+        <ul class="space-y-2.5 text-sm">
+          <li>
+            <a
+              href="https://luz.antoniohorrillo.com/"
+              class="text-slate-300 hover:text-amber-300 transition-colors inline-flex items-center gap-1.5"
+              title="Precio de la luz hoy en Extremadura hora a hora (PVPC)"
+            >
+              <span class="text-amber-400">⚡</span>
+              <span>Luz Extremadura</span>
+            </a>
+            <span class="block text-xs text-slate-300 pl-5">Precio PVPC hora a hora</span>
+          </li>
+          <li>
+            <a
+              href="https://embalses.antoniohorrillo.com/"
+              class="text-slate-300 hover:text-cyan-300 transition-colors inline-flex items-center gap-1.5"
+              title="Nivel de agua y pantanos de Extremadura"
+            >
+              <span class="text-cyan-400">💧</span>
+              <span>Embalses Extremadura</span>
+            </a>
+            <span class="block text-xs text-slate-300 pl-5">Capacidad y reservas hídricas</span>
+          </li>
+          <li>
+            <a
+              href="https://glucoluna.antoniohorrillo.com/"
+              class="text-slate-300 hover:text-indigo-300 transition-colors inline-flex items-center gap-1.5"
+              title="Calendario y control nocturno de glucosa"
+            >
+              <span class="text-indigo-400">🌙</span>
+              <span>GlucoLuna</span>
+            </a>
+            <span class="block text-xs text-slate-300 pl-5">Control y diario de glucosa</span>
+          </li>
+          <li class="pt-1 border-t border-slate-800/80">
+            <a
+              href="https://antoniohorrillo.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-xs text-slate-300 hover:text-white transition-colors underline"
+            >
+              antoniohorrillo.com · Portafolio
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna 4: Fuente Oficial y Privacidad -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-wider text-white mb-4">
+          Fuente y Privacidad
         </h3>
         <ul class="space-y-2.5 text-sm text-slate-300">
           <li>
