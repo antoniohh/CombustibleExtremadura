@@ -1,8 +1,8 @@
-# Registro de Sesión: Desarrollo, Identidad Visual y Releases de Combustible Extremadura (`v1.0.0` → `v1.2.0`)
+# Registro de Sesión: Desarrollo, Identidad Visual y Releases de Combustible Extremadura (`v1.0.0` → `v1.3.1`)
 
-- **Fecha de la sesión:** 2 y 3 de noviembre de 2026
+- **Fecha de la sesión:** 2 al 13 de noviembre de 2026
 - **Proyecto:** Combustible Extremadura (`combustible-extremadura`)
-- **Versión vigente al cierre:** `v1.2.0`
+- **Versión vigente al cierre:** `v1.3.1`
 - **Dominio de producción:** `https://combustible.antoniohorrillo.com/`
 - **Repositorio oficial:** `https://github.com/antoniohh/CombustibleExtremadura`
 - **Autor y Titular:** Antonio Horrillo ([antoniohorrillo.com](https://antoniohorrillo.com))
@@ -186,3 +186,13 @@ CombustibleExtremadura/
 - Saneamiento y blindaje atemporal de las tarjetas Open Graph y Twitter Cards.
 - Automatización de `<lastmod>` dinámico en `public/sitemap.xml` tras cada descarga matinal en `scripts/actualizar_precios_hoy.mjs`.
 - Empaquetado final en `release/combustible-extremadura-v1.2.2.zip` y `release/RELEASE_NOTES_v1.2.2.md`.
+
+### 5.7. Release `v1.3.0`
+- Incorporación de la barra superior transversal `src/components/NetworkBar.astro` 100% responsiva y módulo SEO «Red de Proyectos» en `src/components/Footer.astro`.
+- Empaquetado final en `release/combustible-extremadura-v1.3.0.zip` y `release/RELEASE_NOTES_v1.3.0.md`.
+
+### 5.8. Release `v1.3.1`
+- Renovación integral de los recursos gráficos y de identidad visual del portal para unificar la estética de observatorio de datos con *Embalses de Extremadura* y *Luz Extremadura*:
+  - Rediseño del isotipo vectorial SVG (`public/favicon.svg`, `public/assets/favicon.svg`, `public/assets/logo.svg`) y nuevo componente `src/components/Logo.astro` integrado en `Header.astro` y `Footer.astro`.
+  - Nuevas creatividades generadas con **Nano Banana**: icono principal con *squircle* transparente (`icon-512.png`, `icon-192.png`, `apple-touch-icon.png`, `favicon.ico`) y tarjeta social Open Graph (`og-image.png`, `1200×630` px) con tarjeta 3D *glassmorphic* del mapa de Extremadura, corredores de estaciones de servicio y curvas de Gasolina 95 y Diésel.
+- Empaquetado final en `release/combustible-extremadura-v1.3.1.zip` y `release/RELEASE_NOTES_v1.3.1.md`.

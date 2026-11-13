@@ -1,6 +1,7 @@
 ---
 import { SITE_NAME, AUTHOR_NAME, AUTHOR_URL, withBase } from "../lib/site";
 import { HOY_EXTREMADURA } from "../data/precios";
+import Logo from "./Logo.astro";
 ---
 
 <footer class="bg-slate-950 text-slate-200 border-t border-slate-800">
@@ -10,11 +11,8 @@ import { HOY_EXTREMADURA } from "../data/precios";
       <!-- Columna 1: Marca y Descripción -->
       <div class="space-y-4">
         <div class="flex items-center gap-3">
-          <img
-            src={withBase("assets/icon-192.png")}
-            alt=""
-            width="36"
-            height="36"
+          <Logo
+            size={36}
             class="w-9 h-9 rounded-xl"
           />
           <span class="text-lg font-extrabold text-white tracking-tight">

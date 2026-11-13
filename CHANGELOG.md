@@ -2,6 +2,19 @@
 
 Todas las versiones relevantes de **Combustible Extremadura**. El proyecto sigue [Versionado Semántico](https://semver.org/lang/es/).
 
+## [1.3.1] — 2026-11-13
+
+Versión de renovación integral de los recursos gráficos y de identidad visual del portal (isotipo vectorial de alta precisión, componente `<Logo />`, iconos de aplicación PWA/iOS/favicon y tarjeta social Open Graph `1200×630` generados con **Nano Banana**), unificando el lenguaje visual de observatorio de datos con *Embalses de Extremadura* y *Luz Extremadura*.
+
+### Añadido y Mejorado
+
+- **Nuevo Componente Vectorial `<Logo />` e Isotipo SVG de Alta Precisión ([`src/components/Logo.astro`](src/components/Logo.astro), [`public/favicon.svg`](public/favicon.svg), [`public/assets/favicon.svg`](public/assets/favicon.svg), [`public/assets/logo.svg`](public/assets/logo.svg))**:
+  - Rediseño del isotipo vectorial sobre contenedor *squircle* oscuro (`#0f172a` → `#040814`) con borde luminoso cian-ámbar, anillo exterior de telemetría graduado, gota volumétrica dorada de carburante con reflejo especular de cristal, silueta de boquilla dispensadora y curva de cotización cian con nodos de datos.
+  - Creación del componente reutilizable `Logo.astro` con identificadores únicos de gradiente por instancia e integración directa en [`src/components/Header.astro`](src/components/Header.astro) y [`src/components/Footer.astro`](src/components/Footer.astro).
+- **Nuevas Creatividades de Marca con Nano Banana ([`public/assets/icon-512.png`](public/assets/icon-512.png), [`public/assets/icon-192.png`](public/assets/icon-192.png), [`public/assets/apple-touch-icon.png`](public/assets/apple-touch-icon.png), [`public/favicon.ico`](public/favicon.ico), [`public/assets/og-image.png`](public/assets/og-image.png))**:
+  - Nuevo icono principal de aplicación con *squircle* transparente (`512×512`, `192×192`, `180×180` y `favicon.ico` multirresolución `16/32/48` px).
+  - Nueva tarjeta social Open Graph (`1200×630` px) con estética de observatorio de datos, badge `DATOS OFICIALES MITECO · EXTREMADURA`, tarjeta 3D *glassmorphic* con el mapa provincial de Extremadura, estaciones de servicio iluminadas en los principales corredores viarios, curvas de evolución de Gasolina 95 y Diésel y píldora `422 Gasolineras · 179 Municipios`.
+
 ## [1.3.0] — 2026-11-12
 
 Versión de interconexión del ecosistema digital que incorpora la barra de navegación transversal 100% responsiva (`NetworkBar.astro`) y un módulo SEO de red en el pie de página (`Footer.astro`), enlazando los proyectos de datos abiertos y utilidades de Antonio Horrillo (*Combustible*, *Luz*, *Embalses* y *GlucoLuna*).

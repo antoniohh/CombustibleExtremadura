@@ -1,6 +1,6 @@
 # Combustible Extremadura
 
-[![Versión](https://img.shields.io/badge/versi%C3%B3n-1.3.0-0284c7?style=for-the-badge)](CHANGELOG.md)
+[![Versión](https://img.shields.io/badge/versi%C3%B3n-1.3.1-0284c7?style=for-the-badge)](CHANGELOG.md)
 [![Astro](https://img.shields.io/badge/Astro-7.4.2-BC52EE?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.3.3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Chart.js](https://img.shields.io/badge/Chart.js-4.5.1-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)](https://www.chartjs.org)
@@ -163,18 +163,20 @@ Si necesitas cambiar el dominio en el futuro, actualiza `src/lib/site.ts`, `astr
 
 ## 📦 Control de Versiones
 
-Versión actual: **1.2.2** · [Historial completo en CHANGELOG.md](CHANGELOG.md)
+Versión actual: **1.3.1** · [Historial completo en CHANGELOG.md](CHANGELOG.md)
 
 | Versión | Fecha | Cambios principales |
 |---|---|---|
-| **1.2.2** | 2026-11-09 | Desacoplamiento de fechas fijas y precios en `<title>` y `<meta description>`, prevención de desfase en SERPs de Google, tarjetas Open Graph perennes y automatización de `<lastmod>` en el sitemap |
+| **1.3.1** | 2026-11-13 | Renovación de recursos gráficos e identidad visual con Nano Banana (`icon-512.png`, `icon-192.png`, `apple-touch-icon.png`, `favicon.ico` y tarjeta Open Graph `1200×630`) y nuevo isotipo vectorial SVG con componente `<Logo />` en cabecera y pie |
+| 1.3.0 | 2026-11-12 | Incorporación de la barra superior transversal `NetworkBar.astro` 100% responsiva y módulo SEO «Red de Proyectos» en el pie de página |
+| 1.2.2 | 2026-11-09 | Desacoplamiento de fechas fijas y precios en `<title>` y `<meta description>`, prevención de desfase en SERPs de Google, tarjetas Open Graph perennes y automatización de `<lastmod>` en el sitemap |
 | 1.2.1 | 2026-11-03 | Implementación de Google Consent Mode v2 delimitado por región (bloqueo estricto por defecto en el EEE) y actualización de la política de privacidad y cookies |
 | 1.2.0 | 2026-11-03 | Simplificación y aligeramiento visual de portada con apertura compacta, soporte de instalación PWA en Chrome móvil y optimización de rendimiento |
 | 1.1.0 | 2026-11-02 | Nuevas cajas de precios y Top 5 hoy para Badajoz Capital y Cáceres Capital en portada, e identidad visual completa (icono, favicon y tarjeta Open Graph `1200×630`) generada con Nano Banana |
 | 1.0.1 | 2026-11-02 | Incorporación de `AGENTS.md`, consolidación del flujo de publicación en GitHub Releases y paquete de distribución `v1.0.1` |
 | 1.0.0 | 2026-11-02 | Lanzamiento inicial en `combustible.antoniohorrillo.com`: precios diarios en 422 EESS, comparativa Badajoz vs Cáceres, buscador de 179 municipios, serie histórica 2025-2026 con 4 gráficos Chart.js, calculadora de ahorro, Consent Mode v2 y actualización diaria automatizada a las 06:00 AM |
 
-El workflow `.github/workflows/release.yml` compila el sitio y adjunta automáticamente `combustible-extremadura-v1.2.2.zip` al publicar una etiqueta `v*` en GitHub. Además, los paquetes precompilados locales se encuentran disponibles en `release/`.
+El workflow `.github/workflows/release.yml` compila el sitio y adjunta automáticamente `combustible-extremadura-v1.3.1.zip` al publicar una etiqueta `v*` en GitHub. Además, los paquetes precompilados locales se encuentran disponibles en `release/`.
 
 ---
 
